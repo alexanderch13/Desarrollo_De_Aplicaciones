@@ -1,0 +1,198 @@
+:root {
+  /* Paleta pastel: verde salvia (acento principal) + marrón cálido (base/texto) */
+  --bg: #faf6f0;
+  --fg: #4b3b2f;
+  --muted: #8d7b6a;
+  --card: #fffdf9;
+  --border: #e7dcc9;
+  --shadow: 0 8px 20px rgba(75,59,47,.10);
+  --primary: #7fa88a;
+  --primary-700: #5f8a72;
+}
+#page-menu { --primary: #c69c6d; --primary-700: #a67b4c; }     /* marrón caramelo pastel */
+#page-reservas { --primary: #d8a47f; --primary-700: #b97f56; } /* terracota pastel */
+
+/* [USO: HERENCIA] */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font: 16px/1.6 system-ui, Arial, sans-serif;
+  color: var(--fg);
+  letter-spacing: .2px;
+  background:
+    radial-gradient(1000px 400px at 10% -10%, rgba(127,168,138,.14), transparent 60%),
+    radial-gradient(800px 300px at 100% 0%, rgba(198,156,109,.14), transparent 60%),
+    var(--bg);
+}
+.container { max-width: 960px; margin: 0 auto; padding: 18px; }
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.site-header, .site-footer {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, var(--primary) 8%), var(--card));
+}
+.brand { font-weight: 800; text-decoration: none; color: var(--primary); font-size: 28px; letter-spacing: .3px; }
+.site-header nav.container {
+  padding-block: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* [USO: MÚLTIPLES] */
+h1, h2, h3 { margin: 0 0 8px; }
+p, li { margin: 0 0 8px; }
+
+/* [USO: NOMBRE/ETIQUETA] */
+header { border-bottom: 1px solid var(--border); }
+footer { border-top: 1px solid var(--border); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
+
+/* [USO: CLASE] */
+.menu .link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: background .15s ease, color .15s ease;
+}
+.menu .link:hover {
+  background: color-mix(in oklab, var(--primary) 16%, white);
+  text-decoration: none;
+}
+.seccion { margin: 16px 0; }
+.titulo { font-size: 38px; line-height: 1.15; }
+.lead { font-size: 18px; color: var(--muted); }
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--fg);
+  background: #fff;
+  font-weight: 700;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(75,59,47,.12); }
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: color-mix(in oklab, var(--primary), black 16%);
+}
+.nota {
+  background: color-mix(in oklab, #fbf1e4 90%, white 10%);
+  border: 1px dashed var(--primary-700);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+.resaltado { color: #4d7a52 !important; } /* [USO: CASCADA -> !important] — verde pastel intenso */
+
+/* adorno de títulos de tarjeta */
+.card h2 { position: relative; padding-left: 10px; }
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* [USO: ID] */
+#page-inicio .brand, #page-menu .brand, #page-reservas .brand { color: var(--primary); }
+
+/* [USO: COMBINADORES] */
+section article p { color: #4b3b2f; }        /* descendiente */
+nav > ul > li > a { padding: 4px 6px; }       /* hijo directo */
+h1 + p { font-style: italic; color: #4b3b2f; } /* hermano adyacente */
+h1 ~ p { color: #6b5c4d; }                     /* hermanos generales */
+p.nota { border-color: var(--primary-700); }  /* tipo + clase */
+.btn.primary {
+  font-weight: 800;
+  box-shadow: 0 2px 0 color-mix(in oklab, var(--primary-700), black 14%);
+} /* conjunción de clases */
+.card:hover .btn { text-decoration: underline; } /* ancestro hover => descendiente */
+
+/* [USO: ATRIBUTOS (con ^ $ * ~ |=)] */
+[title] { outline: 1px dashed #b8a894; }                /* presencia */
+a[href^="https"] { color: var(--primary-700); }         /* empieza con https (Instagram en footer) */
+a[href$=".pdf"] { text-decoration: underline; }         /* termina con .pdf (Carta en footer) */
+a[href*="menu"] { font-weight: 700; }                   /* contiene 'menu' (link al menú) */
+[class~="marcada"] { padding-left: 0; }                 /* palabra en class */
+[lang|="es"] { border-left: 4px solid var(--border); padding-left: 12px; } /* prefijo de idioma */
+[data-rol="info"] {
+  background: #f1f7f0;
+  border-left: 4px solid var(--primary);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* [USO: PSEUDO-CLASES (≥10)] */
+a:link { opacity: .95; }
+a:visited { opacity: .86; }
+a:hover { filter: brightness(1.05); }
+a:active { transform: scale(.98); }
+input:focus, textarea:focus { outline: 3px solid var(--primary); }
+input:required, textarea:required { border: 1px solid var(--border); }
+input:valid, textarea:valid { border-color: #7fa88a; background: #f1f7f0; }
+input:invalid, textarea:invalid { border-color: #c97b63; background: #fbf1ee; }
+input[type="checkbox"]:checked { outline: 2px dashed var(--primary-700); outline-offset: 2px; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+li:nth-child(odd) { background: #f7f2ea; }
+li:nth-child(even) { background: #f2ece1; }
+p:first-child { font-weight: 700; }
+p:last-child { font-style: italic; }
+:target {
+  scroll-margin-top: 12px;
+  box-shadow: 0 0 0 4px rgba(127,168,138,.28);
+  border-radius: 10px;
+}
+
+/* [USO: PSEUDO-ELEMENTOS (≥7)] */
+.lead::first-line { text-transform: uppercase; }
+.drop::first-letter { font-size: 160%; font-weight: 800; }
+::selection { background: #e9d9b8; }
+.marcada li::marker { content: "• "; color: var(--primary); }
+input::placeholder { color: #b0a08e; }
+.badge::before { content: "★ "; color: #c69c6d; }
+.badge::after { content: " ✓"; color: #7fa88a; }
+
+/* [USO: FORMULARIO] */
+.form label { display: block; margin: 10px 0 6px; }
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color .12s, box-shadow .12s;
+}
+
+/* El checkbox no debe heredar el tamaño/estilo de los campos de texto */
+.form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  accent-color: var(--primary);
+}
+.form label.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* [USO: CASCADA/ESPECIFICIDAD] — cadena completa: #origen p > .card p > p */
+p { color: #4b3b2f; }              /* tipo — especificidad 0-0-1 (base) */
+p { margin-bottom: 8px; }          /* mismo selector luego => gana por orden */
+.card p { color: var(--muted); }   /* clase — especificidad 0-1-1 (vence al tipo) */
+#origen p { color: var(--primary-700); } /* id — especificidad 1-0-1 (vence a clase y tipo) */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cafetería MoKaChiMo — Reservas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Reserva tu mesa en Cafetería MoKaChiMo: completa el formulario con tus datos y confirma tu visita." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cafetería MoKaChiMo" />
+  <meta property="og:title" content="Cafetería MoKaChiMo — Reservas" />
+  <meta property="og:description" content="Completa el formulario con tus datos y confirma tu visita." />
+  <meta property="og:image" content="assets/og-reservas.png" />
+  <meta property="og:url" content="reservas.html" />
+  <meta property="og:locale" content="es_PE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cafetería MoKaChiMo — Reservas" />
+  <meta name="twitter:description" content="Completa el formulario con tus datos y confirma tu visita." />
+  <meta name="twitter:image" content="assets/og-reservas.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="page-reservas">
+  <header class="site-header card">
+    <nav class="container" aria-label="Principal">
+      <a class="brand" href="index.html" title="Inicio">MoKaChiMo</a>
+      <ul class="menu">
+        <li><a class="link" href="index.html#hero">Inicio</a></li>
+        <li><a class="link" href="menu.html">Menú</a></li>
+        <li><a class="link" href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="seccion">
+      <h1>Reservas</h1>
+      <p class="lead drop">Completa tus datos y confirma.</p>
+
+      <form action="/enviar" method="post" class="form card">
+        <label>Nombre
+          <input type="text" name="nombre" required minlength="2" placeholder="Tu nombre">
+        </label>
+        <label>Correo
+          <input type="email" name="email" required placeholder="tucorreo@ejemplo.com">
+        </label>
+        <label>Fecha
+          <input type="date" name="fecha" id="fecha-reserva" required>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" required minlength="10" placeholder="¿Algo
+especial?"></textarea>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" required> Acepto términos
+        </label>
+
+        <button type="submit" class="btn primary">Reservar</button>
+        <button type="button" class="btn" disabled>Deshabilitado</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p><small>© 2026 • Cafetería MoKaChiMo</small></p>
+    <ul class="footer-links">
+      <li><a class="link" href="assets/carta.pdf">Carta (PDF)</a></li>
+      <li><a class="link" href="https://instagram.com/colibri-cafe" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    //Solo permite reservar desde hoy en adelante
+    document.getElementById('fecha-reserva').min = new Date().toISOString().split('T')[0];
+  </script>
+</body>
+</html>
