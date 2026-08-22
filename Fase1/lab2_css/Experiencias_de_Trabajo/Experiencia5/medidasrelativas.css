@@ -1,0 +1,56 @@
+/* =========================================================
+   EXPERIENCIA 5B - MEDIDAS RELATIVAS
+   10 unidades x 3 casos = 30 demostraciones
+   ========================================================= */
+
+/* em: relativo al tamaño tipográfico del contexto */
+.em-case-1 { width: 30em; max-width: 100%; padding: 12px; }
+.em-case-2 { padding: 1.5em; }
+.em-case-3 { font-size: 1.15em; padding: 12px; }
+
+/* ex: relativo a la altura-x de la fuente */
+.ex-case-1 { width: 60ex; max-width: 100%; padding: 12px; }
+.ex-case-2 { padding: 2ex; }
+.ex-case-3 { letter-spacing: 0.2ex; padding: 12px; }
+
+/* ch: relativo al avance del glifo 0 */
+.ch-case-1 { width: 55ch; max-width: 100%; padding: 12px; }
+.ch-case-2 { padding: 2ch; }
+.ch-case-3 { text-indent: 4ch; padding: 12px; }
+
+/* rem: relativo al tamaño de fuente del elemento raíz */
+.rem-case-1 { width: 55rem; max-width: 100%; padding: 12px; }
+.rem-case-2 { padding: 1.5rem; }
+.rem-case-3 { font-size: 1.1rem; padding: 12px; }
+
+/* lh: relativo a la altura de línea */
+.lh-case-1 { width: 25lh; max-width: 100%; padding: 12px; }
+.lh-case-2 { padding: 0.5lh; }
+.lh-case-3 { margin-bottom: 1lh; padding: 12px; }
+
+/* vw: porcentaje del ancho del viewport */
+.vw-case-1 { width: 60vw; max-width: 100%; padding: 12px; }
+.vw-case-2 { padding: 2vw; }
+.vw-case-3 { letter-spacing: 0.08vw; padding: 12px; }
+
+/* vh: porcentaje de la altura del viewport */
+.vh-case-1 { min-height: 12vh; padding: 12px; }
+.vh-case-2 { padding: 2vh; }
+.vh-case-3 { border-left-width: 0.4vh; padding: 12px; }
+
+/* vmin: porcentaje de la dimensión menor del viewport */
+.vmin-case-1 { width: 70vmin; max-width: 100%; padding: 12px; }
+.vmin-case-2 { padding: 2vmin; }
+.vmin-case-3 { border-radius: 1vmin; padding: 12px; }
+
+/* vmax: porcentaje de la dimensión mayor del viewport */
+.vmax-case-1 { width: 55vmax; max-width: 100%; padding: 12px; }
+.vmax-case-2 { padding: 1vmax; }
+.vmax-case-3 { letter-spacing: 0.03vmax; padding: 12px; }
+
+/* Unidad adicional de uso moderno: % (porcentaje del contenedor)
+   No reemplaza las 10 unidades solicitadas por la teoría de la guía;
+   se incluye como comparación práctica complementaria. */
+.percent-case-1 { width: 75%; padding: 12px; }
+.percent-case-2 { padding-left: 8%; }
+.percent-case-3 { border-radius: 5%; padding: 12px; }

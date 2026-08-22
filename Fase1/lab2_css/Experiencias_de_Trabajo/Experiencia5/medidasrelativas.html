@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia 5 de CSS: comparación práctica de medidas relativas em, ex, ch, rem, lh, vw, vh, vmin y vmax.">
+    <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+    <title>Experiencia 5 - Medidas relativas</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./medidasrelativas.css">
+</head>
+<body>
+<header>
+    <p>[ CSS // EXPERIENCIA 05 ]</p>
+    <h1>Utilización de medidas relativas</h1>
+    <p>Pruebas visuales con em, ex, ch, rem, lh, vw, vh, vmin y vmax, más una comparación adicional con porcentajes.</p>
+</header>
+
+<nav aria-label="Navegación principal">
+    <a href="#introduccion">./introduccion</a>
+    <a href="#casos">./casos</a>
+    <a href="#comparacion">./comparacion</a>
+    <a href="#conclusion">./conclusion</a>
+    <a href="./index.html">./medidas_absolutas</a>
+</nav>
+
+<main>
+    <section id="introduccion">
+        <h2>Objetivo de la demostración</h2>
+        <p>
+            Esta página desarrolla la parte B de la Experiencia de Práctica N.º 05.
+            Las medidas relativas cambian en función de una referencia: la fuente,
+            la altura de línea, el elemento raíz o las dimensiones del viewport.
+            Se implementan tres casos por cada unidad relativa listada por la guía.
+        </p>
+        <aside>
+            <h3>Control de la práctica</h3>
+            <p>
+                Total principal desarrollado: <strong>9 unidades relativas de la guía × 3 casos = 27 casos</strong>.
+                Se agregan además 3 casos con porcentaje como comparación complementaria.
+                Todas las reglas están en <code>medidasrelativas.css</code>.
+            </p>
+        </aside>
+    </section>
+
+    <section id="casos">
+        <h2>Casos prácticos por unidad</h2>
+        <p>Redimensiona la ventana del navegador para notar con mayor claridad el comportamiento de vw, vh, vmin y vmax.</p>
+        <section class="unit-grid" aria-label="Demostraciones de medidas relativas">
+            <article id="em">
+    <h3>[ em ] Relativa al contexto tipográfico</h3>
+    <p>La guía relaciona em con el tamaño de letra del elemento padre en propiedades tipográficas y con el tamaño del propio elemento en otras propiedades.</p>
+    <p class="demo em-case-1"><strong>Caso 1</strong> — <code>width: 30em</code>. El ancho depende de la escala tipográfica del contexto.</p>
+<p class="demo em-case-2"><strong>Caso 2</strong> — <code>padding: 1.5em</code>. El relleno crece o disminuye con el tamaño de fuente.</p>
+<p class="demo em-case-3"><strong>Caso 3</strong> — <code>font-size: 1.15em</code>. El texto se escala con respecto al contexto.</p>
+</article>
+<article id="ex">
+    <h3>[ ex ] Altura-x de la fuente</h3>
+    <p>La guía define ex a partir de la altura x de la fuente del elemento.</p>
+    <p class="demo ex-case-1"><strong>Caso 1</strong> — <code>width: 60ex</code>. El ancho se expresa según la métrica x de la fuente.</p>
+<p class="demo ex-case-2"><strong>Caso 2</strong> — <code>padding: 2ex</code>. El espacio interior depende de esa métrica tipográfica.</p>
+<p class="demo ex-case-3"><strong>Caso 3</strong> — <code>letter-spacing: 0.2ex</code>. La separación de caracteres usa ex.</p>
+</article>
+<article id="ch">
+    <h3>[ ch ] Avance del glifo 0</h3>
+    <p>La guía relaciona ch con la medida de avance del glifo «0» de la fuente.</p>
+    <p class="demo ch-case-1"><strong>Caso 1</strong> — <code>width: 55ch</code>. Adecuado para comparar anchos vinculados a caracteres.</p>
+<p class="demo ch-case-2"><strong>Caso 2</strong> — <code>padding: 2ch</code>. El relleno usa la medida del carácter de referencia.</p>
+<p class="demo ch-case-3"><strong>Caso 3</strong> — <code>text-indent: 4ch</code>. La sangría se expresa en ch.</p>
+</article>
+<article id="rem">
+    <h3>[ rem ] Tamaño de fuente del elemento raíz</h3>
+    <p>La guía define rem en función del tamaño de letra del elemento raíz.</p>
+    <p class="demo rem-case-1"><strong>Caso 1</strong> — <code>width: 55rem</code>. El ancho responde a la escala definida en la raíz.</p>
+<p class="demo rem-case-2"><strong>Caso 2</strong> — <code>padding: 1.5rem</code>. El relleno mantiene una referencia global.</p>
+<p class="demo rem-case-3"><strong>Caso 3</strong> — <code>font-size: 1.1rem</code>. El texto toma como base la fuente raíz.</p>
+</article>
+<article id="lh">
+    <h3>[ lh ] Altura de línea</h3>
+    <p>La guía define lh como una unidad relativa a la altura de línea del elemento.</p>
+    <p class="demo lh-case-1"><strong>Caso 1</strong> — <code>width: 25lh</code>. El ancho se calcula a partir de la altura de línea.</p>
+<p class="demo lh-case-2"><strong>Caso 2</strong> — <code>padding: 0.5lh</code>. El relleno sigue la altura de línea.</p>
+<p class="demo lh-case-3"><strong>Caso 3</strong> — <code>margin-bottom: 1lh</code>. El margen inferior utiliza una línea como referencia.</p>
+</article>
+<article id="vw">
+    <h3>[ vw ] Ancho de la ventana gráfica</h3>
+    <p>La guía establece que 1vw equivale al 1% del ancho del viewport.</p>
+    <p class="demo vw-case-1"><strong>Caso 1</strong> — <code>width: 60vw</code>. El ancho cambia cuando cambia el ancho de la ventana.</p>
+<p class="demo vw-case-2"><strong>Caso 2</strong> — <code>padding: 2vw</code>. El relleno responde al ancho del viewport.</p>
+<p class="demo vw-case-3"><strong>Caso 3</strong> — <code>letter-spacing: 0.08vw</code>. La separación también varía con el viewport.</p>
+</article>
+<article id="vh">
+    <h3>[ vh ] Altura de la ventana gráfica</h3>
+    <p>La guía establece que 1vh equivale al 1% de la altura del viewport.</p>
+    <p class="demo vh-case-1"><strong>Caso 1</strong> — <code>min-height: 12vh</code>. La altura mínima responde a la ventana.</p>
+<p class="demo vh-case-2"><strong>Caso 2</strong> — <code>padding: 2vh</code>. El relleno depende de la altura visible.</p>
+<p class="demo vh-case-3"><strong>Caso 3</strong> — <code>border-left-width: 0.4vh</code>. El borde cambia con la altura del viewport.</p>
+</article>
+<article id="vmin">
+    <h3>[ vmin ] Dimensión menor del viewport</h3>
+    <p>La guía define vmin respecto del 1% de la dimensión más pequeña de la ventana gráfica.</p>
+    <p class="demo vmin-case-1"><strong>Caso 1</strong> — <code>width: 70vmin</code>. El ancho toma como referencia la dimensión menor.</p>
+<p class="demo vmin-case-2"><strong>Caso 2</strong> — <code>padding: 2vmin</code>. El relleno se adapta a la dimensión menor.</p>
+<p class="demo vmin-case-3"><strong>Caso 3</strong> — <code>border-radius: 1vmin</code>. El radio del borde también es adaptable.</p>
+</article>
+<article id="vmax">
+    <h3>[ vmax ] Dimensión mayor del viewport</h3>
+    <p>La guía define vmax respecto del 1% de la dimensión más grande de la ventana gráfica.</p>
+    <p class="demo vmax-case-1"><strong>Caso 1</strong> — <code>width: 55vmax</code>. El ancho toma como referencia la dimensión mayor.</p>
+<p class="demo vmax-case-2"><strong>Caso 2</strong> — <code>padding: 1vmax</code>. El relleno depende de la dimensión mayor.</p>
+<p class="demo vmax-case-3"><strong>Caso 3</strong> — <code>letter-spacing: 0.03vmax</code>. La separación de letras responde a la dimensión mayor.</p>
+</article>
+<article id="%">
+    <h3>[ % ] Porcentaje (comparación adicional)</h3>
+    <p>Se incluye como comparación complementaria para observar una medida relativa al contenedor.</p>
+    <p class="demo percent-case-1"><strong>Caso 1</strong> — <code>width: 75%</code>. El ancho ocupa una fracción del contenedor.</p>
+<p class="demo percent-case-2"><strong>Caso 2</strong> — <code>padding-left: 8%</code>. El espacio izquierdo se calcula proporcionalmente.</p>
+<p class="demo percent-case-3"><strong>Caso 3</strong> — <code>border-radius: 5%</code>. El radio se expresa porcentualmente.</p>
+</article>
+        </section>
+    </section>
+
+    <section id="comparacion">
+        <h2>Tabla comparativa</h2>
+        <figure>
+            <figcaption>Referencia utilizada por cada unidad relativa.</figcaption>
+            <table>
+                <caption>Medidas relativas CSS</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Unidad</th>
+                        <th rowspan="2" scope="col">Referencia</th>
+                        <th colspan="2" scope="colgroup">Uso en la experiencia</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Comportamiento esperado</th>
+                        <th scope="col">Casos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">em</th><td>Tamaño tipográfico del contexto</td><td>Escala con la fuente</td><td>width, padding, font-size</td></tr>
+                    <tr><th scope="row">ex</th><td>Altura-x de la fuente</td><td>Depende de la métrica tipográfica</td><td>width, padding, letter-spacing</td></tr>
+                    <tr><th scope="row">ch</th><td>Avance del glifo 0</td><td>Útil en medidas relacionadas con texto</td><td>width, padding, text-indent</td></tr>
+                    <tr><th scope="row">rem</th><td>Fuente del elemento raíz</td><td>Referencia global estable</td><td>width, padding, font-size</td></tr>
+                    <tr><th scope="row">lh</th><td>Altura de línea</td><td>Escala según line-height</td><td>width, padding, margin</td></tr>
+                    <tr><th scope="row">vw</th><td>1% del ancho del viewport</td><td>Cambia al variar el ancho</td><td>width, padding, letter-spacing</td></tr>
+                    <tr><th scope="row">vh</th><td>1% de la altura del viewport</td><td>Cambia al variar la altura</td><td>min-height, padding, border</td></tr>
+                    <tr><th scope="row">vmin</th><td>1% de la dimensión menor</td><td>Responde al lado menor</td><td>width, padding, border-radius</td></tr>
+                    <tr><th scope="row">vmax</th><td>1% de la dimensión mayor</td><td>Responde al lado mayor</td><td>width, padding, letter-spacing</td></tr>
+                    <tr><th scope="row">%</th><td>Contenedor de referencia</td><td>Comparación adicional</td><td>width, padding, border-radius</td></tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión de medidas relativas</h2>
+        <p>
+            Las medidas relativas facilitan que un diseño responda al contexto en el que se presenta.
+            Las unidades tipográficas cambian de acuerdo con la fuente o la altura de línea, mientras
+            que las unidades del viewport cambian al modificar las dimensiones de la ventana.
+            Esta característica permite comparar de forma directa por qué una interfaz adaptable
+            suele beneficiarse de valores relativos en determinados componentes.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>OWASP UI Lab // Experiencia 05</p>
+    <p>Laboratorio de Desarrollo de Aplicaciones - CSS</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+EXPERIENCIA 05 - VALIDACIÓN
+
+HTML:
+- index.html: medidas absolutas
+- medidasrelativas.html: medidas relativas
+- Etiquetas <div>: 0
+- Atributos style="": 0
+- HTML semántico: sí
+- Tablas con colgroup: sí
+- Tablas con colspan/rowspan: sí
+
+MEDIDAS ABSOLUTAS:
+- cm: 3 casos
+- mm: 3 casos
+- Q: 3 casos
+- in: 3 casos
+- pc: 3 casos
+- pt: 3 casos
+- px: 3 casos
+TOTAL: 21 casos
+
+MEDIDAS RELATIVAS PRINCIPALES DE LA GUÍA:
+- em: 3 casos
+- ex: 3 casos
+- ch: 3 casos
+- rem: 3 casos
+- lh: 3 casos
+- vw: 3 casos
+- vh: 3 casos
+- vmin: 3 casos
+- vmax: 3 casos
+TOTAL PRINCIPAL: 27 casos
+
+COMPARACIÓN ADICIONAL:
+- %: 3 casos
+
+TOTAL GENERAL DE DEMOSTRACIONES: 51
+
+VALIDACIÓN AUTOMÁTICA:
+{
+  "html": {
+    "index.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true
+    },
+    "medidasrelativas.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true
+    }
+  },
+  "absolute_case_counts": {
+    "cm": 3,
+    "mm": 3,
+    "Q": 3,
+    "in": 3,
+    "pc": 3,
+    "pt": 3,
+    "px": 3
+  },
+  "relative_case_counts": {
+    "em": 3,
+    "ex": 3,
+    "ch": 3,
+    "rem": 3,
+    "lh": 3,
+    "vw": 3,
+    "vh": 3,
+    "vmin": 3,
+    "vmax": 3,
+    "%": 3
+  }
+}

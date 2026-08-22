@@ -1,0 +1,39 @@
+/* =========================================================
+   EXPERIENCIA 5A - MEDIDAS ABSOLUTAS
+   7 unidades x 3 casos = 21 demostraciones
+   ========================================================= */
+
+/* CENTÍMETROS (cm) */
+.cm-case-1 { width: 12cm; max-width: 100%; padding: 12px; }
+.cm-case-2 { padding: 0.8cm; }
+.cm-case-3 { border-left-width: 0.25cm; padding: 12px; }
+
+/* MILÍMETROS (mm) */
+.mm-case-1 { width: 120mm; max-width: 100%; padding: 12px; }
+.mm-case-2 { padding: 8mm; }
+.mm-case-3 { letter-spacing: 1mm; padding: 12px; }
+
+/* CUARTOS DE MILÍMETRO (Q) */
+.q-case-1 { width: 480Q; max-width: 100%; padding: 12px; }
+.q-case-2 { padding: 32Q; }
+.q-case-3 { border-left-width: 4Q; padding: 12px; }
+
+/* PULGADAS (in) */
+.in-case-1 { width: 4.5in; max-width: 100%; padding: 12px; }
+.in-case-2 { padding: 0.25in; }
+.in-case-3 { border-left-width: 0.08in; padding: 12px; }
+
+/* PICAS (pc) */
+.pc-case-1 { width: 30pc; max-width: 100%; padding: 12px; }
+.pc-case-2 { padding: 1.5pc; }
+.pc-case-3 { border-left-width: 0.4pc; padding: 12px; }
+
+/* PUNTOS (pt) */
+.pt-case-1 { width: 360pt; max-width: 100%; padding: 12px; }
+.pt-case-2 { padding: 18pt; }
+.pt-case-3 { font-size: 13pt; padding: 12px; }
+
+/* PÍXELES (px) */
+.px-case-1 { width: 480px; max-width: 100%; padding: 12px; }
+.px-case-2 { padding: 24px; }
+.px-case-3 { border-left-width: 6px; padding: 12px; }

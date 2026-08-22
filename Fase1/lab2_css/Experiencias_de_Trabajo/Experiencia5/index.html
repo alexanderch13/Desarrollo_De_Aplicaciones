@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia 5 de CSS: comparación práctica de medidas absolutas cm, mm, Q, in, pc, pt y px.">
+    <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+    <title>Experiencia 5 - Medidas absolutas</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./medidasabsolutas.css">
+</head>
+<body>
+<header>
+    <p>[ CSS // EXPERIENCIA 05 ]</p>
+    <h1>Utilización de medidas absolutas</h1>
+    <p>Comparación visual de cm, mm, Q, in, pc, pt y px aplicada a una interfaz técnica de seguridad.</p>
+</header>
+
+<nav aria-label="Navegación principal">
+    <a href="#introduccion">./introduccion</a>
+    <a href="#casos">./casos</a>
+    <a href="#comparacion">./comparacion</a>
+    <a href="#conclusion">./conclusion</a>
+    <a href="./medidasrelativas.html">./medidas_relativas</a>
+</nav>
+
+<main>
+    <section id="introduccion">
+        <h2>Objetivo de la demostración</h2>
+        <p>
+            Esta página desarrolla la parte A de la Experiencia de Práctica N.º 05.
+            Se prueban las siete unidades absolutas listadas en la guía y se presentan
+            tres aplicaciones diferentes para cada una, con el fin de observar y comparar
+            cómo afectan el tamaño, el espaciado, la tipografía y los bordes.
+        </p>
+        <aside>
+            <h3>Control de la práctica</h3>
+            <p>
+                Total desarrollado: <strong>7 unidades absolutas × 3 casos = 21 casos</strong>.
+                Todas las reglas se encuentran en <code>medidasabsolutas.css</code> y no se usan estilos en línea.
+            </p>
+        </aside>
+    </section>
+
+    <section id="casos">
+        <h2>Casos prácticos por unidad</h2>
+        <p>Cada bloque conserva el mismo contenido para facilitar la comparación visual entre unidades.</p>
+        <section class="unit-grid" aria-label="Demostraciones de medidas absolutas">
+            <article id="cm">
+    <h3>[ cm ] Centímetros</h3>
+    <p>Unidad física absoluta. La guía la presenta como una unidad que no cambia en relación con otro elemento.</p>
+    <p class="demo cm-case-1"><strong>Caso 1</strong> — <code>width: 12cm</code>. Compara un ancho expresado directamente en centímetros.</p>
+<p class="demo cm-case-2"><strong>Caso 2</strong> — <code>padding: 0.8cm</code>. El espacio interior se define con centímetros.</p>
+<p class="demo cm-case-3"><strong>Caso 3</strong> — <code>border-left-width: 0.25cm</code>. El grosor del borde utiliza centímetros.</p>
+</article>
+<article id="mm">
+    <h3>[ mm ] Milímetros</h3>
+    <p>Permite expresar dimensiones físicas en milímetros.</p>
+    <p class="demo mm-case-1"><strong>Caso 1</strong> — <code>width: 120mm</code>. Ancho fijado en milímetros.</p>
+<p class="demo mm-case-2"><strong>Caso 2</strong> — <code>padding: 8mm</code>. Espaciado interior medido en milímetros.</p>
+<p class="demo mm-case-3"><strong>Caso 3</strong> — <code>letter-spacing: 1mm</code>. Separación de caracteres expresada en milímetros.</p>
+</article>
+<article id="Q">
+    <h3>[ Q ] Cuartos de milímetro</h3>
+    <p>La guía define 1Q como la cuadragésima parte de un centímetro.</p>
+    <p class="demo q-case-1"><strong>Caso 1</strong> — <code>width: 480Q</code>. Ancho expresado en unidades Q.</p>
+<p class="demo q-case-2"><strong>Caso 2</strong> — <code>padding: 32Q</code>. Relleno interno en cuartos de milímetro.</p>
+<p class="demo q-case-3"><strong>Caso 3</strong> — <code>border-left-width: 4Q</code>. Grosor del borde usando Q.</p>
+</article>
+<article id="in">
+    <h3>[ in ] Pulgadas</h3>
+    <p>La guía indica que 1in equivale a 2,54cm y a 96px.</p>
+    <p class="demo in-case-1"><strong>Caso 1</strong> — <code>width: 4.5in</code>. Ancho configurado en pulgadas.</p>
+<p class="demo in-case-2"><strong>Caso 2</strong> — <code>padding: 0.25in</code>. Relleno interior en pulgadas.</p>
+<p class="demo in-case-3"><strong>Caso 3</strong> — <code>border-left-width: 0.08in</code>. Borde izquierdo definido en pulgadas.</p>
+</article>
+<article id="pc">
+    <h3>[ pc ] Picas</h3>
+    <p>Unidad tipográfica absoluta; la guía indica que 1pc equivale a 1/6 de pulgada.</p>
+    <p class="demo pc-case-1"><strong>Caso 1</strong> — <code>width: 30pc</code>. Ancho expresado en picas.</p>
+<p class="demo pc-case-2"><strong>Caso 2</strong> — <code>padding: 1.5pc</code>. Espaciado interior expresado en picas.</p>
+<p class="demo pc-case-3"><strong>Caso 3</strong> — <code>border-left-width: 0.4pc</code>. Grosor del borde en picas.</p>
+</article>
+<article id="pt">
+    <h3>[ pt ] Puntos</h3>
+    <p>Unidad tipográfica absoluta. La guía establece que 1pt equivale a 1/72 de pulgada.</p>
+    <p class="demo pt-case-1"><strong>Caso 1</strong> — <code>width: 360pt</code>. Ancho expresado en puntos.</p>
+<p class="demo pt-case-2"><strong>Caso 2</strong> — <code>padding: 18pt</code>. Relleno interno en puntos.</p>
+<p class="demo pt-case-3"><strong>Caso 3</strong> — <code>font-size: 13pt</code>. Tamaño tipográfico definido en puntos.</p>
+</article>
+<article id="px">
+    <h3>[ px ] Píxeles</h3>
+    <p>La guía presenta el píxel como unidad absoluta y relaciona 96px con una pulgada.</p>
+    <p class="demo px-case-1"><strong>Caso 1</strong> — <code>width: 480px</code>. Ancho fijo en píxeles.</p>
+<p class="demo px-case-2"><strong>Caso 2</strong> — <code>padding: 24px</code>. Relleno interno en píxeles.</p>
+<p class="demo px-case-3"><strong>Caso 3</strong> — <code>border-left-width: 6px</code>. Grosor del borde en píxeles.</p>
+</article>
+        </section>
+    </section>
+
+    <section id="comparacion">
+        <h2>Tabla comparativa</h2>
+        <p>La equivalencia mostrada reproduce las relaciones indicadas en el marco teórico de la guía.</p>
+        <figure>
+            <figcaption>Resumen de unidades absolutas utilizadas en la experiencia.</figcaption>
+            <table>
+                <caption>Medidas absolutas CSS</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Unidad</th>
+                        <th rowspan="2" scope="col">Nombre</th>
+                        <th colspan="2" scope="colgroup">Demostración</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Referencia de la guía</th>
+                        <th scope="col">Casos implementados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">cm</th><td>Centímetros</td><td>1cm = 96px / 2,54</td><td>width, padding, border</td></tr>
+                    <tr><th scope="row">mm</th><td>Milímetros</td><td>1mm = 1/10 de 1cm</td><td>width, padding, letter-spacing</td></tr>
+                    <tr><th scope="row">Q</th><td>Cuartos de milímetro</td><td>1Q = 1/40 de 1cm</td><td>width, padding, border</td></tr>
+                    <tr><th scope="row">in</th><td>Pulgadas</td><td>1in = 2,54cm = 96px</td><td>width, padding, border</td></tr>
+                    <tr><th scope="row">pc</th><td>Picas</td><td>1pc = 1/6 de 1in</td><td>width, padding, border</td></tr>
+                    <tr><th scope="row">pt</th><td>Puntos</td><td>1pt = 1/72 de 1in</td><td>width, padding, font-size</td></tr>
+                    <tr><th scope="row">px</th><td>Píxeles</td><td>1px = 1/96 de 1in</td><td>width, padding, border</td></tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión de medidas absolutas</h2>
+        <p>
+            Las unidades absolutas permiten asignar valores definidos sin depender directamente del
+            tamaño tipográfico de un elemento padre o del viewport. En la comparación se observa que
+            todas pueden expresar dimensiones y espacios, aunque su escala resulta diferente.
+            Para interfaces web resulta especialmente intuitivo trabajar con píxeles, mientras que
+            las unidades físicas y tipográficas permiten comprender mejor las equivalencias del sistema CSS.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>OWASP UI Lab // Experiencia 05</p>
+    <p>Laboratorio de Desarrollo de Aplicaciones - CSS</p>
+</footer>
+</body>
+</html>
