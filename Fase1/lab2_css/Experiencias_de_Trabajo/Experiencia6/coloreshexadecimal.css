@@ -1,0 +1,30 @@
+/* Experiencia 6C: colores mediante código hexadecimal */
+.hex-red .swatch {
+    background-color: #dc2626;
+    border-color: #7f1d1d;
+}
+
+.hex-dark .swatch {
+    background-color: #151515;
+    border-color: #ef4444;
+}
+
+.hex-blue .swatch {
+    background-color: #1e40af;
+    border-color: #60a5fa;
+}
+
+.hex-purple .swatch {
+    background-color: #6d28d9;
+    border-color: #c4b5fd;
+}
+
+.hex-green .swatch {
+    background-color: #166534;
+    border-color: #86efac;
+}
+
+.hex-short .swatch {
+    background-color: #900;
+    border-color: #f66;
+}

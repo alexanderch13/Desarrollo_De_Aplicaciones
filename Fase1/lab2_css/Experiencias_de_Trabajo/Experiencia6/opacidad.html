@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia 6 de CSS: demostración de colores mediante opacidad.">
+    <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+    <title>Experiencia 6 - Configuración de colores con opacidad</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./medidasrelativas.css">
+</head>
+<body>
+<header>
+    <p>[ CSS // EXPERIENCIA 06 ]</p>
+    <h1>Configuración de colores con opacidad</h1>
+    <p>Comparación entre canales alfa y la propiedad opacity.</p>
+</header>
+
+<nav aria-label="Páginas de la experiencia 6">
+    <a href="./index.html">./nombres</a>
+<a href="./rgb.html">./rgb</a>
+<a href="./hexadecimal.html">./hex</a>
+<a href="./hls.html">./hsl</a>
+<a href="./opacidad.html">./opacidad</a>
+</nav>
+
+<main>
+    <section id="objetivo">
+        <h2>Objetivo de esta parte</h2>
+        <p>El encabezado de la guía pide colores con opacidad, pero sus pasos repiten por aparente error el nombre medidasrelativas.css y texto de la experiencia anterior. Para no ocultar esa inconsistencia, esta entrega conserva literalmente el nombre medidasrelativas.css y lo utiliza para demostrar opacidad.</p>
+        <aside>
+            <h3>Control de cumplimiento</h3>
+            <p>
+                Esta página implementa <strong>6 casos</strong>,
+                superando el mínimo de tres solicitado. No utiliza etiquetas <code>&lt;div&gt;</code>
+                ni estilos en línea.
+            </p>
+        </aside>
+    </section>
+
+    <section id="demostraciones">
+        <h2>Demostraciones visuales</h2>
+        <p>
+            Cada tarjeta utiliza el mismo patrón estructural para que la diferencia principal
+            observada sea la forma en la que se define o modifica el color.
+        </p>
+        <section class="case-grid" aria-label="Casos de color mediante opacidad">
+            <article class="opacity-rgba">
+            <h3>Caso 1</h3>
+            <p>Canal alfa mediante rgba().</p>
+            <p class="swatch">rgba(220, 38, 38, 0.45)</p>
+        </article>
+<article class="opacity-hsla">
+            <h3>Caso 2</h3>
+            <p>Canal alfa mediante hsla().</p>
+            <p class="swatch">hsla(221, 71%, 40%, 0.45)</p>
+        </article>
+<article class="opacity-hex">
+            <h3>Caso 3</h3>
+            <p>Hexadecimal de 8 dígitos con alfa.</p>
+            <p class="swatch">#7c3aed73</p>
+        </article>
+<article class="opacity-property-25">
+            <h3>Caso 4</h3>
+            <p>Opacidad aplicada al elemento completo.</p>
+            <p class="swatch">opacity: 0.25</p>
+        </article>
+<article class="opacity-property-55">
+            <h3>Caso 5</h3>
+            <p>Nivel medio de opacidad.</p>
+            <p class="swatch">opacity: 0.55</p>
+        </article>
+<article class="opacity-property-85">
+            <h3>Caso 6</h3>
+            <p>Nivel alto de opacidad.</p>
+            <p class="swatch">opacity: 0.85</p>
+        </article>
+        </section>
+    </section>
+
+    <section id="comparacion">
+        <h2>Registro comparativo</h2>
+        <figure>
+            <figcaption>Comparación técnica de los casos implementados.</figcaption>
+            <table>
+                <caption>Experiencia 06 — opacidad</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Valor</th>
+                        <th colspan="3" scope="colgroup">Análisis del caso</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Formato</th>
+                        <th scope="col">Uso</th>
+                        <th scope="col">Referencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">rgba(..., 0.45)</th><td>Canal alfa</td><td>Solo el color configurado</td><td>45%</td></tr>
+<tr><th scope="row">hsla(..., 0.45)</th><td>Canal alfa</td><td>Solo el color configurado</td><td>45%</td></tr>
+<tr><th scope="row">#7c3aed73</th><td>Hex con alfa</td><td>Solo el color configurado</td><td>Aproximadamente 45%</td></tr>
+<tr><th scope="row">opacity: 0.25</th><td>Propiedad</td><td>Elemento completo</td><td>25%</td></tr>
+<tr><th scope="row">opacity: 0.55</th><td>Propiedad</td><td>Elemento completo</td><td>55%</td></tr>
+<tr><th scope="row">opacity: 0.85</th><td>Propiedad</td><td>Elemento completo</td><td>85%</td></tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>La transparencia puede incorporarse dentro del propio color mediante un canal alfa o aplicarse al elemento completo con opacity. La diferencia es importante: opacity también afecta al contenido descendiente del elemento.</p>
+    </section>
+</main>
+
+<footer>
+    <p>OWASP UI Lab // Experiencia 06</p>
+    <p>Laboratorio de Desarrollo de Aplicaciones - CSS</p>
+</footer>
+</body>
+</html>

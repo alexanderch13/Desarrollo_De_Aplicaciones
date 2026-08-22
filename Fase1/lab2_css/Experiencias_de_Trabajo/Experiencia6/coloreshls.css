@@ -1,0 +1,30 @@
+/* La guía nombra esta sección como HLS; CSS utiliza la función válida hsl(). */
+.hsl-red .swatch {
+    background-color: hsl(0, 72%, 51%);
+    border-color: hsl(0, 63%, 31%);
+}
+
+.hsl-orange .swatch {
+    background-color: hsl(25, 90%, 48%);
+    border-color: hsl(39, 100%, 50%);
+}
+
+.hsl-blue .swatch {
+    background-color: hsl(221, 71%, 40%);
+    border-color: hsl(213, 94%, 68%);
+}
+
+.hsl-purple .swatch {
+    background-color: hsl(263, 70%, 50%);
+    border-color: hsl(255, 92%, 76%);
+}
+
+.hsl-green .swatch {
+    background-color: hsl(142, 72%, 29%);
+    border-color: hsl(142, 69%, 58%);
+}
+
+.hsl-neutral .swatch {
+    background-color: hsl(0, 0%, 18%);
+    border-color: hsl(0, 0%, 65%);
+}

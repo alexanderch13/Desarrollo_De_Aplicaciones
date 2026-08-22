@@ -1,0 +1,30 @@
+/* Experiencia 6A: colores mediante nombres CSS */
+.name-red .swatch {
+    background-color: crimson;
+    border-color: darkred;
+}
+
+.name-orange .swatch {
+    background-color: orangered;
+    border-color: orange;
+}
+
+.name-blue .swatch {
+    background-color: midnightblue;
+    border-color: deepskyblue;
+}
+
+.name-purple .swatch {
+    background-color: indigo;
+    border-color: violet;
+}
+
+.name-green .swatch {
+    background-color: darkgreen;
+    border-color: limegreen;
+}
+
+.name-neutral .swatch {
+    background-color: dimgray;
+    border-color: silver;
+}

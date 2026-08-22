@@ -1,0 +1,30 @@
+/* Experiencia 6B: RGB con valores enteros y porcentajes */
+.rgb-int-red .swatch {
+    background-color: rgb(220, 38, 38);
+    border-color: rgb(127, 29, 29);
+}
+
+.rgb-int-dark .swatch {
+    background-color: rgb(21, 21, 21);
+    border-color: rgb(239, 68, 68);
+}
+
+.rgb-int-blue .swatch {
+    background-color: rgb(30, 64, 175);
+    border-color: rgb(96, 165, 250);
+}
+
+.rgb-percent-red .swatch {
+    background-color: rgb(86%, 15%, 15%);
+    border-color: rgb(50%, 11%, 11%);
+}
+
+.rgb-percent-cyan .swatch {
+    background-color: rgb(0%, 45%, 55%);
+    border-color: rgb(40%, 90%, 100%);
+}
+
+.rgb-percent-purple .swatch {
+    background-color: rgb(42%, 18%, 68%);
+    border-color: rgb(78%, 58%, 100%);
+}

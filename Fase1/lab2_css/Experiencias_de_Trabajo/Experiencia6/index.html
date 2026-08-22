@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia 6 de CSS: demostración de colores mediante nombres CSS.">
+    <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+    <title>Experiencia 6 - Configuración de colores por nombre</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./colorespornombre.css">
+</head>
+<body>
+<header>
+    <p>[ CSS // EXPERIENCIA 06 ]</p>
+    <h1>Configuración de colores por nombre</h1>
+    <p>Uso de nombres CSS para definir colores de fondo y borde en una interfaz técnica.</p>
+</header>
+
+<nav aria-label="Páginas de la experiencia 6">
+    <a href="./index.html">./nombres</a>
+<a href="./rgb.html">./rgb</a>
+<a href="./hexadecimal.html">./hex</a>
+<a href="./hls.html">./hsl</a>
+<a href="./opacidad.html">./opacidad</a>
+</nav>
+
+<main>
+    <section id="objetivo">
+        <h2>Objetivo de esta parte</h2>
+        <p>La guía pide crear colorespornombre.css y utilizar por lo menos 3 casos con colores expresados mediante su nombre.</p>
+        <aside>
+            <h3>Control de cumplimiento</h3>
+            <p>
+                Esta página implementa <strong>6 casos</strong>,
+                superando el mínimo de tres solicitado. No utiliza etiquetas <code>&lt;div&gt;</code>
+                ni estilos en línea.
+            </p>
+        </aside>
+    </section>
+
+    <section id="demostraciones">
+        <h2>Demostraciones visuales</h2>
+        <p>
+            Cada tarjeta utiliza el mismo patrón estructural para que la diferencia principal
+            observada sea la forma en la que se define o modifica el color.
+        </p>
+        <section class="case-grid" aria-label="Casos de color mediante nombres CSS">
+            <article class="name-red">
+            <h3>Caso 1</h3>
+            <p>Familia roja para estados críticos.</p>
+            <p class="swatch">crimson / darkred</p>
+        </article>
+<article class="name-orange">
+            <h3>Caso 2</h3>
+            <p>Familia naranja para advertencias.</p>
+            <p class="swatch">orangered / orange</p>
+        </article>
+<article class="name-blue">
+            <h3>Caso 3</h3>
+            <p>Familia azul para información.</p>
+            <p class="swatch">midnightblue / deepskyblue</p>
+        </article>
+<article class="name-purple">
+            <h3>Caso 4</h3>
+            <p>Contraste violeta para clasificación.</p>
+            <p class="swatch">indigo / violet</p>
+        </article>
+<article class="name-green">
+            <h3>Caso 5</h3>
+            <p>Familia verde para estado correcto.</p>
+            <p class="swatch">darkgreen / limegreen</p>
+        </article>
+<article class="name-neutral">
+            <h3>Caso 6</h3>
+            <p>Escala neutra para elementos secundarios.</p>
+            <p class="swatch">dimgray / silver</p>
+        </article>
+        </section>
+    </section>
+
+    <section id="comparacion">
+        <h2>Registro comparativo</h2>
+        <figure>
+            <figcaption>Comparación técnica de los casos implementados.</figcaption>
+            <table>
+                <caption>Experiencia 06 — nombres CSS</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Valor</th>
+                        <th colspan="3" scope="colgroup">Análisis del caso</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Formato</th>
+                        <th scope="col">Uso</th>
+                        <th scope="col">Referencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">crimson</th><td>Nombre CSS</td><td>Fondo de riesgo crítico</td><td>Alta presencia visual</td></tr>
+<tr><th scope="row">orangered</th><td>Nombre CSS</td><td>Advertencia</td><td>Contraste cálido</td></tr>
+<tr><th scope="row">midnightblue</th><td>Nombre CSS</td><td>Información</td><td>Contraste frío</td></tr>
+<tr><th scope="row">indigo</th><td>Nombre CSS</td><td>Clasificación</td><td>Acento alternativo</td></tr>
+<tr><th scope="row">darkgreen</th><td>Nombre CSS</td><td>Estado correcto</td><td>Semántica positiva</td></tr>
+<tr><th scope="row">dimgray</th><td>Nombre CSS</td><td>Contenido secundario</td><td>Baja prioridad</td></tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>Los nombres CSS permiten trabajar con colores de manera legible y directa. Son útiles cuando se busca claridad en el código, aunque ofrecen menos control numérico que RGB, hexadecimal o HSL.</p>
+    </section>
+</main>
+
+<footer>
+    <p>OWASP UI Lab // Experiencia 06</p>
+    <p>Laboratorio de Desarrollo de Aplicaciones - CSS</p>
+</footer>
+</body>
+</html>

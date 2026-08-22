@@ -1,0 +1,94 @@
+EXPERIENCIA 06 - VALIDACIÓN AUTOMÁTICA
+
+Requisito general del proyecto:
+- Etiquetas <div>: 0
+- Estilos inline: 0
+- HTML semántico: sí
+- CSS externo: sí
+- Tablas avanzadas: sí
+
+Casos:
+- Colores por nombre: 6
+- RGB: 6 (enteros + porcentajes)
+- Hexadecimal: 6
+- HSL: 6
+- Opacidad: 6
+- TOTAL: 30 casos
+
+Detalle:
+{
+  "html": {
+    "hexadecimal.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_semantic_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true,
+      "linked_css": [
+        "base.css",
+        "coloreshexadecimal.css"
+      ]
+    },
+    "hls.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_semantic_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true,
+      "linked_css": [
+        "base.css",
+        "coloreshls.css"
+      ]
+    },
+    "index.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_semantic_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true,
+      "linked_css": [
+        "base.css",
+        "colorespornombre.css"
+      ]
+    },
+    "opacidad.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_semantic_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true,
+      "linked_css": [
+        "base.css",
+        "medidasrelativas.css"
+      ]
+    },
+    "rgb.html": {
+      "div_tags": 0,
+      "inline_styles": 0,
+      "has_semantic_main": true,
+      "has_table": true,
+      "has_colgroup": true,
+      "has_colspan": true,
+      "has_rowspan": true,
+      "linked_css": [
+        "base.css",
+        "coloresrgb.css"
+      ]
+    }
+  },
+  "case_counts": {
+    "nombre": 6,
+    "rgb": 6,
+    "hexadecimal": 6,
+    "hsl": 6,
+    "opacidad": 6
+  }
+}
