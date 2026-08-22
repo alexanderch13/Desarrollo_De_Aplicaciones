@@ -80,7 +80,7 @@
             <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Prueba de placeholder y selector de archivo</legend>
-                    <div class="form-grid">
+                    <section class="form-grid" aria-label="Campos para probar pseudo-elementos de formulario">
                         <label class="field" for="nombre-api">
                             Nombre de API
                             <input id="nombre-api" name="nombre_api" type="text" placeholder="Ej.: API de inventario" required>
@@ -89,7 +89,7 @@
                             Responsable técnico
                             <input id="owner" name="owner" type="text" placeholder="Ej.: Equipo Backend" required>
                         </label>
-                    </div>
+                    </section>
                     <label class="field" for="detalle">
                         Observaciones
                         <textarea id="detalle" name="detalle" rows="4" placeholder="Describa los controles que fueron revisados"></textarea>

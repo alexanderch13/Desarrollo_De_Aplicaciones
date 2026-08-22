@@ -3,3 +3,5 @@ QA automático
 - Pseudo-clases distintas detectadas: 19
 - Pseudo-elementos distintos detectados: 8
 - Enlaces CSS locales verificados: True
+
+Verificación semántica: 0 etiquetas DIV en los tres documentos HTML.

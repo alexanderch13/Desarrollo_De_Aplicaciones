@@ -44,7 +44,7 @@
 
         <section id="casos" data-panel="selectors">
             <h2>Casos de coincidencia implementados</h2>
-            <div class="cards">
+            <section class="cards" aria-label="Casos de coincidencia por atributos">
                 <article class="card" data-panel="risk" data-level="critico" data-code="API1-2023">
                     <h3>API1:2023 // BOLA</h3>
                     <p>El atributo <code>data-level="critico"</code> permite dar prioridad visual a este caso mediante coincidencia exacta.</p>
@@ -57,7 +57,7 @@
                     <h3>API8:2023 // Security Misconfiguration</h3>
                     <p>La presentación cambia según el valor almacenado en el atributo personalizado <code>data-level</code>.</p>
                 </article>
-            </div>
+            </section>
 
             <article data-panel="links">
                 <h3>Coincidencias aplicadas a enlaces</h3>
@@ -76,7 +76,7 @@
             <form action="https://httpbin.org/post" method="post">
                 <fieldset>
                     <legend>Simulación académica de registro de una API</legend>
-                    <div class="form-grid">
+                    <section class="form-grid" aria-label="Campos de registro de la API">
                         <label class="field" for="correo">
                             Correo de prueba
                             <input id="correo" name="correo" type="email" placeholder="estudiante@example.com" required>
@@ -97,7 +97,7 @@
                             Endpoint legado
                             <input id="deprecated" name="deprecated" type="text" value="/api/v0/legacy" disabled>
                         </label>
-                    </div>
+                    </section>
                     <p><button type="submit">Enviar a endpoint de prueba</button></p>
                     <small>El destino es un endpoint público de pruebas HTTP. No se deben introducir datos personales ni credenciales reales.</small>
                 </fieldset>
@@ -106,7 +106,7 @@
 
         <section id="matriz" data-panel="table">
             <h2>Matriz de selectores demostrados</h2>
-            <div class="table-wrap">
+            <figure class="table-wrap">
                 <table>
                     <caption>Resumen técnico de coincidencias de atributos</caption>
                     <colgroup>
@@ -127,7 +127,7 @@
                         <tr><td><code>[lang|="es"]</code></td><td>Idioma/prefijo</td><td>Coincide con es o con una variante que empieza por es-.</td></tr>
                     </tbody>
                 </table>
-            </div>
+            </figure>
         </section>
 
         <section id="conclusion" data-panel="result" data-state="verificado final">

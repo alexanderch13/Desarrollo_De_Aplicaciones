@@ -57,7 +57,7 @@
             <form action="https://httpbin.org/post" method="post">
                 <fieldset>
                     <legend>Prueba de pseudo-clases de formulario</legend>
-                    <div class="form-grid">
+                    <section class="form-grid" aria-label="Campos para probar estados de formulario">
                         <label class="field" for="alias">
                             Alias requerido
                             <input id="alias" name="alias" type="text" minlength="3" placeholder="mínimo 3 caracteres" required>
@@ -82,7 +82,7 @@
                             Campo deshabilitado
                             <input id="deshabilitado" type="text" value="No editable" disabled>
                         </label>
-                    </div>
+                    </section>
                     <p class="choice">
                         <label class="choice"><input type="checkbox" name="revision" required><span>Confirmo que revisé los controles</span></label>
                     </p>

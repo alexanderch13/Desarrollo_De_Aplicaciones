@@ -35,3 +35,8 @@ Esta carpeta contiene las tres evidencias solicitadas en la guía de la Sesión 
 4. Revisar `REGISTRO_Y_CONCLUSIONES.md` como evidencia escrita.
 
 > Los formularios apuntan a un endpoint público de prueba HTTP. No ingresar información real, personal o confidencial.
+
+
+## Criterio semántico adicional
+
+Esta versión elimina por completo las etiquetas genéricas `div`. La agrupación visual se realiza con elementos semánticos (`section`, `article`, `figure`, `fieldset`) y CSS Grid/Flexbox.
