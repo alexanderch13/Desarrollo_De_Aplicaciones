@@ -1,0 +1,165 @@
+<!--
+  ------------------------------------------------------------------
+  | Autor: CHIPANA FLORES ALEXANDER TOMAS - DESARROLLO DE APLICACIONES |
+  | GRUPO - 06                                                   |
+  | EXPERIENCIA DE PRÁCTICA N° 02: USO DE SELECTORES                |
+  ------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia de práctica N° 02: uso de selectores CSS por nombre, clase e ID aplicado a una página educativa sobre OWASP API Security Top 10.">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="keywords" content="CSS, selectores, OWASP, API Security, HTML5, Desarrollo de Aplicaciones">
+    <title>Selectores por ID | OWASP API Security</title>
+    <link rel="stylesheet" href="id.css">
+</head>
+<body id="pagina">
+    <header id="cabecera">
+        <p id="etiqueta-superior">[ EXPERIENCIA 02 // CSS SELECTORS ]</p>
+        <h1 id="titulo-principal">OWASP API Security Top 10</h1>
+        <p id="subtitulo">Aplicación práctica de selectores CSS por ID</p>
+        <p id="firma">Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+
+    <nav id="navegacion">
+        <a id="nav-inicio" href="#inicio">./inicio</a>
+        <a id="nav-tecnologias" href="#tecnologias">./tecnologias</a>
+        <a id="nav-owasp" href="#owasp">./owasp_top10</a>
+        <a id="nav-controles" href="#controles">./controles</a>
+        <a id="nav-registro" href="#registro">./registro</a>
+    </nav>
+
+    <main id="contenido">
+        <section id="inicio">
+            <h2 id="inicio-titulo">Uso de selectores por ID</h2>
+            <p id="inicio-texto">Esta segunda copia utiliza identificadores únicos para seleccionar elementos concretos del documento. Cada ID aparece una sola vez en el HTML y permite aplicar una regla a un componente específico.</p>
+            <aside id="aviso-inicio">
+                <h3 id="aviso-inicio-titulo">Objetivo de la evidencia</h3>
+                <p id="aviso-inicio-texto">Demostrar el uso de selectores como #cabecera, #titulo-principal, #inicio y #riesgo-1. A diferencia de una clase, un ID debe identificar de manera única un elemento del documento.</p>
+            </aside>
+        </section>
+
+        <section id="tecnologias">
+            <h2 id="tecnologias-titulo">¿Cómo trabajan las APIs?</h2>
+            <p id="tecnologias-texto">Existen diferentes tecnologías y arquitecturas para implementar APIs. En esta versión cada bloque recibe un identificador único para comprobar la precisión del selector por ID.</p>
+            <article id="tecnologia-1">
+                <h3 id="tecnologia-1-titulo">[ REST ] Representational State Transfer</h3>
+                <ul id="tecnologia-1-lista">
+                    <li id="tec-1-item-1">Arquitectura orientada a recursos identificados mediante URLs.</li>
+                    <li id="tec-1-item-2">Utiliza métodos HTTP como GET, POST, PUT, PATCH y DELETE.</li>
+                    <li id="tec-1-item-3">Es común trabajar con representaciones JSON para intercambiar información.</li>
+                </ul>
+            </article>
+            <article id="tecnologia-2">
+                <h3 id="tecnologia-2-titulo">[ GraphQL ] Lenguaje de consulta para APIs</h3>
+                <ul id="tecnologia-2-lista">
+                    <li id="tec-2-item-1">Permite que el cliente solicite los campos que necesita.</li>
+                    <li id="tec-2-item-2">Trabaja habitualmente sobre un endpoint para consultas y mutaciones.</li>
+                    <li id="tec-2-item-3">Su esquema describe tipos y operaciones disponibles.</li>
+                </ul>
+            </article>
+            <article id="tecnologia-3">
+                <h3 id="tecnologia-3-titulo">[ gRPC ] Remote Procedure Call</h3>
+                <ul id="tecnologia-3-lista">
+                    <li id="tec-3-item-1">Permite invocar operaciones remotas mediante contratos definidos.</li>
+                    <li id="tec-3-item-2">Puede utilizar Protocol Buffers para describir mensajes y servicios.</li>
+                    <li id="tec-3-item-3">Es común en comunicaciones entre servicios y sistemas distribuidos.</li>
+                </ul>
+            </article>
+            <article id="tecnologia-4">
+                <h3 id="tecnologia-4-titulo">[ SOAP ] Simple Object Access Protocol</h3>
+                <ul id="tecnologia-4-lista">
+                    <li id="tec-4-item-1">Protocolo de mensajería basado en XML.</li>
+                    <li id="tec-4-item-2">La estructura de los mensajes utiliza elementos como Envelope, Header y Body.</li>
+                    <li id="tec-4-item-3">Se encuentra en integraciones empresariales y servicios con contratos formales.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="owasp">
+            <h2 id="owasp-titulo">OWASP API Security Top 10 - 2023</h2>
+            <p id="owasp-texto">Los siguientes riesgos organizan problemas relacionados con autorización, autenticación, consumo de recursos, lógica de negocio, configuración y administración de APIs.</p>
+            <article id="riesgo-1">
+                <h3 id="riesgo-1-titulo">API1:2023 // Broken Object Level Authorization - BOLA</h3>
+                <p id="riesgo-1-descripcion">Aparece cuando una API trabaja con identificadores de objetos pero no verifica correctamente si el usuario autenticado tiene autorización para acceder al recurso.</p>
+                <p id="riesgo-1-nota"><strong id="riesgo-1-enfasis">Observación:</strong> Ejemplo académico: modificar el ID de un objeto en una petición permite comprobar si el servidor valida correctamente la autorización.</p>
+            </article>
+            <article id="riesgo-2">
+                <h3 id="riesgo-2-titulo">API2:2023 // Broken Authentication</h3>
+                <p id="riesgo-2-descripcion">Ocurre cuando los mecanismos utilizados para identificar a los usuarios presentan fallas que pueden comprometer credenciales, tokens o mecanismos de autenticación.</p>
+                <p id="riesgo-2-nota"><strong id="riesgo-2-enfasis">Observación:</strong> Aspectos a revisar: protección de credenciales, control de intentos, manejo de sesiones y tratamiento seguro de tokens.</p>
+            </article>
+            <article id="riesgo-3">
+                <h3 id="riesgo-3-titulo">API3:2023 // Broken Object Property Level Authorization</h3>
+                <p id="riesgo-3-descripcion">Se relaciona con una validación incorrecta de las propiedades de los objetos que una API permite leer o modificar.</p>
+                <p id="riesgo-3-nota"><strong id="riesgo-3-enfasis">Observación:</strong> Puede provocar exposición excesiva de información o permitir cambios sobre propiedades que deberían estar protegidas.</p>
+            </article>
+            <article id="riesgo-4">
+                <h3 id="riesgo-4-titulo">API4:2023 // Unrestricted Resource Consumption</h3>
+                <p id="riesgo-4-descripcion">Las peticiones a una API consumen CPU, memoria, almacenamiento y ancho de banda; si no existen límites adecuados, los recursos pueden agotarse.</p>
+                <p id="riesgo-4-nota"><strong id="riesgo-4-enfasis">Observación:</strong> Controles relacionados: límites de tamaño, paginación controlada y restricciones sobre el consumo de recursos.</p>
+            </article>
+            <article id="riesgo-5">
+                <h3 id="riesgo-5-titulo">API5:2023 // Broken Function Level Authorization - BFLA</h3>
+                <p id="riesgo-5-descripcion">Aparece cuando una API no controla correctamente qué funciones puede ejecutar cada rol o tipo de usuario.</p>
+                <p id="riesgo-5-nota"><strong id="riesgo-5-enfasis">Observación:</strong> Ejemplo académico: verificar que una cuenta regular no pueda ejecutar funciones reservadas para administración.</p>
+            </article>
+            <article id="riesgo-6">
+                <h3 id="riesgo-6-titulo">API6:2023 // Unrestricted Access to Sensitive Business Flows</h3>
+                <p id="riesgo-6-descripcion">Se produce cuando funcionalidades importantes para el negocio pueden utilizarse de manera automatizada y abusiva sin suficientes controles.</p>
+                <p id="riesgo-6-nota"><strong id="riesgo-6-enfasis">Observación:</strong> Los flujos sensibles necesitan controles que reduzcan automatización abusiva y uso repetitivo no previsto.</p>
+            </article>
+            <article id="riesgo-7">
+                <h3 id="riesgo-7-titulo">API7:2023 // Server-Side Request Forgery - SSRF</h3>
+                <p id="riesgo-7-descripcion">Ocurre cuando una API obtiene un recurso remoto utilizando una URI proporcionada por un usuario sin validarla correctamente.</p>
+                <p id="riesgo-7-nota"><strong id="riesgo-7-enfasis">Observación:</strong> Funciones como webhooks, carga por URL e integraciones externas requieren validación y restricciones apropiadas.</p>
+            </article>
+            <article id="riesgo-8">
+                <h3 id="riesgo-8-titulo">API8:2023 // Security Misconfiguration</h3>
+                <p id="riesgo-8-descripcion">Las configuraciones incorrectas en servidores, frameworks o servicios que soportan una API pueden exponer información o aumentar la superficie de ataque.</p>
+                <p id="riesgo-8-nota"><strong id="riesgo-8-enfasis">Observación:</strong> Se deben revisar métodos innecesarios, mensajes de error, configuraciones de seguridad y servicios expuestos.</p>
+            </article>
+            <article id="riesgo-9">
+                <h3 id="riesgo-9-titulo">API9:2023 // Improper Inventory Management</h3>
+                <p id="riesgo-9-descripcion">Una organización puede mantener versiones antiguas, endpoints olvidados o APIs no documentadas que continúan accesibles.</p>
+                <p id="riesgo-9-nota"><strong id="riesgo-9-enfasis">Observación:</strong> Mantener un inventario actualizado ayuda a identificar versiones antiguas, servicios internos expuestos y endpoints de prueba.</p>
+            </article>
+            <article id="riesgo-10">
+                <h3 id="riesgo-10-titulo">API10:2023 // Unsafe Consumption of APIs</h3>
+                <p id="riesgo-10-descripcion">Ocurre cuando una aplicación confía excesivamente en información proveniente de APIs externas y procesa esos datos sin las validaciones necesarias.</p>
+                <p id="riesgo-10-nota"><strong id="riesgo-10-enfasis">Observación:</strong> Los datos recibidos desde servicios externos también deben tratarse como entradas que requieren validación.</p>
+            </article>
+        </section>
+
+        <section id="controles">
+            <h2 id="controles-titulo">Controles de seguridad</h2>
+            <p id="controles-texto">Los riesgos estudiados muestran la importancia de aplicar controles de autenticación, autorización, validación de entradas y limitaciones sobre los recursos utilizados por una API.</p>
+            <ol id="controles-lista">
+                <li id="control-1">Validar autorización antes de entregar o modificar recursos.</li>
+                <li id="control-2">Proteger credenciales, sesiones y tokens de autenticación.</li>
+                <li id="control-3">Aplicar límites al consumo de recursos.</li>
+                <li id="control-4">Validar la información recibida, incluso desde servicios externos.</li>
+                <li id="control-5">Mantener actualizado el inventario de APIs y versiones.</li>
+                <li id="control-6">Eliminar configuraciones y servicios innecesarios.</li>
+            </ol>
+        </section>
+
+        <section id="registro">
+            <h2 id="registro-titulo">Registro de verificación</h2>
+            <p id="registro-texto">Se verificó en el navegador que cada selector por ID afectara únicamente al elemento identificado. Al modificar una regla específica, el cambio no alteró otros componentes del mismo tipo.</p>
+            <aside id="aviso-registro">
+                <h3 id="aviso-registro-titulo">Conclusión</h3>
+                <p id="aviso-registro-texto">Los selectores por ID ofrecen alta precisión porque apuntan a elementos únicos. Son útiles cuando un componente necesita un tratamiento exclusivo, aunque reutilizar estilos con IDs requiere más reglas y resulta menos flexible que trabajar con clases.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer id="pie">
+        <p id="pie-principal">EXPERIENCIA DE PRÁCTICA N° 02 // SELECTORES POR ID</p>
+        <p id="pie-secundario">CHIPANA FLORES ALEXANDER TOMAS // GRUPO 06 // Desarrollo de Aplicaciones - 2026</p>
+    </footer>
+</body>
+</html>

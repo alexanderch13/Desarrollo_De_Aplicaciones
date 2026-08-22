@@ -1,0 +1,165 @@
+<!--
+  ------------------------------------------------------------------
+  | Autor: CHIPANA FLORES ALEXANDER TOMAS - DESARROLLO DE APLICACIONES |
+  | GRUPO - 06                                                   |
+  | EXPERIENCIA DE PRÁCTICA N° 02: USO DE SELECTORES                |
+  ------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia de práctica N° 02: uso de selectores CSS por nombre, clase e ID aplicado a una página educativa sobre OWASP API Security Top 10.">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="keywords" content="CSS, selectores, OWASP, API Security, HTML5, Desarrollo de Aplicaciones">
+    <title>Selectores por nombre | OWASP API Security</title>
+    <link rel="stylesheet" href="nombre.css">
+</head>
+<body>
+    <header>
+        <p>[ EXPERIENCIA 02 // CSS SELECTORS ]</p>
+        <h1>OWASP API Security Top 10</h1>
+        <p>Aplicación práctica de selectores CSS por nombre</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">./inicio</a>
+        <a href="#tecnologias">./tecnologias</a>
+        <a href="#owasp">./owasp_top10</a>
+        <a href="#controles">./controles</a>
+        <a href="#registro">./registro</a>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h2>Uso de selectores por nombre</h2>
+            <p>Esta versión utiliza reglas CSS basadas únicamente en el nombre de las etiquetas HTML. El objetivo es comprobar cómo un mismo selector de elemento puede aplicar una presentación uniforme a todos los elementos del mismo tipo.</p>
+            <aside>
+                <h3>Objetivo de la evidencia</h3>
+                <p>Verificar la aplicación de reglas sobre elementos como body, header, nav, main, section, article, h1, h2, h3, p, a, ul, li, strong, aside y footer sin utilizar selectores de clase ni de ID en la hoja de estilos.</p>
+            </aside>
+        </section>
+
+        <section id="tecnologias">
+            <h2>¿Cómo trabajan las APIs?</h2>
+            <p>Existen diferentes tecnologías y arquitecturas para implementar APIs. En esta página se presentan REST, GraphQL, gRPC y SOAP como contexto para aplicar estilos a elementos semánticos repetidos.</p>
+            <article>
+                <h3>[ REST ] Representational State Transfer</h3>
+                <ul>
+                    <li>Arquitectura orientada a recursos identificados mediante URLs.</li>
+                    <li>Utiliza métodos HTTP como GET, POST, PUT, PATCH y DELETE.</li>
+                    <li>Es común trabajar con representaciones JSON para intercambiar información.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>[ GraphQL ] Lenguaje de consulta para APIs</h3>
+                <ul>
+                    <li>Permite que el cliente solicite los campos que necesita.</li>
+                    <li>Trabaja habitualmente sobre un endpoint para consultas y mutaciones.</li>
+                    <li>Su esquema describe tipos y operaciones disponibles.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>[ gRPC ] Remote Procedure Call</h3>
+                <ul>
+                    <li>Permite invocar operaciones remotas mediante contratos definidos.</li>
+                    <li>Puede utilizar Protocol Buffers para describir mensajes y servicios.</li>
+                    <li>Es común en comunicaciones entre servicios y sistemas distribuidos.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>[ SOAP ] Simple Object Access Protocol</h3>
+                <ul>
+                    <li>Protocolo de mensajería basado en XML.</li>
+                    <li>La estructura de los mensajes utiliza elementos como Envelope, Header y Body.</li>
+                    <li>Se encuentra en integraciones empresariales y servicios con contratos formales.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="owasp">
+            <h2>OWASP API Security Top 10 - 2023</h2>
+            <p>Los siguientes riesgos organizan problemas relacionados con autorización, autenticación, consumo de recursos, lógica de negocio, configuración y administración de APIs.</p>
+            <article>
+                <h3>API1:2023 // Broken Object Level Authorization - BOLA</h3>
+                <p>Aparece cuando una API trabaja con identificadores de objetos pero no verifica correctamente si el usuario autenticado tiene autorización para acceder al recurso.</p>
+                <p><strong>Observación:</strong> Ejemplo académico: modificar el ID de un objeto en una petición permite comprobar si el servidor valida correctamente la autorización.</p>
+            </article>
+            <article>
+                <h3>API2:2023 // Broken Authentication</h3>
+                <p>Ocurre cuando los mecanismos utilizados para identificar a los usuarios presentan fallas que pueden comprometer credenciales, tokens o mecanismos de autenticación.</p>
+                <p><strong>Observación:</strong> Aspectos a revisar: protección de credenciales, control de intentos, manejo de sesiones y tratamiento seguro de tokens.</p>
+            </article>
+            <article>
+                <h3>API3:2023 // Broken Object Property Level Authorization</h3>
+                <p>Se relaciona con una validación incorrecta de las propiedades de los objetos que una API permite leer o modificar.</p>
+                <p><strong>Observación:</strong> Puede provocar exposición excesiva de información o permitir cambios sobre propiedades que deberían estar protegidas.</p>
+            </article>
+            <article>
+                <h3>API4:2023 // Unrestricted Resource Consumption</h3>
+                <p>Las peticiones a una API consumen CPU, memoria, almacenamiento y ancho de banda; si no existen límites adecuados, los recursos pueden agotarse.</p>
+                <p><strong>Observación:</strong> Controles relacionados: límites de tamaño, paginación controlada y restricciones sobre el consumo de recursos.</p>
+            </article>
+            <article>
+                <h3>API5:2023 // Broken Function Level Authorization - BFLA</h3>
+                <p>Aparece cuando una API no controla correctamente qué funciones puede ejecutar cada rol o tipo de usuario.</p>
+                <p><strong>Observación:</strong> Ejemplo académico: verificar que una cuenta regular no pueda ejecutar funciones reservadas para administración.</p>
+            </article>
+            <article>
+                <h3>API6:2023 // Unrestricted Access to Sensitive Business Flows</h3>
+                <p>Se produce cuando funcionalidades importantes para el negocio pueden utilizarse de manera automatizada y abusiva sin suficientes controles.</p>
+                <p><strong>Observación:</strong> Los flujos sensibles necesitan controles que reduzcan automatización abusiva y uso repetitivo no previsto.</p>
+            </article>
+            <article>
+                <h3>API7:2023 // Server-Side Request Forgery - SSRF</h3>
+                <p>Ocurre cuando una API obtiene un recurso remoto utilizando una URI proporcionada por un usuario sin validarla correctamente.</p>
+                <p><strong>Observación:</strong> Funciones como webhooks, carga por URL e integraciones externas requieren validación y restricciones apropiadas.</p>
+            </article>
+            <article>
+                <h3>API8:2023 // Security Misconfiguration</h3>
+                <p>Las configuraciones incorrectas en servidores, frameworks o servicios que soportan una API pueden exponer información o aumentar la superficie de ataque.</p>
+                <p><strong>Observación:</strong> Se deben revisar métodos innecesarios, mensajes de error, configuraciones de seguridad y servicios expuestos.</p>
+            </article>
+            <article>
+                <h3>API9:2023 // Improper Inventory Management</h3>
+                <p>Una organización puede mantener versiones antiguas, endpoints olvidados o APIs no documentadas que continúan accesibles.</p>
+                <p><strong>Observación:</strong> Mantener un inventario actualizado ayuda a identificar versiones antiguas, servicios internos expuestos y endpoints de prueba.</p>
+            </article>
+            <article>
+                <h3>API10:2023 // Unsafe Consumption of APIs</h3>
+                <p>Ocurre cuando una aplicación confía excesivamente en información proveniente de APIs externas y procesa esos datos sin las validaciones necesarias.</p>
+                <p><strong>Observación:</strong> Los datos recibidos desde servicios externos también deben tratarse como entradas que requieren validación.</p>
+            </article>
+        </section>
+
+        <section id="controles">
+            <h2>Controles de seguridad</h2>
+            <p>Los riesgos estudiados muestran la importancia de aplicar controles de autenticación, autorización, validación de entradas y limitaciones sobre los recursos utilizados por una API.</p>
+            <ol>
+                <li>Validar autorización antes de entregar o modificar recursos.</li>
+                <li>Proteger credenciales, sesiones y tokens de autenticación.</li>
+                <li>Aplicar límites al consumo de recursos.</li>
+                <li>Validar la información recibida, incluso desde servicios externos.</li>
+                <li>Mantener actualizado el inventario de APIs y versiones.</li>
+                <li>Eliminar configuraciones y servicios innecesarios.</li>
+            </ol>
+        </section>
+
+        <section id="registro">
+            <h2>Registro de verificación</h2>
+            <p>Se cargó la página en el navegador y se verificó que las reglas definidas en nombre.css se aplicaran a todos los elementos correspondientes. Al modificar una regla de etiqueta, el cambio se reflejó simultáneamente en todos los elementos que comparten ese nombre.</p>
+            <aside>
+                <h3>Conclusión</h3>
+                <p>Los selectores por nombre son simples y útiles para establecer estilos generales, pero afectan a todos los elementos del mismo tipo. Esto facilita mantener una apariencia uniforme, aunque limita la posibilidad de diferenciar componentes específicos sin recurrir a selectores más precisos.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 02 // SELECTORES POR NOMBRE</p>
+        <p>CHIPANA FLORES ALEXANDER TOMAS // GRUPO 06 // Desarrollo de Aplicaciones - 2026</p>
+    </footer>
+</body>
+</html>

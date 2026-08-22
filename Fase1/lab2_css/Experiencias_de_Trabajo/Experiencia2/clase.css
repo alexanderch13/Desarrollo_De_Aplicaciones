@@ -1,0 +1,195 @@
+/*
+ * EXPERIENCIA DE PRÁCTICA N° 02 - SELECTORES POR CLASE
+ * REGLA DEL EJERCICIO: las reglas se declaran únicamente con selectores de clase.
+ * Autor: CHIPANA FLORES ALEXANDER TOMAS - GRUPO 06
+ */
+
+.pagina {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e5e7eb;
+    background-color: #050505;
+    background-image: radial-gradient(circle at top, #3b0000 0%, #120000 25%, #050505 55%);
+}
+
+.cabecera {
+    padding: 65px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(180deg, rgba(80, 0, 0, 0.95), rgba(12, 12, 12, 0.98));
+    border-bottom: 2px solid #dc2626;
+    box-shadow: 0 5px 30px rgba(220, 38, 38, 0.35);
+}
+
+.etiqueta-superior {
+    margin: 0 0 10px 0;
+    color: #ef4444;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-principal {
+    margin: 0;
+    font-size: 44px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+}
+
+.subtitulo {
+    margin: 15px 0 5px 0;
+    color: #d1d5db;
+    font-size: 19px;
+}
+
+.firma {
+    margin: 0;
+    color: #ef4444;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.navegacion {
+    padding: 18px;
+    text-align: center;
+    background-color: #090909;
+    border-bottom: 1px solid #7f1d1d;
+}
+
+.enlace-nav {
+    display: inline-block;
+    margin: 6px 14px;
+    color: #f87171;
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.seccion {
+    margin-bottom: 28px;
+    padding: 30px;
+    background-color: #101010;
+    border: 1px solid #3f3f46;
+    border-top: 2px solid #dc2626;
+    border-bottom: 2px solid #dc2626;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.titulo-seccion {
+    margin: 0 0 18px 0;
+    color: #ef4444;
+    font-family: monospace;
+    font-size: 28px;
+}
+
+.texto {
+    color: #b6b6b6;
+    line-height: 1.75;
+}
+
+.tarjeta {
+    margin-top: 18px;
+    padding: 22px;
+    background-color: #151515;
+    border-radius: 7px;
+}
+
+.tecnologia {
+    border-left: 5px solid #ef4444;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.08);
+}
+
+.riesgo {
+    border-left: 6px solid #7f1d1d;
+    background-color: #090909;
+}
+
+.titulo-tarjeta {
+    margin-top: 0;
+    color: #ef4444;
+    font-family: monospace;
+}
+
+.titulo-riesgo {
+    margin: 0 0 10px 0;
+    color: #f87171;
+    font-family: monospace;
+    line-height: 1.4;
+}
+
+.lista {
+    margin-bottom: 0;
+    padding-left: 24px;
+    color: #b6b6b6;
+    line-height: 1.8;
+}
+
+.lista-ordenada {
+    padding: 18px 18px 18px 42px;
+    color: #d1d5db;
+    line-height: 1.9;
+    background-color: #090909;
+    border-radius: 7px;
+}
+
+.item-lista {
+    margin-bottom: 6px;
+}
+
+.nota {
+    margin-bottom: 0;
+    color: #d1d5db;
+    line-height: 1.65;
+}
+
+.enfasis {
+    color: #ef4444;
+}
+
+.aviso {
+    margin-top: 20px;
+    padding: 22px;
+    background-color: #0b0b0b;
+    border-left: 5px solid #991b1b;
+    border-radius: 7px;
+}
+
+.titulo-aviso {
+    margin-top: 0;
+    color: #f87171;
+    font-family: monospace;
+}
+
+.texto-aviso {
+    margin-bottom: 0;
+    color: #b6b6b6;
+    line-height: 1.75;
+}
+
+.pie {
+    margin-top: 20px;
+    padding: 26px 15px;
+    text-align: center;
+    background-color: #120000;
+    border-top: 2px solid #7f1d1d;
+}
+
+.pie-principal {
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.pie-secundario {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+}
