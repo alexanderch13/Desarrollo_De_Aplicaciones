@@ -1,0 +1,70 @@
+/*
+ * EXPERIENCIA 04 - C) HERENCIA Y CASCADA
+ * Herencia: 7 casos.
+ * Cascada: 5 demostraciones visibles.
+ */
+
+/* ==============================
+   HERENCIA: 7 CASOS
+   Los hijos no declaran estas propiedades: las reciben del padre.
+   ============================== */
+
+/* H1 */
+.inherit-color { color: #fca5a5; }
+
+/* H2 */
+.inherit-family { font-family: Georgia, 'Times New Roman', serif; }
+
+/* H3 */
+.inherit-size { font-size: 1.12rem; }
+
+/* H4 */
+.inherit-line { line-height: 2; }
+
+/* H5 */
+.inherit-spacing { letter-spacing: .075em; }
+
+/* H6 */
+.inherit-align { text-align: center; }
+
+/* H7 */
+.inherit-transform { text-transform: uppercase; }
+
+/* Se neutraliza el color genérico de base.css dentro de las demos
+   para que el valor heredado del article sea visible en sus hijos. */
+.inherit-color p,
+.inherit-color em,
+.inherit-color strong {
+    color: inherit;
+}
+
+/* ==============================
+   CASCADA: 5 CASOS
+   ============================== */
+
+/* CA1: mismo selector/especificidad -> gana la declaración posterior */
+.order-demo p { color: #f87171; }
+.order-demo p { color: #ffffff; }
+
+/* CA2: una clase (0-1-0) supera al selector de elemento (0-0-1) */
+p { color: #b6b6b6; }
+.specificity-class { color: #fb7185; }
+
+/* CA3: un ID (1-0-0) supera a una clase (0-1-0) */
+.priority-class { color: #fca5a5; }
+#priority-id { color: #ffffff; font-weight: 800; }
+
+/* CA4: selector compuesto más específico supera a una clase simple */
+.compound-demo { color: #b6b6b6; }
+article .compound-demo[data-priority="high"] { color: #ef4444; font-weight: 800; }
+
+/* CA5: !important supera las declaraciones normales, incluso más específicas */
+#important-case { color: #ffffff; }
+.important-demo p { color: #f87171 !important; }
+
+.cascade-result {
+    padding: 14px;
+    background: #090909;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+}

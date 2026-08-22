@@ -1,0 +1,8 @@
+index.html: <div> = 0; style inline = 0
+regex.html: <div> = 0; style inline = 0
+herenciaycascada.html: <div> = 0; style inline = 0
+Combinados documentados: 10
+Múltiples documentados: 5
+Regex documentados: 8
+Herencia documentada: 7
+Cascada documentada: 5

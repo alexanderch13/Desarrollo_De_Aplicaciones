@@ -1,0 +1,53 @@
+/*
+ * EXPERIENCIA 04 - B) SELECTORES REGEX / COINCIDENCIA DE ATRIBUTOS
+ * La guía solicita al menos 5 casos. Aquí se implementan 8.
+ */
+
+/* R1: empieza por */
+a[href^="https://"] {
+    text-decoration-thickness: 2px;
+}
+
+/* R2: termina en */
+a[href$=".org"] {
+    color: #fca5a5;
+}
+
+/* R3: contiene */
+a[href*="owasp"] {
+    font-weight: 800;
+    text-shadow: 0 0 12px rgba(239,68,68,.45);
+}
+
+/* R4: código comienza con API */
+[data-code^="API"] {
+    border-left-color: #dc2626;
+}
+
+/* R5: código termina en -2023 */
+[data-code$="-2023"] {
+    box-shadow: inset 0 0 0 1px rgba(220,38,38,.18);
+}
+
+/* R6: cadena contenida en una familia */
+[data-family*="auth"] {
+    background: linear-gradient(135deg, #151515, #200909);
+}
+
+/* R7: clase cuyo valor comienza por regex- */
+[class^="regex-"] {
+    border-top: 1px solid #7f1d1d;
+}
+
+/* R8: title contiene Security */
+[title*="Security"] {
+    outline: 1px dashed rgba(248,113,113,.55);
+    outline-offset: 3px;
+}
+
+.regex-link-list {
+    display: grid;
+    gap: 10px;
+    padding-left: 0;
+    list-style-position: inside;
+}

@@ -1,0 +1,163 @@
+<!--
+  --------------------------------------------------------------------
+  | EXPERIENCIA 04 - A) SELECTORES COMBINADOS Y MÚLTIPLES            |
+  | Desarrollo de Aplicaciones - Grupo 06                            |
+  | HTML semántico sin etiquetas DIV                                 |
+  --------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="description" content="Experiencia 04 de CSS: selectores combinados y múltiples aplicados a una interfaz educativa de OWASP API Security.">
+    <title>Combinados y múltiples | Experiencia 04</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="combinadosymultiples.css">
+</head>
+<body>
+    <header>
+        <p>[ EXPERIENCIA 04 // CSS SELECTOR ENGINE ]</p>
+        <h1>OWASP API Security Top 10</h1>
+        <p>Aplicación de selectores combinados, múltiples, Regex, herencia y cascada</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+
+    <nav aria-label="Navegación de selectores combinados">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#combinados">./combinados</a>
+        <a href="#multiples">./multiples</a>
+        <a href="#matriz">./matriz</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2>Formas combinadas y múltiples</h2>
+            <p>Esta evidencia demuestra cómo CSS puede seleccionar elementos de acuerdo con relaciones jerárquicas y de vecindad, además de agrupar varios selectores en una sola regla cuando comparten la misma presentación.</p>
+            <aside class="notice">
+                <h3>Requisito de la práctica</h3>
+                <p>La guía solicita por lo menos <strong>7 casos combinados</strong> y <strong>5 casos múltiples</strong>. La implementación incluye 10 combinaciones documentadas y 5 agrupaciones principales.</p>
+            </aside>
+        </section>
+
+        <section id="combinados">
+            <h2>Demostración de selectores combinados</h2>
+            <p>Los casos se apoyan en relaciones de descendencia, hijo directo, hermano adyacente y hermanos generales.</p>
+
+            <section class="cards" aria-label="Casos de combinadores">
+                <article>
+                    <h3>C1 // Hijo directo</h3>
+                    <p><code>nav &gt; a</code> alcanza solamente enlaces que son hijos inmediatos del elemento de navegación.</p>
+                    <p>Al pasar el cursor, el borde inferior confirma visualmente la selección.</p>
+                </article>
+                <article>
+                    <h3>C2 // Hermano adyacente</h3>
+                    <p><code>header + nav</code> selecciona el navegador porque aparece inmediatamente después del encabezado.</p>
+                    <p>La sombra del navegador es la evidencia de esta relación.</p>
+                </article>
+                <article>
+                    <h3>C3 // Descendiente</h3>
+                    <p><code>section article</code> aplica una transición a artículos ubicados dentro de una sección.</p>
+                    <p>La relación puede tener uno o más niveles intermedios.</p>
+                </article>
+                <article>
+                    <h3>C4 // Hijo directo</h3>
+                    <p><code>article &gt; h3</code> estiliza únicamente títulos que son hijos directos de un artículo.</p>
+                    <p>El borde inferior del título permite comprobar la regla.</p>
+                </article>
+                <article>
+                    <h3>C5 // Adyacencia</h3>
+                    <p><code>h2 + p</code> selecciona únicamente el primer párrafo inmediatamente posterior a cada h2.</p>
+                    <p>Otros párrafos posteriores no cumplen la misma condición.</p>
+                </article>
+                <article>
+                    <h3>C6 // Hermanos generales</h3>
+                    <p><code>h3 ~ p</code> selecciona todos los párrafos hermanos que aparecen después de un h3.</p>
+                    <p>Por ello estos textos reciben el desplazamiento interno definido en CSS.</p>
+                </article>
+                <article>
+                    <h3>C7 // Lista directa</h3>
+                    <p>Los elementos de la siguiente lista cumplen <code>ul &gt; li</code>:</p>
+                    <ul>
+                        <li>Broken Object Level Authorization</li>
+                        <li>Broken Authentication</li>
+                        <li>Security Misconfiguration</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>C8-C10 // Estructuras multinivel</h3>
+                    <p><code>section &gt; aside</code>, <code>main &gt; section &gt; article &gt; p</code> y <code>table tbody &gt; tr</code> muestran que los combinadores pueden encadenarse.</p>
+                    <p>Esto permite describir relaciones estructurales muy precisas sin alterar el HTML.</p>
+                </article>
+            </section>
+        </section>
+
+        <section id="multiples">
+            <h2>Demostración de selectores múltiples</h2>
+            <p>Los selectores separados por comas permiten compartir una declaración entre diferentes elementos y reducen repetición.</p>
+            <article>
+                <h3>Grupos implementados</h3>
+                <ol>
+                    <li><code>h1, h2, h3</code> para características tipográficas comunes.</li>
+                    <li><code>header, footer</code> para zonas estructurales superior e inferior.</li>
+                    <li><code>section, article, aside</code> para control de desbordamiento de texto.</li>
+                    <li><code>ul, ol</code> para márgenes consistentes en listas.</li>
+                    <li><code>table, caption, th, td</code> para presentación numérica tabular.</li>
+                </ol>
+            </article>
+            <aside class="notice">
+                <h3>Ventaja</h3>
+                <p>Agrupar selectores evita repetir exactamente las mismas propiedades en reglas separadas, por lo que mejora la legibilidad y el mantenimiento de la hoja de estilos.</p>
+            </aside>
+        </section>
+
+        <section id="matriz">
+            <h2>Matriz técnica de selectores</h2>
+            <p>La tabla resume la relación estructural que expresa cada combinador y utiliza <code>colspan</code>, <code>rowspan</code>, <code>colgroup</code> y <code>col</code> para mantener una estructura tabular más completa.</p>
+            <figure>
+                <table>
+                    <caption>Combinadores y agrupaciones comprobadas en el navegador</caption>
+                    <colgroup>
+                        <col class="col-selector">
+                        <col class="col-category">
+                        <col class="col-result">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Selector CSS</th>
+                            <th rowspan="2">Interpretación</th>
+                        </tr>
+                        <tr>
+                            <th>Expresión</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>section article</code></td><td>Descendiente</td><td>Article situado en cualquier nivel dentro de section.</td></tr>
+                        <tr><td><code>article &gt; h3</code></td><td>Hijo directo</td><td>H3 cuyo padre inmediato es article.</td></tr>
+                        <tr><td><code>h2 + p</code></td><td>Adyacente</td><td>Primer p inmediatamente posterior a h2.</td></tr>
+                        <tr><td><code>h3 ~ p</code></td><td>Hermano general</td><td>Todos los p hermanos posteriores a h3.</td></tr>
+                        <tr><td><code>h1, h2, h3</code></td><td>Múltiple</td><td>Una sola regla se aplica a tres selectores.</td></tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+
+        <section id="conclusion">
+            <h2>Registro y conclusión</h2>
+            <p>Las pruebas mostraron que los combinadores permiten expresar relaciones entre elementos sin agregar contenedores genéricos al DOM. Los selectores múltiples reducen duplicación cuando varios elementos necesitan propiedades equivalentes.</p>
+            <aside class="notice">
+                <h3>Resultado de verificación</h3>
+                <p>Se comprobó que las diez reglas combinadas y los cinco grupos múltiples producen efectos visibles sin emplear etiquetas <code>&lt;div&gt;</code> ni estilos en línea.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 04 // CSS</p>
+        <p>OWASP API Security // Desarrollo de Aplicaciones // 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!-- EXPERIENCIA 04 - B) SELECTORES REGEX / SIN DIV -->
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="description" content="Experiencia 04 de CSS: selectores Regex basados en patrones de coincidencia de atributos.">
+    <title>Selectores Regex | Experiencia 04</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="regex.css">
+</head>
+<body>
+    <header>
+        <p>[ EXPERIENCIA 04 // ATTRIBUTE PATTERN MATCHING ]</p>
+        <h1>Selectores Regex en CSS</h1>
+        <p>Coincidencias por inicio, final y contenido aplicadas a OWASP API Security</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+
+    <nav aria-label="Navegación de selectores Regex">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#enlaces">./enlaces</a>
+        <a href="#apis">./apis</a>
+        <a href="#matriz">./matriz</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2>Utilización de selectores Regex</h2>
+            <p>En CSS, la guía denomina selectores Regex a los patrones de coincidencia de atributos que permiten comprobar si un valor comienza con, termina con o contiene una determinada cadena.</p>
+            <aside class="notice">
+                <h3>Requisito cubierto</h3>
+                <p>La práctica solicita un mínimo de <strong>5 casos</strong>. Esta evidencia implementa 8 reglas de coincidencia distintas y documentadas en <code>regex.css</code>.</p>
+            </aside>
+        </section>
+
+        <section id="enlaces">
+            <h2>Patrones aplicados a URLs</h2>
+            <p>Los enlaces permiten observar simultáneamente los operadores <code>^=</code>, <code>$=</code> y <code>*=</code>.</p>
+            <article class="regex-links">
+                <h3>Fuentes técnicas</h3>
+                <ul class="regex-link-list">
+                    <li><a href="https://owasp.org" title="OWASP Security Foundation">OWASP Foundation</a></li>
+                    <li><a href="https://developer.mozilla.org" title="MDN Web Docs">MDN Web Docs</a></li>
+                    <li><a href="https://example.org" title="Security Demo">Example.org</a></li>
+                    <li><a href="http://example.com" title="HTTP Demo">Enlace HTTP de comparación</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="apis">
+            <h2>Patrones aplicados a metadatos técnicos</h2>
+            <p>Los atributos <code>data-code</code> y <code>data-family</code> representan metadatos del riesgo y permiten seleccionar tarjetas según fragmentos del valor.</p>
+            <section class="cards" aria-label="Riesgos OWASP con atributos para Regex">
+                <article class="regex-card" data-code="API1-2023" data-family="authorization" title="API Security BOLA">
+                    <h3>API1:2023 // BOLA</h3>
+                    <p>Su código comienza por <code>API</code>, termina en <code>-2023</code> y su familia contiene <code>auth</code>.</p>
+                </article>
+                <article class="regex-card" data-code="API2-2023" data-family="authentication" title="API Security Authentication">
+                    <h3>API2:2023 // Broken Authentication</h3>
+                    <p>La coincidencia de subcadena permite identificar familias relacionadas con autenticación y autorización.</p>
+                </article>
+                <article class="regex-card" data-code="API8-2023" data-family="configuration" title="API Security Misconfiguration">
+                    <h3>API8:2023 // Security Misconfiguration</h3>
+                    <p>Coincide por prefijo/sufijo de código, aunque su familia no contiene la cadena <code>auth</code>.</p>
+                </article>
+            </section>
+        </section>
+
+        <section id="matriz">
+            <h2>Matriz de coincidencias</h2>
+            <p>La siguiente estructura relaciona cada patrón con el tipo de comparación que realiza.</p>
+            <figure>
+                <table>
+                    <caption>Ocho casos implementados en regex.css</caption>
+                    <colgroup>
+                        <col class="col-selector">
+                        <col class="col-category">
+                        <col class="col-result">
+                    </colgroup>
+                    <thead>
+                        <tr><th>Selector</th><th>Operación</th><th>Resultado esperado</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>[href^="https://"]</code></td><td>Comienza con</td><td>Enlaces HTTPS.</td></tr>
+                        <tr><td><code>[href$=".org"]</code></td><td>Termina con</td><td>URLs cuyo valor termina en .org.</td></tr>
+                        <tr><td><code>[href*="owasp"]</code></td><td>Contiene</td><td>URL que contiene owasp.</td></tr>
+                        <tr><td><code>[data-code^="API"]</code></td><td>Comienza con</td><td>Códigos OWASP API.</td></tr>
+                        <tr><td><code>[data-code$="-2023"]</code></td><td>Termina con</td><td>Casos de la edición 2023.</td></tr>
+                        <tr><td><code>[data-family*="auth"]</code></td><td>Contiene</td><td>Familias authentication/authorization.</td></tr>
+                        <tr><td><code>[class^="regex-"]</code></td><td>Comienza con</td><td>Clases cuyo valor inicia con regex-.</td></tr>
+                        <tr><td><code>[title*="Security"]</code></td><td>Contiene</td><td>Elementos cuyo title contiene Security.</td></tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+
+        <section id="conclusion">
+            <h2>Registro y conclusión</h2>
+            <p>Se verificó que estos patrones permiten clasificar elementos de forma flexible cuando los valores de sus atributos siguen convenciones previsibles. Resultan especialmente útiles con rutas, extensiones, códigos y atributos de datos.</p>
+            <aside class="notice">
+                <h3>Precisión</h3>
+                <p>Estos operadores realizan coincidencias de cadenas; no constituyen expresiones regulares completas como las de otros lenguajes, aunque la guía los agrupa bajo la denominación de selectores Regex.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 04 // SELECTORES REGEX</p>
+        <p>OWASP API Security // Desarrollo de Aplicaciones // 2026</p>
+    </footer>
+</body>
+</html>

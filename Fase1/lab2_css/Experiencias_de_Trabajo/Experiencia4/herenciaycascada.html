@@ -1,0 +1,149 @@
+<!-- EXPERIENCIA 04 - C) HERENCIA Y CASCADA / SIN DIV -->
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="description" content="Experiencia 04 de CSS: siete casos de herencia y cinco casos de cascada con explicación de prioridad.">
+    <title>Herencia y cascada | Experiencia 04</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="hereciaycascada.css">
+</head>
+<body>
+    <header>
+        <p>[ EXPERIENCIA 04 // CSS INHERITANCE & CASCADE ]</p>
+        <h1>Herencia y Cascada</h1>
+        <p>Comportamiento de propiedades heredables, orden de origen, especificidad e importancia</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+
+    <nav aria-label="Navegación de herencia y cascada">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#herencia">./herencia</a>
+        <a href="#cascada">./cascada</a>
+        <a href="#matriz">./matriz</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2>Herencia y cascada en CSS</h2>
+            <p>La herencia permite que determinadas propiedades definidas en un elemento padre se transmitan a sus descendientes. La cascada determina qué declaración gana cuando varias reglas intentan aplicar valores distintos al mismo elemento.</p>
+            <aside class="notice">
+                <h3>Requisitos cubiertos</h3>
+                <p>Se implementan <strong>7 casos de herencia</strong> y <strong>5 casos de cascada</strong>, superando exactamente los mínimos indicados por la práctica.</p>
+            </aside>
+        </section>
+
+        <section id="herencia">
+            <h2>Siete casos de herencia</h2>
+            <p>En cada artículo la propiedad se define en el elemento padre y los descendientes la reciben sin repetir el valor en cada nodo.</p>
+            <section class="cards" aria-label="Casos de propiedades heredadas">
+                <article class="inherit-color">
+                    <h3>H1 // color</h3>
+                    <p>Este párrafo y su <em>énfasis interno</em> reciben el color del artículo padre.</p>
+                </article>
+                <article class="inherit-family">
+                    <h3>H2 // font-family</h3>
+                    <p>Los descendientes utilizan la familia tipográfica establecida en el padre.</p>
+                </article>
+                <article class="inherit-size">
+                    <h3>H3 // font-size</h3>
+                    <p>El tamaño de fuente se transmite a los elementos de texto descendientes.</p>
+                </article>
+                <article class="inherit-line">
+                    <h3>H4 // line-height</h3>
+                    <p>La altura de línea heredada incrementa el espacio vertical entre las líneas de este contenido.</p>
+                </article>
+                <article class="inherit-spacing">
+                    <h3>H5 // letter-spacing</h3>
+                    <p>El espaciado entre caracteres proviene del artículo padre.</p>
+                </article>
+                <article class="inherit-align">
+                    <h3>H6 // text-align</h3>
+                    <p>La alineación central se hereda y afecta a este párrafo.</p>
+                </article>
+                <article class="inherit-transform">
+                    <h3>H7 // text-transform</h3>
+                    <p>El texto descendiente se presenta en mayúsculas por herencia.</p>
+                </article>
+            </section>
+        </section>
+
+        <section id="cascada">
+            <h2>Cinco casos de cascada</h2>
+            <p>Cada evidencia provoca deliberadamente un conflicto entre declaraciones para comprobar qué regla tiene prioridad.</p>
+
+            <article class="order-demo">
+                <h3>CA1 // Orden de origen</h3>
+                <p class="cascade-result">Dos reglas idénticas declaran colores distintos. Al tener la misma especificidad, gana la regla escrita después.</p>
+            </article>
+
+            <article>
+                <h3>CA2 // Clase contra elemento</h3>
+                <p class="cascade-result specificity-class">La clase tiene mayor especificidad que el selector simple <code>p</code>.</p>
+            </article>
+
+            <article>
+                <h3>CA3 // ID contra clase</h3>
+                <p id="priority-id" class="cascade-result priority-class">El ID tiene prioridad frente a la clase cuando ambas reglas son normales.</p>
+            </article>
+
+            <article>
+                <h3>CA4 // Selector compuesto</h3>
+                <p class="cascade-result compound-demo" data-priority="high">El selector compuesto que incluye elemento, clase y atributo supera a la clase simple.</p>
+            </article>
+
+            <article class="important-demo">
+                <h3>CA5 // !important</h3>
+                <p id="important-case" class="cascade-result">La declaración marcada con <code>!important</code> vence a la declaración normal del ID. Debe emplearse con precaución.</p>
+            </article>
+        </section>
+
+        <section id="matriz">
+            <h2>Matriz de comprobación</h2>
+            <p>La tabla separa los mecanismos de herencia de los factores que intervienen en la cascada.</p>
+            <figure>
+                <table>
+                    <caption>Resultados esperados de la demostración</caption>
+                    <colgroup>
+                        <col class="col-category">
+                        <col class="col-selector">
+                        <col class="col-result">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Mecanismo</th>
+                            <th colspan="2">Comprobación</th>
+                        </tr>
+                        <tr><th>Caso</th><th>Resultado</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="3">Herencia</td><td>color / tipografía</td><td>Los descendientes reciben valores del padre cuando no existe una declaración que los sustituya.</td></tr>
+                        <tr><td>line-height / letter-spacing</td><td>La presentación textual mantiene una configuración común en el subárbol.</td></tr>
+                        <tr><td>text-align / text-transform</td><td>El comportamiento textual se propaga a los elementos descendientes.</td></tr>
+                        <tr><td rowspan="3">Cascada</td><td>Orden de origen</td><td>Con igual especificidad gana la declaración posterior.</td></tr>
+                        <tr><td>Especificidad</td><td>ID &gt; clase/atributo/pseudoclase &gt; elemento.</td></tr>
+                        <tr><td>Importancia</td><td><code>!important</code> altera la prioridad normal y debe reservarse para casos justificados.</td></tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+
+        <section id="conclusion">
+            <h2>Registro y conclusión</h2>
+            <p>La experiencia permitió distinguir dos procesos diferentes: la herencia evita repetir determinadas propiedades textuales en todos los descendientes, mientras que la cascada resuelve conflictos entre reglas considerando importancia, especificidad y orden de aparición.</p>
+            <aside class="notice">
+                <h3>Resultado técnico</h3>
+                <p>Las siete propiedades heredables y los cinco conflictos de cascada pueden verificarse visualmente desde el navegador y mediante las herramientas de desarrollo inspeccionando la sección <em>Computed</em>.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 04 // HERENCIA Y CASCADA</p>
+        <p>OWASP API Security // Desarrollo de Aplicaciones // 2026</p>
+    </footer>
+</body>
+</html>

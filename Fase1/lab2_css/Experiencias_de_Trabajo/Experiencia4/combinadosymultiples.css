@@ -1,0 +1,96 @@
+/*
+ * EXPERIENCIA 04 - A) SELECTORES COMBINADOS Y MÚLTIPLES
+ * Se superan los mínimos de la guía: 7 combinados + 5 múltiples.
+ */
+
+/* ==============================
+   SELECTORES COMBINADOS
+   ============================== */
+
+/* C1. Hijo directo: solo enlaces hijos inmediatos de nav */
+nav > a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+/* C2. Hermano adyacente: nav que aparece inmediatamente después de header */
+header + nav {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .45);
+}
+
+/* C3. Descendiente: cualquier article ubicado dentro de section */
+section article {
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+/* C4. Hijo directo: h3 que es hijo inmediato de article */
+article > h3 {
+    border-bottom: 1px solid #3f3f46;
+    padding-bottom: 10px;
+}
+
+/* C5. Hermano adyacente: primer párrafo inmediatamente posterior a h2 */
+h2 + p {
+    color: #d1d5db;
+    font-size: 1.04rem;
+}
+
+/* C6. Hermanos generales: párrafos posteriores a h3 dentro del mismo padre */
+h3 ~ p {
+    padding-left: 8px;
+}
+
+/* C7. Hijo directo en listas */
+ul > li {
+    margin-bottom: 7px;
+}
+
+/* C8. Hijo directo: aside inmediatamente contenido en section */
+section > aside {
+    border-left-width: 7px;
+}
+
+/* C9. Combinación multinivel */
+main > section > article > p {
+    max-width: 85ch;
+}
+
+/* C10. Descendiente + hijo directo dentro de tabla */
+table tbody > tr {
+    background: #0d0d0d;
+}
+
+/* ==============================
+   SELECTORES MÚLTIPLES
+   ============================== */
+
+/* M1. Agrupación de encabezados */
+h1, h2, h3 {
+    letter-spacing: .02em;
+}
+
+/* M2. Zonas superior e inferior */
+header, footer {
+    border-color: #7f1d1d;
+}
+
+/* M3. Contenedores semánticos de contenido */
+section, article, aside {
+    overflow-wrap: anywhere;
+}
+
+/* M4. Listas */
+ul, ol {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* M5. Elementos tabulares */
+table, caption, th, td {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Efectos visibles para demostrar los combinadores */
+nav > a:hover { border-bottom-color: #ef4444; }
+section article:hover { transform: translateY(-2px); border-color: #7f1d1d; }
+table tbody > tr:hover { background: #180808; }
