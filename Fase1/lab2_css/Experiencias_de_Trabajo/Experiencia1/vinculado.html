@@ -1,109 +1,540 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En línea</title>
-</head>
-
-<body>
-
-    <header>
-        <h1>Ciberseguridad</h1>
-        <p>Protegiendo la información y los sistemas en el mundo digital.</p>
-    </header>
-
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#concepto">¿Qué es?</a>
-        <a href="#amenazas">Amenazas</a>
-        <a href="#proteccion">Protección</a>
-    </nav>
-
-    <main>
-
-        <section id="inicio">
-            <h2>Introducción</h2>
-
-            <p>
-                La ciberseguridad es fundamental para proteger dispositivos,
-                redes, sistemas y datos frente a diferentes amenazas digitales.
-            </p>
-        </section>
-
-        <section id="concepto">
-            <h2>¿Qué es la Ciberseguridad?</h2>
-
-            <article>
-                <h3>Definición</h3>
-
-                <p>
-                    La ciberseguridad comprende diferentes prácticas,
-                    tecnologías y medidas utilizadas para proteger sistemas
-                    informáticos, redes y datos frente a accesos no autorizados,
-                    ataques o daños.
-                </p>
-            </article>
-        </section>
-
-        <section id="amenazas">
-            <h2>Principales amenazas</h2>
-
-            <ul>
-                <li>Malware</li>
-                <li>Phishing</li>
-                <li>Ransomware</li>
-                <li>Robo de contraseñas</li>
-                <li>Ataques de ingeniería social</li>
-            </ul>
-        </section>
-
-        <section id="proteccion">
-            <h2>Medidas de protección</h2>
-
-            <article>
-                <h3>Buenas prácticas</h3>
-
-                <p>
-                    Para reducir los riesgos de seguridad se recomienda
-                    utilizar contraseñas seguras, mantener los programas
-                    actualizados y evitar ingresar a enlaces desconocidos.
-                </p>
-
-                <ol>
-                    <li>Utilizar contraseñas diferentes y seguras.</li>
-                    <li>Activar la autenticación de dos factores.</li>
-                    <li>Actualizar regularmente el sistema operativo.</li>
-                    <li>Realizar copias de seguridad.</li>
-                    <li>No descargar archivos de fuentes desconocidas.</li>
-                </ol>
-            </article>
-        </section>
-
-        <aside>
-            <h3>Dato importante</h3>
-
-            <p>
-                Una gran cantidad de incidentes de seguridad pueden comenzar
-                por errores humanos, como abrir enlaces sospechosos o
-                proporcionar información privada a personas desconocidas.
-            </p>
-        </aside>
-
-        <div>
-            <p>
-                La <span>seguridad digital</span> es responsabilidad de todos
-                los usuarios de Internet.
-            </p>
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Laboratorio de Desarrollo de Aplicaciones - 2026</p>
-    </footer>
-
-</body>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Página educativa sobre OWASP API Security Top 10 2023 y los principales riesgos de seguridad en APIs." name="description"/>
+  <meta content="Laboratorio de Desarrollo de Aplicaciones" name="author"/>
+  <title>
+   css vinculado
+  </title>
+  <link href="./main.css" rel="stylesheet"/>
+ </head>
+ <body class="body-estilo-1">
+  <header class="header-estilo-1">
+   <p class="p-estilo-1">
+    [ API SECURITY ]
+   </p>
+   <h1 class="h1-estilo-1">
+    OWASP API Security Top 10
+   </h1>
+   <p class="p-estilo-2">
+    Principales riesgos de seguridad en APIs
+   </p>
+   <p class="p-estilo-3">
+    OWASP API Security Top 10 // 2023
+   </p>
+  </header>
+  <nav class="nav-estilo-1">
+   <a class="a-estilo-1" href="#inicio">
+    ./inicio
+   </a>
+   <a class="a-estilo-1" href="#api">
+    ./apis
+   </a>
+   <a class="a-estilo-1" href="#owasp">
+    ./owasp_top10
+   </a>
+   <a class="a-estilo-1" href="#proteccion">
+    ./security
+   </a>
+  </nav>
+  <main class="main-estilo-1">
+   <section class="section-estilo-1" id="inicio">
+    <h2 class="h2-estilo-1">
+     Seguridad en APIs
+    </h2>
+    <p class="p-estilo-4">
+     Las APIs permiten la comunicación entre diferentes aplicaciones,
+                servicios y sistemas. Debido a que manejan información y
+                funcionalidades importantes, también representan una superficie
+                que debe ser protegida frente a accesos no autorizados, abuso de
+                recursos y errores de configuración.
+    </p>
+    <p class="p-estilo-4">
+     El OWASP API Security Top 10 reúne riesgos importantes que deben
+                considerarse al diseñar, desarrollar y evaluar la seguridad de
+                una API.
+    </p>
+   </section>
+   <section class="section-estilo-1" id="api">
+    <h2 class="h2-estilo-2">
+     ¿Cómo trabajan las APIs?
+    </h2>
+    <p class="p-estilo-5">
+     Existen diferentes tecnologías y arquitecturas utilizadas
+                para implementar APIs. Entre las estudiadas se encuentran
+                REST, GraphQL, gRPC y SOAP.
+    </p>
+    <article class="article-estilo-1">
+     <h3 class="h3-estilo-1">
+      [ REST ] Representational State Transfer - Roy Fielding, 2000
+     </h3>
+     <ul class="ul-estilo-1">
+      <li>
+       Arquitectura basada en RECURSOS identificados por URLs.
+      </li>
+      <li>
+       Usa verbos
+       <strong class="strong-estilo-1">
+        HTTP
+       </strong>
+       nativos:
+       <strong class="strong-estilo-1">
+        GET
+       </strong>
+       ,
+       <strong class="strong-estilo-1">
+        POST
+       </strong>
+       ,
+       <strong class="strong-estilo-1">
+        PUT
+       </strong>
+       ,
+       <strong class="strong-estilo-1">
+        PATCH
+       </strong>
+       ,
+       <strong class="strong-estilo-1">
+        DELETE
+       </strong>
+       .
+      </li>
+      <li>
+       Formato:
+       <strong class="strong-estilo-1">
+        JSON
+       </strong>
+       (ligero, legible por humanos, clave valor).
+      </li>
+      <li>
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-2">
+     <h3 class="h3-estilo-1">
+      [ GraphQL ]
+     </h3>
+     <ul class="ul-estilo-1">
+      <li>
+       Un solo endpoint:
+       <span class="span-estilo-1">
+        /graphql
+       </span>
+       para todo.
+      </li>
+      <li>
+       El cliente decide qué campos recibir
+       <strong class="strong-estilo-2">
+        (Query Language).
+       </strong>
+      </li>
+      <li>
+       Elimina
+       <strong class="strong-estilo-3">
+        over-fetching
+       </strong>
+       y
+       <strong class="strong-estilo-3">
+        under-fetching
+       </strong>
+       .
+      </li>
+      <li>
+       Schema con tipos fuertes e introspección automática.
+      </li>
+      <li>
+       Operaciones:
+       <strong class="strong-estilo-3">
+        query
+       </strong>
+       (leer),
+       <strong class="strong-estilo-3">
+        mutation
+       </strong>
+       (escribir) y
+       <strong class="strong-estilo-3">
+        subscription
+       </strong>
+       (real-time).
+      </li>
+      <li>
+       <strong class="strong-estilo-1">
+        Debilidad:
+       </strong>
+       complejidad en caché y problema de
+       <strong class="strong-estilo-3">
+        N+1 queries
+       </strong>
+       ,
+                        donde el servidor realiza una consulta inicial y luego
+                        consultas adicionales para los elementos solicitados.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-2">
+     <h3 class="h3-estilo-1">
+      [ gRPC ]
+     </h3>
+     <ul class="ul-estilo-1">
+      <li>
+       Llamadas a funciones remotas como si fueran locales (
+       <span class="span-estilo-1">
+        RPC
+       </span>
+       )
+      </li>
+      <li>
+       Formato: Protocol BUffers (binario, ultracompacto)
+      </li>
+      <li>
+       REQUIERE HTTP/2: multiplexing, streams, header compression
+      </li>
+      <li>
+       Soporta 4 modos de streaming (unary, server, cliente, bidi)
+      </li>
+      <li>
+       Auto-genera código en 10+ lenguajes desde .proto
+      </li>
+      <li>
+       Usado en: microservicios internos, IoT, sistemas de alto rendimiento.
+      </li>
+      <li>
+       Debilidad: no funciona en browsers nativamente, no legible por humanos.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-2">
+     <h3 class="h3-estilo-1">
+      [ SOAP ]
+     </h3>
+     <ul class="ul-estilo-1">
+      <li>
+       Protocolo basado en
+       <span class="span-estilo-1">
+        XML
+       </span>
+       con estructura Envelope/Header/Body
+      </li>
+      <li>
+       Formato: Protocol BUffers (binario, ultracompacto)
+      </li>
+      <li>
+       REQUIERE HTTP/2: multiplexing, streams, header compression
+      </li>
+      <li>
+       Soporta 4 modos de streaming (unary, server, cliente, bidi)
+      </li>
+      <li>
+       Auto-genera código en 10+ lenguajes desde .proto
+      </li>
+      <li>
+       Usado en: microservicios internos, IoT, sistemas de alto rendimiento.
+      </li>
+      <li>
+       Debilidad: no funciona en browsers nativamente, no legible por humanos.
+      </li>
+     </ul>
+    </article>
+   </section>
+   <section class="article-estilo-2" id="owasp">
+    <h2 class="h3-estilo-1">
+     OWASP API Security Top 10 - 2023
+    </h2>
+    <p class="ul-estilo-1">
+     Los siguientes riesgos representan diferentes problemas
+                relacionados con autorización, autenticación, consumo de
+                recursos, lógica de negocio, configuración y administración
+                de APIs.
+    </p>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API1:2023
+     </span>
+     <h3 class="h3-estilo-2">
+      Broken Object Level Authorization - BOLA
+     </h3>
+     <p class="p-estilo-6">
+      Aparece cuando una API trabaja con identificadores de
+                    objetos pero no verifica correctamente si el usuario
+                    autenticado tiene autorización para acceder al recurso.
+     </p>
+     <p class="p-estilo-7">
+      <strong>
+       Ejemplo:
+      </strong>
+      modificar el ID de un usuario en una petición para intentar
+                    acceder a información perteneciente a otra cuenta.
+     </p>
+    </article>
+    <!-- API 2 -->
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API2:2023
+     </span>
+     <h3 class="h3-estilo-2">
+      Broken Authentication
+     </h3>
+     <p class="p-estilo-6">
+      Ocurre cuando los mecanismos utilizados para identificar
+                    a los usuarios presentan fallas que permiten comprometer
+                    credenciales, tokens o mecanismos de autenticación.
+     </p>
+     <p class="p-estilo-8">
+      <strong>
+       Ejemplos:
+      </strong>
+      ataques de fuerza bruta, credential stuffing,
+                    problemas con JWT y reutilización de tokens.
+     </p>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API3:2023
+     </span>
+     <h3 class="h3-estilo-3">
+      Broken Object Property Level Authorization
+     </h3>
+     <p class="p-estilo-6">
+      Se relaciona con una validación incorrecta de las
+                    propiedades de los objetos que una API permite leer
+                    o modificar.
+     </p>
+     <p class="p-estilo-8">
+      Puede provocar exposición excesiva de información o
+                    permitir modificaciones de propiedades que deberían
+                    estar protegidas.
+     </p>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API4:2023
+     </span>
+     <h3 class="h3-estilo-3">
+      Unrestricted Resource Consumption
+     </h3>
+     <p class="p-estilo-6">
+      Las peticiones realizadas a una API consumen CPU,
+                    memoria, almacenamiento y ancho de banda. Si no existen
+                    límites adecuados, estos recursos pueden agotarse.
+     </p>
+     <ul class="ul-estilo-2">
+      <li>
+       Ausencia de rate limiting.
+      </li>
+      <li>
+       Archivos sin límite de tamaño.
+      </li>
+      <li>
+       Paginación sin restricciones.
+      </li>
+      <li>
+       Abuso de servicios SMS o correo.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API5:2023
+     </span>
+     <h3 class="h3-estilo-2">
+      Broken Function Level Authorization - BFLA
+     </h3>
+     <p class="p-estilo-6">
+      Aparece cuando una API no controla correctamente qué
+                    funciones puede ejecutar cada rol o tipo de usuario.
+     </p>
+     <p class="p-estilo-8">
+      <strong>
+       Ejemplo:
+      </strong>
+      un usuario regular consigue acceder a funciones
+                    administrativas destinadas exclusivamente a administradores.
+     </p>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API6:2023
+     </span>
+     <h3 class="h3-estilo-4">
+      Unrestricted Access to Sensitive Business Flows
+     </h3>
+     <p class="p-estilo-6">
+      Se produce cuando funcionalidades importantes para el
+                    negocio pueden utilizarse de manera automatizada y
+                    abusiva sin suficientes controles.
+     </p>
+     <ul class="ul-estilo-2">
+      <li>
+       Compra automatizada masiva de tickets.
+      </li>
+      <li>
+       Abuso de programas de referidos.
+      </li>
+      <li>
+       Spam automatizado.
+      </li>
+      <li>
+       Abuso de cupones y descuentos.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API7:2023
+     </span>
+     <h3 class="h3-estilo-4">
+      Server-Side Request Forgery - SSRF
+     </h3>
+     <p class="p-estilo-6">
+      Ocurre cuando una API obtiene un recurso remoto utilizando
+                    una URI proporcionada por un usuario sin validarla
+                    correctamente.
+     </p>
+     <p class="p-estilo-7">
+      Funciones como webhooks, carga de imágenes mediante URL
+                    e integraciones externas pueden convertirse en posibles
+                    vectores de este problema.
+     </p>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API8:2023
+     </span>
+     <h3 class="h3-estilo-4">
+      Security Misconfiguration
+     </h3>
+     <p class="p-estilo-6">
+      Las configuraciones incorrectas en servidores,
+                    frameworks o servicios que soportan una API pueden
+                    exponer información o aumentar la superficie de ataque.
+     </p>
+     <ul class="ul-estilo-2">
+      <li>
+       CORS configurado incorrectamente.
+      </li>
+      <li>
+       Errores demasiado detallados.
+      </li>
+      <li>
+       Métodos HTTP innecesarios.
+      </li>
+      <li>
+       Swagger expuesto en producción.
+      </li>
+      <li>
+       Headers de seguridad ausentes.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API9:2023
+     </span>
+     <h3 class="h3-estilo-4">
+      Improper Inventory Management
+     </h3>
+     <p class="p-estilo-6">
+      Una organización puede mantener versiones antiguas,
+                    endpoints olvidados o APIs no documentadas que continúan
+                    accesibles y presentan controles de seguridad insuficientes.
+     </p>
+     <ul class="ul-estilo-2">
+      <li>
+       Versiones antiguas de APIs.
+      </li>
+      <li>
+       Shadow APIs.
+      </li>
+      <li>
+       Endpoints de debug.
+      </li>
+      <li>
+       Servicios internos expuestos.
+      </li>
+     </ul>
+    </article>
+    <article class="article-estilo-3">
+     <span class="span-estilo-2">
+      API10:2023
+     </span>
+     <h3 class="h3-estilo-4">
+      Unsafe Consumption of APIs
+     </h3>
+     <p class="p-estilo-6">
+      Ocurre cuando una aplicación confía excesivamente en
+                    información proveniente de APIs externas y procesa esos
+                    datos sin las validaciones necesarias.
+     </p>
+     <p class="p-estilo-7">
+      Un servicio externo comprometido puede convertirse en
+                    un punto de entrada para afectar a los sistemas que
+                    consumen sus datos.
+     </p>
+    </article>
+   </section>
+   <section class="article-estilo-2" id="proteccion">
+    <h2 class="h2-estilo-3">
+     Controles de seguridad
+    </h2>
+    <p class="p-estilo-9">
+     Los riesgos estudiados muestran la importancia de aplicar
+                controles de autenticación, autorización, validación de
+                entradas y limitaciones sobre los recursos utilizados por
+                una API.
+    </p>
+    <ol class="ol-estilo-1">
+     <li>
+      Verificar autorización antes de entregar recursos.
+     </li>
+     <li>
+      Proteger correctamente tokens y credenciales.
+     </li>
+     <li>
+      Aplicar límites al consumo de recursos.
+     </li>
+     <li>
+      Validar la información recibida.
+     </li>
+     <li>
+      Mantener actualizado el inventario de APIs.
+     </li>
+     <li>
+      Eliminar configuraciones y servicios innecesarios.
+     </li>
+     <li>
+      Controlar las funciones disponibles según cada rol.
+     </li>
+    </ol>
+   </section>
+   <aside class="article-estilo-2">
+    <h3 class="h3-estilo-5">
+     ⚠ Importante
+    </h3>
+    <p class="p-estilo-10">
+     La seguridad de una API no depende únicamente de ocultar sus
+                endpoints. Es necesario controlar quién puede acceder a cada
+                recurso, qué operaciones puede realizar y qué información
+                puede leer o modificar.
+    </p>
+   </aside>
+   <div class="div-estilo-1">
+    <p class="p-estilo-11">
+     Una API segura requiere
+     <span class="span-estilo-3">
+      autenticación, autorización, validación y monitoreo.
+     </span>
+    </p>
+   </div>
+  </main>
+  <footer class="footer-estilo-1">
+   <p class="p-estilo-12">
+    OWASP API Security Top 10 - 2023
+   </p>
+   <p class="p-estilo-13">
+    Laboratorio de Desarrollo de Aplicaciones - 2026
+   </p>
+  </footer>
+ </body>
 </html>

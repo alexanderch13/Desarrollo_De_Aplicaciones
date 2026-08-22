@@ -1,0 +1,292 @@
+/*
+ * EXPERIENCIA DE PRÁCTICA N° 01 - CSS VINCULADO
+ * Hoja de estilos extraída de la versión en línea (index.html).
+ * Autor: CHIPANA FLORES ALEXANDER TOMAS - GRUPO 06
+ */
+
+.body-estilo-1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050505;
+    background-image:
+            radial-gradient(circle at top, #3b0000 0%, #120000 25%, #050505 55%),
+            repeating-linear-gradient(
+                45deg,
+                rgba(255, 0, 0, 0.025) 0px,
+                rgba(255, 0, 0, 0.025) 1px,
+                transparent 1px,
+                transparent 10px
+            );
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+.header-estilo-1 {
+    background:
+            linear-gradient(
+                180deg,
+                rgba(80, 0, 0, 0.95),
+                rgba(12, 12, 12, 0.98)
+            );
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+    border-bottom: 2px solid #dc2626;
+    box-shadow: 0 5px 30px rgba(220, 38, 38, 0.35);
+}
+
+.p-estilo-1 {
+    margin: 0 0 10px 0;
+    color: #ef4444;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.h1-estilo-1 {
+    margin: 0;
+    font-size: 44px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+}
+
+.p-estilo-2 {
+    font-size: 19px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #d1d5db;
+}
+
+.p-estilo-3 {
+    font-size: 15px;
+    color: #ef4444;
+    margin: 0;
+    font-family: monospace;
+}
+
+.nav-estilo-1 {
+    background-color: #090909;
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #7f1d1d;
+}
+
+.a-estilo-1 {
+    color: #f87171;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.main-estilo-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.section-estilo-1 {
+    background-color: #101010;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #3f3f46;
+    border-top: 2px solid #dc2626;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #dc2626;
+}
+
+.h2-estilo-1 {
+    font-size: 28px;
+    color: #ef4444;
+    margin: 0;
+    font-family: monospace;
+}
+
+.p-estilo-4 {
+    color: #b6b6b6;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.h2-estilo-2 {
+    color: #ef4444;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.p-estilo-5 {
+    color: #b6b6b6;
+    line-height: 1.7;
+}
+
+.article-estilo-1 {
+    background-color: #151515;
+    padding: 22px;
+    margin-top: 20px;
+    border-left: 5px solid #dc2626;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.08);
+}
+
+.h3-estilo-1 {
+    color: #ef4444;
+    margin-top: 0;
+    font-family: monospace;
+}
+
+.ul-estilo-1 {
+    color: #b6b6b6;
+    line-height: 1.8;
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.strong-estilo-1 {
+    color: #ef4444;
+}
+
+.article-estilo-2 {
+    background-color: #151515;
+    padding: 22px;
+    margin-top: 20px;
+    border-left: 5px solid #ef4444;
+    border-radius: 6px;
+}
+
+.span-estilo-1 {
+    font-family: monospace;
+    color: #fca5a5;
+    background-color: #290909;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.strong-estilo-2 {
+    color: #e5e7eb;
+}
+
+.strong-estilo-3 {
+    color: #f87171;
+}
+
+.article-estilo-3 {
+    background-color: #090909;
+    padding: 25px;
+    margin-bottom: 18px;
+    border-left: 6px solid #7f1d1d;
+    border-radius: 8px;
+}
+
+.span-estilo-2 {
+    background-color: #dc2626;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.h3-estilo-2 {
+    color: #991b1b;
+    margin-bottom: 10px;
+}
+
+.p-estilo-6 {
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.p-estilo-7 {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.p-estilo-8 {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.h3-estilo-3 {
+    color: #92400e;
+    margin-bottom: 10px;
+}
+
+.ul-estilo-2 {
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 0;
+}
+
+.h3-estilo-4 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.h2-estilo-3 {
+    color: #1f2d49;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.p-estilo-9 {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.ol-estilo-1 {
+    color: #374151;
+    line-height: 2;
+    padding-left: 25px;
+}
+
+.h3-estilo-5 {
+    margin-top: 0;
+    color: #92400e;
+}
+
+.p-estilo-10 {
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 0;
+}
+
+.div-estilo-1 {
+    background-color: #151515;
+    padding: 22px;
+    margin-top: 20px;
+    border-left: 5px solid #ef4444;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.p-estilo-11 {
+    margin: 0;
+    color: #334155;
+    font-size: 17px;
+}
+
+.span-estilo-3 {
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.footer-estilo-1 {
+    background-color: #1f2d49;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 20px;
+}
+
+.p-estilo-12 {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.p-estilo-13 {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+}
