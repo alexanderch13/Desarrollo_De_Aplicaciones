@@ -1,0 +1,147 @@
+<!--
+  ------------------------------------------------------------------
+  | Autor: CHIPANA FLORES ALEXANDER TOMAS - DESARROLLO DE APLICACIONES |
+  | GRUPO - 06                                                        |
+  | EXPERIENCIA 03 - A) SELECTORES DE ATRIBUTOS                      |
+  ------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="keywords" content="CSS, selectores de atributos, pseudo-clases, pseudo-elementos, OWASP, API Security">
+    <meta name="description" content="Experiencia 03 de CSS: demostración completa de selectores de atributos aplicada a una interfaz educativa sobre OWASP API Security.">
+    <title>Selectores de atributos | Experiencia 03</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="atributos.css">
+</head>
+<body>
+    <header>
+        <p class="eyebrow">[ EXPERIENCIA 03 // ADVANCED CSS SELECTORS ]</p>
+        <h1>OWASP API Security Top 10</h1>
+        <p>Aplicación práctica de selectores de atributos, pseudo-clases y pseudo-elementos</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+    <nav aria-label="Navegación principal">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#casos">./casos</a>
+        <a href="#laboratorio">./laboratorio</a>
+        <a href="#matriz">./matriz</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo" data-panel="intro" data-state="verificado activo">
+            <h2>Uso de selectores de atributos</h2>
+            <p>Esta evidencia aplica reglas CSS según la presencia y el valor de atributos HTML. Se prueban coincidencias exactas, por inicio, por final, por contenido, por palabra y por prefijo de idioma.</p>
+            <aside class="notice">
+                <h3>Objetivo técnico</h3>
+                <p>Demostrar que CSS puede localizar elementos sin depender exclusivamente del nombre de etiqueta, una clase o un ID. Los selectores utilizados se encuentran documentados dentro de <code>atributos.css</code>.</p>
+            </aside>
+        </section>
+
+        <section id="casos" data-panel="selectors">
+            <h2>Casos de coincidencia implementados</h2>
+            <div class="cards">
+                <article class="card" data-panel="risk" data-level="critico" data-code="API1-2023">
+                    <h3>API1:2023 // BOLA</h3>
+                    <p>El atributo <code>data-level="critico"</code> permite dar prioridad visual a este caso mediante coincidencia exacta.</p>
+                </article>
+                <article class="card" data-panel="risk" data-level="alto" data-code="API2-2023">
+                    <h3>API2:2023 // Broken Authentication</h3>
+                    <p>Este panel utiliza <code>data-level="alto"</code> y un código que comienza por <code>API</code> y termina en <code>-2023</code>.</p>
+                </article>
+                <article class="card" data-panel="risk" data-level="medio" data-code="API8-2023">
+                    <h3>API8:2023 // Security Misconfiguration</h3>
+                    <p>La presentación cambia según el valor almacenado en el atributo personalizado <code>data-level</code>.</p>
+                </article>
+            </div>
+
+            <article data-panel="links">
+                <h3>Coincidencias aplicadas a enlaces</h3>
+                <p>Los siguientes enlaces permiten demostrar <code>^=</code>, <code>$=</code>, <code>*=</code> y coincidencia exacta de atributos:</p>
+                <p>
+                    <a href="https://owasp.org" target="_blank" rel="noopener noreferrer">OWASP</a> ·
+                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">MDN</a> ·
+                    <a href="https://example.org" target="_blank" rel="noopener noreferrer">Example.org</a>
+                </p>
+            </article>
+        </section>
+
+        <section id="laboratorio" data-panel="form" lang="es-PE">
+            <h2>Laboratorio de atributos en formulario</h2>
+            <p>El formulario utiliza distintos tipos y estados de atributos para comprobar cómo cada regla de <code>atributos.css</code> selecciona controles específicos.</p>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>Simulación académica de registro de una API</legend>
+                    <div class="form-grid">
+                        <label class="field" for="correo">
+                            Correo de prueba
+                            <input id="correo" name="correo" type="email" placeholder="estudiante@example.com" required>
+                        </label>
+                        <label class="field" for="url-api">
+                            Endpoint público
+                            <input id="url-api" name="url_api" type="url" placeholder="https://api.example.org/v1" required>
+                        </label>
+                        <label class="field" for="token">
+                            Token de laboratorio
+                            <input id="token" name="token" type="password" minlength="8" placeholder="mínimo 8 caracteres" required>
+                        </label>
+                        <label class="field" for="codigo">
+                            Código de práctica
+                            <input id="codigo" name="codigo" type="text" value="EXP03-G06" readonly>
+                        </label>
+                        <label class="field" for="deprecated">
+                            Endpoint legado
+                            <input id="deprecated" name="deprecated" type="text" value="/api/v0/legacy" disabled>
+                        </label>
+                    </div>
+                    <p><button type="submit">Enviar a endpoint de prueba</button></p>
+                    <small>El destino es un endpoint público de pruebas HTTP. No se deben introducir datos personales ni credenciales reales.</small>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="matriz" data-panel="table">
+            <h2>Matriz de selectores demostrados</h2>
+            <div class="table-wrap">
+                <table>
+                    <caption>Resumen técnico de coincidencias de atributos</caption>
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col style="width: 30%">
+                        <col style="width: 45%">
+                    </colgroup>
+                    <thead>
+                        <tr><th>Selector</th><th>Tipo</th><th>Qué demuestra</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>[data-panel]</code></td><td>Presencia</td><td>Selecciona cualquier elemento que tenga el atributo.</td></tr>
+                        <tr><td><code>[data-level="critico"]</code></td><td>Igualdad</td><td>Selecciona un valor exacto.</td></tr>
+                        <tr><td><code>[href^="https://"]</code></td><td>Inicio</td><td>El valor comienza con una cadena.</td></tr>
+                        <tr><td><code>[href$=".org"]</code></td><td>Final</td><td>El valor termina con una cadena.</td></tr>
+                        <tr><td><code>[href*="owasp"]</code></td><td>Contiene</td><td>La cadena aparece en cualquier posición.</td></tr>
+                        <tr><td><code>[data-state~="verificado"]</code></td><td>Palabra</td><td>Busca una palabra dentro de una lista separada por espacios.</td></tr>
+                        <tr><td><code>[lang|="es"]</code></td><td>Idioma/prefijo</td><td>Coincide con es o con una variante que empieza por es-.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="conclusion" data-panel="result" data-state="verificado final">
+            <h2>Registro y conclusión</h2>
+            <p>Se verificó en el navegador que los estilos cambian en función de los atributos y de sus valores. Los selectores de atributos resultan útiles cuando la estructura HTML ya contiene información descriptiva o estados que pueden aprovecharse directamente desde CSS.</p>
+            <aside class="notice">
+                <h3>Diferencia frente a una pseudo-clase</h3>
+                <p>Un selector de atributo examina información escrita en el propio elemento, por ejemplo <code>[required]</code> o <code>[type="email"]</code>. Una pseudo-clase representa principalmente un estado, posición o condición, por ejemplo <code>:focus</code>, <code>:checked</code> o <code>:nth-child()</code>.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 03 // CSS</p>
+        <p>CHIPANA FLORES ALEXANDER TOMAS // GRUPO 06 // Desarrollo de Aplicaciones - 2026</p>
+    </footer>
+</body>
+</html>

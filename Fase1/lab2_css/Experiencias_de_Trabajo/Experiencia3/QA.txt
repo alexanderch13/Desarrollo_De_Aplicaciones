@@ -1,0 +1,5 @@
+QA automático
+- Selectores de atributo detectados: 18
+- Pseudo-clases distintas detectadas: 19
+- Pseudo-elementos distintos detectados: 8
+- Enlaces CSS locales verificados: True

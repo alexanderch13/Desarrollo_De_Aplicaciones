@@ -1,0 +1,111 @@
+/*
+ * EXPERIENCIA 03 - B) PSEUDOCLASES
+ * Archivo exigido por la guía: pseudoclases.css
+ * La guía exige por lo menos 10. Aquí se demuestran 18 casos.
+ */
+
+/* 1 */
+.demo-links a:link {
+    color: #f87171;
+}
+
+/* 2 */
+.demo-links a:visited {
+    color: #c084fc;
+}
+
+/* 3 */
+.demo-links a:hover {
+    color: #fff;
+    background: #7f1d1d;
+}
+
+/* 4 */
+.demo-links a:active {
+    transform: translateY(1px);
+}
+
+/* 5 */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+    border-color: #ef4444;
+}
+
+/* 6 */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #fca5a5;
+    outline-offset: 4px;
+}
+
+/* 7 */
+input:required {
+    border-left: 4px solid #ef4444;
+}
+
+/* 8 */
+input:optional {
+    border-left: 4px solid #52525b;
+}
+
+/* 9 */
+input:valid:not([type="checkbox"]):not([type="radio"]) {
+    box-shadow: inset 0 0 0 1px rgba(34, 197, 94, .55);
+}
+
+/* 10 */
+input:invalid:not(:placeholder-shown) {
+    box-shadow: inset 0 0 0 1px rgba(239, 68, 68, .8);
+}
+
+/* 11 */
+input:checked + span {
+    color: #fff;
+    font-weight: 800;
+}
+
+/* 12 */
+input:disabled {
+    opacity: .48;
+}
+
+/* 13 */
+input:enabled:hover,
+select:enabled:hover,
+textarea:enabled:hover {
+    border-color: #f87171;
+}
+
+/* 14 */
+.demo-list li:first-child {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* 15 */
+.demo-list li:last-child {
+    color: #fca5a5;
+}
+
+/* 16 */
+.demo-list li:nth-child(odd) {
+    background: rgba(127, 29, 29, .16);
+}
+
+/* 17 */
+.demo-list li:not(:last-child) {
+    border-bottom: 1px solid #27272a;
+}
+
+/* 18 */
+section:target {
+    border-color: #ef4444;
+    box-shadow: 0 0 24px rgba(220, 38, 38, .28);
+}
+
+button:hover {
+    background: #991b1b;
+}

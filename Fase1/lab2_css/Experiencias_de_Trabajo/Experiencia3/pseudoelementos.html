@@ -1,0 +1,121 @@
+<!--
+  ------------------------------------------------------------------
+  | Autor: CHIPANA FLORES ALEXANDER TOMAS - DESARROLLO DE APLICACIONES |
+  | GRUPO - 06                                                        |
+  | EXPERIENCIA 03 - C) PSEUDOELEMENTOS                              |
+  ------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="keywords" content="CSS, selectores de atributos, pseudo-clases, pseudo-elementos, OWASP, API Security">
+    <meta name="description" content="Experiencia 03 de CSS: demostración de ocho pseudo-elementos en una página educativa de seguridad de APIs.">
+    <title>Pseudo-elementos | Experiencia 03</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="pseudoelementos.css">
+</head>
+<body>
+    <header>
+        <p class="eyebrow">[ EXPERIENCIA 03 // ADVANCED CSS SELECTORS ]</p>
+        <h1>OWASP API Security Top 10</h1>
+        <p>Aplicación práctica de selectores de atributos, pseudo-clases y pseudo-elementos</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+    <nav aria-label="Navegación principal">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#texto">./texto</a>
+        <a href="#listas">./listas</a>
+        <a href="#controles">./controles</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2 class="demo-title">Uso de pseudo-elementos</h2>
+            <p class="lead">Los pseudo-elementos permiten aplicar estilo a una parte específica de un elemento o insertar contenido visual generado desde CSS sin añadir nodos HTML innecesarios. La guía exige siete casos; esta evidencia presenta ocho.</p>
+            <aside class="notice">
+                <h3>Objetivo técnico</h3>
+                <p>Comprobar <code>::before</code>, <code>::after</code>, <code>::first-letter</code>, <code>::first-line</code>, <code>::selection</code>, <code>::marker</code>, <code>::placeholder</code> y <code>::file-selector-button</code>.</p>
+            </aside>
+        </section>
+
+        <section id="texto">
+            <h2 class="demo-title">Tratamiento de contenido textual</h2>
+            <article>
+                <h3>Primera letra y primera línea</h3>
+                <p class="dropcap">La seguridad de una API depende de decisiones de diseño, implementación y operación. Una interfaz debe validar entradas, controlar autorizaciones, proteger credenciales y reducir configuraciones innecesarias. En esta demostración, la primera letra recibe un tratamiento visual distinto mediante CSS.</p>
+                <p class="lead">Esta primera línea se destaca mediante <code>::first-line</code>. El resto del párrafo conserva la apariencia general y permite observar con claridad la diferencia entre una parte virtual del elemento y el elemento completo.</p>
+            </article>
+            <article>
+                <h3>Contenido generado con ::before y ::after</h3>
+                <p class="quote-demo">Una API segura debe validar explícitamente quién puede realizar cada operación.</p>
+                <p><a class="external-link" href="https://owasp.org" target="_blank" rel="noopener noreferrer">Consultar OWASP</a></p>
+            </article>
+            <aside class="notice">
+                <h3>Prueba ::selection</h3>
+                <p>Seleccione con el mouse cualquier fragmento de texto de esta página. El color de selección se modifica globalmente mediante el pseudo-elemento <code>::selection</code>.</p>
+            </aside>
+        </section>
+
+        <section id="listas">
+            <h2 class="demo-title">Marcadores de listas</h2>
+            <article>
+                <h3>Controles básicos</h3>
+                <ul class="marker-demo">
+                    <li>Autenticación robusta.</li>
+                    <li>Autorización por objeto y función.</li>
+                    <li>Validación de entradas y respuestas externas.</li>
+                    <li>Límites de consumo de recursos.</li>
+                    <li>Inventario actualizado de APIs.</li>
+                </ul>
+                <p>Los símbolos de cada elemento son estilizados mediante <code>li::marker</code>.</p>
+            </article>
+        </section>
+
+        <section id="controles">
+            <h2 class="demo-title">Pseudo-elementos en controles</h2>
+            <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Prueba de placeholder y selector de archivo</legend>
+                    <div class="form-grid">
+                        <label class="field" for="nombre-api">
+                            Nombre de API
+                            <input id="nombre-api" name="nombre_api" type="text" placeholder="Ej.: API de inventario" required>
+                        </label>
+                        <label class="field" for="owner">
+                            Responsable técnico
+                            <input id="owner" name="owner" type="text" placeholder="Ej.: Equipo Backend" required>
+                        </label>
+                    </div>
+                    <label class="field" for="detalle">
+                        Observaciones
+                        <textarea id="detalle" name="detalle" rows="4" placeholder="Describa los controles que fueron revisados"></textarea>
+                    </label>
+                    <label class="field" for="evidencia">
+                        Evidencia de laboratorio
+                        <input id="evidencia" name="evidencia" type="file" accept=".png,.jpg,.jpeg,.pdf">
+                    </label>
+                    <p><button type="submit">Enviar prueba</button></p>
+                    <small>No cargue archivos con información personal o confidencial. El control existe únicamente para demostrar <code>::file-selector-button</code>.</small>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="conclusion">
+            <h2 class="demo-title">Registro y conclusión</h2>
+            <p>Se verificó que los pseudo-elementos permiten trabajar con fragmentos virtuales como la primera letra, la primera línea, los marcadores y el placeholder, además de generar contenido decorativo antes o después de un elemento.</p>
+            <aside class="notice">
+                <h3>Diferencia entre pseudo-clase y pseudo-elemento</h3>
+                <p>Una pseudo-clase selecciona un elemento cuando cumple un estado o condición, por ejemplo <code>:hover</code> o <code>:checked</code>. Un pseudo-elemento selecciona o genera una parte del elemento, por ejemplo <code>::first-letter</code>, <code>::before</code> o <code>::marker</code>.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 03 // CSS</p>
+        <p>CHIPANA FLORES ALEXANDER TOMAS // GRUPO 06 // Desarrollo de Aplicaciones - 2026</p>
+    </footer>
+</body>
+</html>

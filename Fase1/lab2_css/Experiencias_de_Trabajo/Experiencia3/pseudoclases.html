@@ -1,0 +1,141 @@
+<!--
+  ------------------------------------------------------------------
+  | Autor: CHIPANA FLORES ALEXANDER TOMAS - DESARROLLO DE APLICACIONES |
+  | GRUPO - 06                                                        |
+  | EXPERIENCIA 03 - B) PSEUDOCLASES                                 |
+  ------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHIPANA FLORES ALEXANDER TOMAS">
+    <meta name="keywords" content="CSS, selectores de atributos, pseudo-clases, pseudo-elementos, OWASP, API Security">
+    <meta name="description" content="Experiencia 03 de CSS: demostración de más de diez pseudo-clases mediante estados, formularios, listas y navegación.">
+    <title>Pseudo-clases | Experiencia 03</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="pseudoclases.css">
+</head>
+<body>
+    <header>
+        <p class="eyebrow">[ EXPERIENCIA 03 // ADVANCED CSS SELECTORS ]</p>
+        <h1>OWASP API Security Top 10</h1>
+        <p>Aplicación práctica de selectores de atributos, pseudo-clases y pseudo-elementos</p>
+        <p>Laboratorio de Desarrollo de Aplicaciones // Grupo 06</p>
+    </header>
+    <nav aria-label="Navegación principal" class="demo-links">
+        <a href="#objetivo">./objetivo</a>
+        <a href="#estados">./estados</a>
+        <a href="#formulario">./formulario</a>
+        <a href="#posicion">./posicion</a>
+        <a href="#conclusion">./conclusion</a>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2>Uso de pseudo-clases</h2>
+            <p>Las pseudo-clases permiten seleccionar elementos de acuerdo con un estado, una interacción del usuario, una condición de validación o una posición dentro de la estructura HTML. La guía exige al menos diez casos; esta evidencia implementa dieciocho.</p>
+            <aside class="notice">
+                <h3>Cómo probar la página</h3>
+                <p>Pase el cursor sobre enlaces y controles, navegue con <kbd>Tab</kbd>, complete los campos, marque opciones y use los enlaces del menú. Cada acción activa distintas reglas de <code>pseudoclases.css</code>.</p>
+            </aside>
+        </section>
+
+        <section id="estados">
+            <h2>Estados de enlaces e interacción</h2>
+            <article class="demo-links">
+                <h3>Prueba :link, :visited, :hover, :active y :focus-visible</h3>
+                <p><a href="https://owasp.org" target="_blank" rel="noopener noreferrer">Abrir OWASP</a></p>
+                <p><a href="#formulario">Ir al formulario de validación</a></p>
+                <p><a href="#posicion">Ir a la lista posicional</a></p>
+            </article>
+        </section>
+
+        <section id="formulario">
+            <h2>Estados de controles y validación</h2>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>Prueba de pseudo-clases de formulario</legend>
+                    <div class="form-grid">
+                        <label class="field" for="alias">
+                            Alias requerido
+                            <input id="alias" name="alias" type="text" minlength="3" placeholder="mínimo 3 caracteres" required>
+                        </label>
+                        <label class="field" for="email-pseudo">
+                            Email requerido
+                            <input id="email-pseudo" name="email" type="email" placeholder="grupo06@example.com" required>
+                        </label>
+                        <label class="field" for="url-pseudo">
+                            URL opcional
+                            <input id="url-pseudo" name="url" type="url" placeholder="https://example.org">
+                        </label>
+                        <label class="field" for="entorno">
+                            Entorno
+                            <select id="entorno" name="entorno">
+                                <option value="dev">Desarrollo</option>
+                                <option value="qa">QA</option>
+                                <option value="prod">Producción</option>
+                            </select>
+                        </label>
+                        <label class="field" for="deshabilitado">
+                            Campo deshabilitado
+                            <input id="deshabilitado" type="text" value="No editable" disabled>
+                        </label>
+                    </div>
+                    <p class="choice">
+                        <label class="choice"><input type="checkbox" name="revision" required><span>Confirmo que revisé los controles</span></label>
+                    </p>
+                    <p>Prioridad:</p>
+                    <p class="choice">
+                        <label class="choice"><input type="radio" name="prioridad" value="alta" required><span>Alta</span></label>
+                        <label class="choice"><input type="radio" name="prioridad" value="media"><span>Media</span></label>
+                    </p>
+                    <label class="field" for="comentario">
+                        Observación
+                        <textarea id="comentario" name="comentario" rows="4" placeholder="Escriba una observación de laboratorio"></textarea>
+                    </label>
+                    <p><button type="submit">Probar validación</button></p>
+                    <small>No introduzca información sensible; el formulario se usa únicamente para demostrar estados CSS.</small>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="posicion">
+            <h2>Pseudo-clases estructurales</h2>
+            <article>
+                <h3>Lista de verificación OWASP</h3>
+                <ol class="demo-list">
+                    <li>Verificar autorización a nivel de objeto.</li>
+                    <li>Proteger autenticación y sesiones.</li>
+                    <li>Controlar propiedades expuestas y modificables.</li>
+                    <li>Aplicar límites al consumo de recursos.</li>
+                    <li>Revisar permisos a nivel de función.</li>
+                    <li>Proteger flujos sensibles del negocio.</li>
+                    <li>Validar recursos remotos para reducir SSRF.</li>
+                    <li>Eliminar configuraciones inseguras.</li>
+                    <li>Mantener un inventario actualizado.</li>
+                    <li>Validar los datos recibidos desde APIs externas.</li>
+                </ol>
+            </article>
+            <aside class="notice">
+                <h3>Reglas estructurales visibles</h3>
+                <p>La lista utiliza <code>:first-child</code>, <code>:last-child</code>, <code>:nth-child(odd)</code> y <code>:not(:last-child)</code> para diferenciar elementos según su posición.</p>
+            </aside>
+        </section>
+
+        <section id="conclusion">
+            <h2>Registro y conclusión</h2>
+            <p>Se probaron estados de navegación, interacción, foco, validación, selección y posición estructural. Las pseudo-clases permiten reaccionar al contexto actual del elemento sin modificar el HTML cada vez que cambia dicho estado.</p>
+            <aside class="notice">
+                <h3>Diferencia entre pseudo-clase y selector de atributo</h3>
+                <p>El selector de atributo consulta información declarada como <code>type</code>, <code>required</code> o <code>data-*</code>. La pseudo-clase consulta una condición dinámica o estructural como <code>:hover</code>, <code>:valid</code>, <code>:checked</code> o <code>:nth-child()</code>.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>EXPERIENCIA DE PRÁCTICA N° 03 // CSS</p>
+        <p>CHIPANA FLORES ALEXANDER TOMAS // GRUPO 06 // Desarrollo de Aplicaciones - 2026</p>
+    </footer>
+</body>
+</html>

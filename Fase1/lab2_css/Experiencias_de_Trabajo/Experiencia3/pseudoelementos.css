@@ -1,0 +1,77 @@
+/*
+ * EXPERIENCIA 03 - C) PSEUDOELEMENTOS
+ * Archivo exigido por la guía: pseudoelementos.css
+ * La guía exige por lo menos 7 casos. Aquí se demuestran 8.
+ */
+
+/* 1. Inserta contenido antes del título */
+.demo-title::before {
+    content: "[LAB] ";
+    color: #ef4444;
+}
+
+/* 2. Inserta contenido después de enlaces externos */
+.external-link::after {
+    content: " ↗";
+    color: #fca5a5;
+}
+
+/* 3. Primera letra */
+.dropcap::first-letter {
+    float: left;
+    margin: .08em .12em 0 0;
+    color: #ef4444;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: .8;
+}
+
+/* 4. Primera línea */
+.lead::first-line {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+/* 5. Texto seleccionado por el usuario */
+::selection {
+    color: #fff;
+    background: #991b1b;
+}
+
+/* 6. Marcadores de listas */
+.marker-demo li::marker {
+    color: #ef4444;
+    font-weight: 800;
+}
+
+/* 7. Placeholder de controles */
+input::placeholder,
+textarea::placeholder {
+    color: #71717a;
+    font-style: italic;
+}
+
+/* 8. Botón generado por input file */
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 9px 12px;
+    color: #fff;
+    background: #7f1d1d;
+    border: 1px solid #dc2626;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Combinaciones de pseudoelementos para reforzar el resultado visual */
+.quote-demo::before {
+    content: "“";
+    color: #ef4444;
+    font-size: 2rem;
+}
+
+.quote-demo::after {
+    content: "”";
+    color: #ef4444;
+    font-size: 2rem;
+}
