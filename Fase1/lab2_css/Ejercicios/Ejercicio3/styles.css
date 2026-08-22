@@ -1,0 +1,327 @@
+:root {
+  /* Paleta pastel: verde salvia (acento principal) + marrón cálido (base/texto) */
+  --bg: #faf6f0;
+  --fg: #4b3b2f;
+  --muted: #8d7b6a;
+  --card: #fffdf9;
+  --border: #e7dcc9;
+  --shadow: 0 8px 20px rgba(75,59,47,.10);
+  --primary: #7fa88a;
+  --primary-700: #5f8a72;
+}
+#page-menu { --primary: #c69c6d; --primary-700: #a67b4c; }     
+#page-reservas { --primary: #d8a47f; --primary-700: #b97f56; } 
+
+/* [USO: HERENCIA] */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font: 16px/1.6 system-ui, Arial, sans-serif;
+  color: var(--fg);
+  letter-spacing: .2px;
+  background:
+    radial-gradient(1000px 400px at 10% -10%, rgba(127,168,138,.14), transparent 60%),
+    radial-gradient(800px 300px at 100% 0%, rgba(198,156,109,.14), transparent 60%),
+    var(--bg);
+}
+
+/* LAYOUT ESTRUCTURAL (Sin usar div) */
+.container { max-width: 1000px; margin: 0 auto; padding: 18px; }
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+/* ESTILOS DE COMPONENTES BÁSICOS */
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.site-header, .site-footer {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, var(--primary) 8%), var(--card));
+}
+.site-header nav.container {
+  padding-block: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+h1, h2, h3, p, li { margin: 0 0 8px; }
+header { border-bottom: 1px solid var(--border); }
+footer { border-top: 1px solid var(--border); }
+nav ul, .footer-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
+
+.seccion { margin: 16px 0; }
+.titulo { font-size: 38px; line-height: 1.15; }
+.lead { font-size: 18px; color: var(--muted); }
+
+.resaltado { color: #4d7a52 !important; } 
+
+.card h2 { position: relative; padding-left: 10px; }
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+#page-inicio .brand, #page-menu .brand, #page-reservas .brand { color: var(--primary); }
+
+section article p { color: #4b3b2f; }        
+nav > ul > li > a { padding: 4px 6px; }       
+h1 + p { font-style: italic; color: #4b3b2f; } 
+h1 ~ p { color: #6b5c4d; }                     
+
+[title] { outline: 1px dashed #b8a894; }                
+a[href^="https"] { color: var(--primary-700); }         
+a[href$=".pdf"] { text-decoration: underline; }         
+a[href*="menu"] { font-weight: 700; }                   
+[class~="marcada"] { padding-left: 0; }                 
+[lang|="es"] { border-left: 4px solid var(--border); padding-left: 12px; } 
+
+/* Pseudo-clases y elementos */
+a:link { opacity: .95; }
+a:visited { opacity: .86; }
+input:focus, textarea:focus { outline: 3px solid var(--primary); }
+input:required, textarea:required { border: 1px solid var(--border); }
+input:valid, textarea:valid { border-color: #7fa88a; background: #f1f7f0; }
+input:invalid, textarea:invalid { border-color: #c97b63; background: #fbf1ee; }
+input[type="checkbox"]:checked { outline: 2px dashed var(--primary-700); outline-offset: 2px; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+li:nth-child(odd) { background: #f7f2ea; }
+li:nth-child(even) { background: #f2ece1; }
+p:first-child { font-weight: 700; }
+p:last-child { font-style: italic; }
+
+.lead::first-line { text-transform: uppercase; }
+.drop::first-letter { font-size: 160%; font-weight: 800; }
+::selection { background: #e9d9b8; }
+.marcada li::marker { content: "• "; color: var(--primary); }
+input::placeholder { color: #b0a08e; }
+.badge::before { content: "★ "; color: #c69c6d; }
+.badge::after { content: " ✓"; color: #7fa88a; }
+
+/* Formulario */
+.form label { display: block; margin: 10px 0 6px; }
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color .12s, box-shadow .12s;
+}
+.form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  accent-color: var(--primary);
+}
+.form label.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* Tabla Avanzada */
+.tabla-avanzada {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.tabla-avanzada th, .tabla-avanzada td {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  text-align: left;
+}
+.cabecera-principal {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+}
+
+/*
+   MODIFICACIÓN EJERCICIO 3: 
+ */
+
+/* 1. ANIMACIÓN EN EL LOGO (Logo más grande y con latido) */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.brand { 
+  font-weight: 900; 
+  text-decoration: none; 
+  font-size: 2.5rem; 
+  letter-spacing: 1px;
+  display: inline-block;
+  animation: flotar 3s ease-in-out infinite;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand:hover {
+  color: var(--primary-700);
+  text-shadow: 0 4px 10px color-mix(in oklab, var(--primary) 50%, transparent);
+}
+
+
+/* 2. MENÚ DESLIZANTE */
+.menu .link {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: color 0.3s ease;
+}
+
+.menu .link::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-700);
+  transition: top 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -1;
+}
+
+.menu .link:hover::before { top: 0; }
+.menu .link:hover { color: white; }
+
+
+/* 3. IMAGEN PRINCIPAL EN 3D*/
+.tarjeta-3d {
+  position: relative;
+  width: 100%; /* Toma todo el ancho disponible */
+  height: 400px; /* Altura imponente */
+  perspective: 1200px; 
+  margin: 0 auto 3rem auto; /* Centrado y con margen inferior */
+}
+
+.cara-3d {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: var(--shadow);
+}
+
+.frente img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dorso {
+  background-color: var(--primary-700);
+  color: white;
+  transform: rotateY(180deg); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.tarjeta-3d:hover .frente { transform: rotateY(-180deg); }
+.tarjeta-3d:hover .dorso { transform: rotateY(0deg); }
+
+
+/* 4. BOTÓN EFECTO "GELATINA" Y EXPRESIÓN REGULAR */
+[class^="btn-"] {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary);
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes rebote-gelatina {
+  0%, 100% { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+
+[class^="btn-"]:hover {
+  animation: rebote-gelatina 0.6s ease;
+  background-color: var(--primary-700);
+}
+
+/* 5. TARJETA DE TEXTO 3D (Nuestra propuesta)*/
+.tarjeta-3d-texto {
+  position: relative;
+  width: 100%;
+  min-height: 200px; 
+  perspective: 1200px;
+}
+
+.tarjeta-3d-texto .cara-3d {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  margin: 0;
+
+}
+
+.tarjeta-3d-texto .frente {
+  transform: rotateY(0deg);
+  background-color: var(--card);
+}
+
+.tarjeta-3d-texto .dorso {
+  background-color: var(--primary-700);
+  transform: rotateY(180deg); /* Empieza de espaldas */
+  border-color: var(--primary-700);
+}
+
+.tarjeta-3d-texto .dorso h2::before {
+  background: white;
+}
+
+/* Al pasar el cursor, el contenedor hace girar ambas caras */
+.tarjeta-3d-texto:hover .frente { transform: rotateY(-180deg); }
+.tarjeta-3d-texto:hover .dorso { transform: rotateY(0deg); }
