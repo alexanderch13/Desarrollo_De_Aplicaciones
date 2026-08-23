@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoKaChiMo: cafetería de especialidad, granos de origen y pastelería artesanal. Ejercicio 5 de recreación y optimización CSS.">
+  <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+  <title>MoKaChiMo — Inicio | Ejercicio 5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-inicio">
+  <header class="site-header">
+    <nav class="container" aria-label="Navegación principal">
+      <a class="brand" href="index.html" aria-label="MoKaChiMo, volver al inicio">MoKaChiMo</a>
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero-shell" aria-labelledby="titulo-inicio">
+      <article class="hero-copy">
+        <p class="eyebrow">Café de especialidad · Arequipa</p>
+        <h1 id="titulo-inicio">Una pausa con sabor a origen.</h1>
+        <p>
+          MoKaChiMo reúne café de especialidad, granos seleccionados y pastelería artesanal
+          en una experiencia cálida inspirada en la identidad visual de los ejercicios 1 y 3.
+        </p>
+        <nav class="hero-actions" aria-label="Acciones destacadas">
+          <a class="btn-primary badge" href="menu.html">Explorar el menú</a>
+          <a class="btn" href="reservas.html">Reservar una mesa</a>
+        </nav>
+      </article>
+
+      <figure class="hero-visual">
+        <img src="assets/inicio.png" alt="Fachada de la cafetería MoKaChiMo con plantas y luz cálida">
+        <figcaption>Una fachada cálida, madera natural y vegetación: claves visuales de la propuesta.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block" id="propuesta">
+      <header class="container section-heading">
+        <h2>La experiencia MoKaChiMo</h2>
+        <p>
+          El diseño recrea la atmósfera de las imágenes proporcionadas con una paleta de café,
+          crema y verde, tarjetas limpias, profundidad suave y componentes interactivos.
+        </p>
+      </header>
+
+      <section class="container feature-grid" aria-label="Características principales">
+        <article class="feature-card">
+          <h3>Granos de origen</h3>
+          <p>Selecciones de Perú, Colombia, Etiopía y Brasil con perfiles diferenciados de taza.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Tostado local</h3>
+          <p>Lotes pequeños para conservar aroma, dulzor y trazabilidad desde el origen.</p>
+        </article>
+        <article class="feature-card" data-state="popular">
+          <h3>Pastelería artesanal</h3>
+          <p>Croissants, rolls, brownies y tartaletas pensados para acompañar cada método.</p>
+        </article>
+      </section>
+    </section>
+
+    <section class="container section-block editorial" id="origen">
+      <figure>
+        <img src="assets/menu.png" alt="Carta de MoKaChiMo con café y pastelería artesanal">
+      </figure>
+      <aside>
+        <p class="eyebrow">Selección de temporada</p>
+        <h2>Del origen a tu taza</h2>
+        <p>
+          Conservamos la idea de los orígenes del Ejercicio 1 y la presentación visual del Ejercicio 3,
+          pero reorganizada con Grid, selectores avanzados y una jerarquía más clara.
+        </p>
+        <ul class="origin-list">
+          <li>Perú — chocolate, panela y frutos rojos</li>
+          <li>Colombia — caramelo, cítricos y cacao</li>
+          <li>Etiopía — flores, frutos rojos y té</li>
+          <li>Brasil — avellana, cacao y cuerpo cremoso</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="container footer-shell">
+      <p><strong>MoKaChiMo</strong><br><small>© 2026 · Café de especialidad</small></p>
+      <ul class="footer-links">
+        <li><a href="assets/carta.pdf">Carta</a></li>
+        <li><a href="https://instagram.com/MoKaChiMo-cafe" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </section>
+  </footer>
+</body>
+</html>

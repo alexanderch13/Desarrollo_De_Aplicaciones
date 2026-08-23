@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserva una mesa en MoKaChiMo mediante un formulario accesible y adaptable.">
+  <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+  <title>MoKaChiMo — Reservas | Ejercicio 5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-reservas">
+  <header class="site-header">
+    <nav class="container" aria-label="Navegación principal">
+      <a class="brand" href="index.html" aria-label="MoKaChiMo, volver al inicio">MoKaChiMo</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container booking-hero">
+      <figure class="visual-banner">
+        <img src="assets/reservas.png" alt="Libro de reservas de MoKaChiMo sobre una mesa de madera">
+        <figcaption>
+          <strong>Tu mesa, tu momento</strong>
+          Completa los datos y elige la fecha de tu visita.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="container section-block booking-grid" id="formulario-reserva">
+      <article class="booking-panel">
+        <p class="eyebrow">Reserva online</p>
+        <h1>Confirma tu visita</h1>
+        <p>Formulario estructurado con etiquetas explícitas, validación HTML y estados visuales accesibles.</p>
+
+        <form class="form-grid" action="https://httpbin.org/post" method="post">
+          <label for="nombre">
+            Nombre completo
+            <input id="nombre" name="nombre" type="text" required minlength="2" autocomplete="name" placeholder="Ej. Ana Torres">
+          </label>
+
+          <label for="correo">
+            Correo electrónico
+            <input id="correo" name="correo" type="email" required autocomplete="email" placeholder="ana@correo.com">
+          </label>
+
+          <label for="fecha">
+            Fecha
+            <input id="fecha" name="fecha" type="date" required>
+          </label>
+
+          <label for="personas">
+            Personas
+            <select id="personas" name="personas" required>
+              <option value="">Selecciona</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 o más</option>
+            </select>
+          </label>
+
+          <label for="mensaje">
+            Indicaciones especiales
+            <textarea id="mensaje" name="mensaje" minlength="10" placeholder="Alergias, celebración u otra indicación"></textarea>
+          </label>
+
+          <label class="check" for="terminos">
+            <input id="terminos" name="terminos" type="checkbox" required>
+            Acepto que esta es una demostración académica del formulario de reserva.
+          </label>
+
+          <button class="btn-primary" type="submit">Solicitar reserva</button>
+        </form>
+      </article>
+
+      <aside class="booking-info">
+        <p class="eyebrow">Antes de reservar</p>
+        <h2>Información útil</h2>
+        <ul>
+          <li>Horario sugerido: 8:00 a 21:00.</li>
+          <li>Las reservas académicas de esta demo no representan una mesa real.</li>
+          <li>El formulario utiliza un endpoint HTTP de prueba para demostrar el envío.</li>
+        </ul>
+
+        <details>
+          <summary>¿Puedo indicar una alergia?</summary>
+          <p>Sí. Utiliza el campo de indicaciones especiales antes de enviar el formulario.</p>
+        </details>
+
+        <details>
+          <summary>¿Puedo reservar para un grupo?</summary>
+          <p>La interfaz permite seleccionar cinco o más personas; en un sistema real se confirmaría disponibilidad.</p>
+        </details>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="container footer-shell">
+      <p><strong>MoKaChiMo</strong><br><small>© 2026 · Reservas</small></p>
+      <ul class="footer-links">
+        <li><a href="menu.html">Ver menú</a></li>
+        <li><a href="assets/carta.pdf">Carta</a></li>
+      </ul>
+    </section>
+  </footer>
+
+  <script>
+    const fecha = document.getElementById("fecha");
+    fecha.min = new Date().toISOString().split("T")[0];
+  </script>
+</body>
+</html>

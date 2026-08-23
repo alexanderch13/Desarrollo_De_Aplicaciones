@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Menú de MoKaChiMo: cafés, métodos, granos de origen y pastelería artesanal.">
+  <meta name="author" content="Laboratorio de Desarrollo de Aplicaciones">
+  <title>MoKaChiMo — Menú | Ejercicio 5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-menu">
+  <header class="site-header">
+    <nav class="container" aria-label="Navegación principal">
+      <a class="brand" href="index.html" aria-label="MoKaChiMo, volver al inicio">MoKaChiMo</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html" aria-current="page">Menú</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container menu-hero">
+      <figure class="visual-banner">
+        <img src="assets/menu.png" alt="Menú visual de MoKaChiMo con cafés y productos de pastelería">
+        <figcaption>
+          <strong>Menú de temporada</strong>
+          Café, métodos y pastelería con una presentación inspirada en la imagen original.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block" id="carta">
+      <header class="container section-heading">
+        <h1>Café, métodos y acompañamientos</h1>
+        <p>
+          Se mantiene el contenido base de los ejercicios anteriores y se presenta mediante
+          componentes reutilizables, estados interactivos y selectores avanzados.
+        </p>
+      </header>
+
+      <section class="container menu-grid" aria-label="Categorías del menú">
+        <article class="menu-card" data-state="popular">
+          <h3>Espresso & leche</h3>
+          <p class="price">Desde S/ 8</p>
+          <ul>
+            <li>Espresso</li>
+            <li>Americano</li>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+            <li>Flat white</li>
+          </ul>
+        </article>
+
+        <article class="menu-card">
+          <h3>Métodos filtrados</h3>
+          <p class="price">Desde S/ 12</p>
+          <ul>
+            <li>V60</li>
+            <li>Prensa francesa</li>
+            <li>Aeropress</li>
+            <li>Cold brew</li>
+          </ul>
+        </article>
+
+        <article class="menu-card">
+          <h3>Pastelería</h3>
+          <p class="price">Desde S/ 7</p>
+          <ul>
+            <li>Croissant</li>
+            <li>Roll de canela</li>
+            <li>Brownie</li>
+            <li>Tartaleta</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+
+    <section class="container section-block" id="granos">
+      <header class="section-heading">
+        <h2>Especificaciones por origen</h2>
+        <p>La tabla avanzada conserva el uso de <code>rowspan</code> y <code>colspan</code> trabajado en el Ejercicio 3.</p>
+      </header>
+
+      <table>
+        <caption>Granos disponibles y perfiles de taza</caption>
+        <thead>
+          <tr>
+            <th rowspan="2" scope="col">Origen</th>
+            <th colspan="2" scope="colgroup">Proceso y perfil</th>
+            <th rowspan="2" scope="col">Método sugerido</th>
+          </tr>
+          <tr>
+            <th scope="col">Proceso</th>
+            <th scope="col">Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" data-origin="Perú, Cusco"><strong>Cusco, Perú</strong></td>
+            <td>Lavado</td>
+            <td>Chocolate oscuro, nueces y panela</td>
+            <td>V60</td>
+          </tr>
+          <tr>
+            <td>Natural</td>
+            <td>Frutos rojos, miel y acidez brillante</td>
+            <td>Aeropress</td>
+          </tr>
+          <tr>
+            <td data-origin="Brasil, Minas Gerais"><strong>Minas Gerais, Brasil</strong></td>
+            <td>Honey</td>
+            <td>Cacao, avellana y cuerpo cremoso</td>
+            <td>Prensa francesa</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="container footer-shell">
+      <p><strong>MoKaChiMo</strong><br><small>© 2026 · Menú de temporada</small></p>
+      <ul class="footer-links">
+        <li><a href="assets/carta.pdf">Carta</a></li>
+        <li><a href="reservas.html">Reservar mesa</a></li>
+      </ul>
+    </section>
+  </footer>
+</body>
+</html>

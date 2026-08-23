@@ -1,0 +1,55 @@
+EJERCICIO 5 - VALIDACIÓN AUTOMÁTICA
+
+{
+  "html": {
+    "index.html": {
+      "div_tags": 0,
+      "inline_style_attrs": 0,
+      "linked_css": true,
+      "has_main": true,
+      "has_nav": true,
+      "has_footer": true,
+      "images_exist": true
+    },
+    "menu.html": {
+      "div_tags": 0,
+      "inline_style_attrs": 0,
+      "linked_css": true,
+      "has_main": true,
+      "has_nav": true,
+      "has_footer": true,
+      "images_exist": true
+    },
+    "reservas.html": {
+      "div_tags": 0,
+      "inline_style_attrs": 0,
+      "linked_css": true,
+      "has_main": true,
+      "has_nav": true,
+      "has_footer": true,
+      "images_exist": true
+    }
+  },
+  "css": {
+    "attribute_selectors": 13,
+    "has_selector_has": true,
+    "has_selector_is": true,
+    "has_selector_where": true,
+    "pseudo_elements": [
+      "::after",
+      "::before",
+      "::first-letter",
+      "::marker",
+      "::placeholder",
+      "::selection"
+    ],
+    "media_queries": 3,
+    "keyframes": [
+      "entrada-suave",
+      "flotar-marca",
+      "pulso-cafe"
+    ],
+    "grid": true,
+    "flex": true
+  }
+}
