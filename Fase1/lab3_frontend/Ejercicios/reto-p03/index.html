@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="DevLab desarrolla sitios web, aplicaciones e integraciones para proyectos digitales."
+    >
+    <title>DevLab | Soluciones digitales</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- HEADER: Zorro aplicará Flexbox en el siguiente commit. -->
+    <header class="header">
+      <div class="contenedor header__contenido">
+        <a class="logo" href="#inicio" aria-label="Ir al inicio de DevLab">DevLab</a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <ul class="nav__lista">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO: Zorro organizará texto e imagen con Flexbox. -->
+      <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+        <div class="contenedor hero__contenido">
+          <div class="hero__texto">
+            <p class="etiqueta">Desarrollo de aplicaciones</p>
+            <h1 id="titulo-principal">
+              Construimos experiencias digitales que funcionan.
+            </h1>
+            <p>
+              Diseñamos soluciones claras y accesibles para ayudar a empresas,
+              organizaciones y emprendimientos a crecer en entornos digitales.
+            </p>
+
+            <div class="acciones" aria-label="Acciones principales">
+              <a class="boton boton--principal" href="#servicios">Ver servicios</a>
+              <a class="boton boton--secundario" href="#proyectos">Ver proyectos</a>
+            </div>
+          </div>
+
+          <figure class="hero__imagen">
+            <img
+              src="assets/dashboard.svg"
+              alt="Ilustración de un panel de aplicación web"
+              width="680"
+              height="430"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <!-- SERVICIOS: Luz convertirá .tarjetas en una cuadrícula CSS Grid. -->
+      <section class="servicios seccion" id="servicios" aria-labelledby="titulo-servicios">
+        <div class="contenedor">
+          <header class="seccion__titulo">
+            <p class="etiqueta">Lo que hacemos</p>
+            <h2 id="titulo-servicios">Servicios para proyectos digitales</h2>
+            <p>Combinamos estrategia, diseño y tecnología en cada solución.</p>
+          </header>
+
+          <div class="tarjetas">
+            <article class="tarjeta">
+              <p class="tarjeta__numero" aria-hidden="true">01</p>
+              <h3>Diseño web</h3>
+              <p>
+                Interfaces claras, consistentes y centradas en las necesidades
+                de las personas usuarias.
+              </p>
+              <a href="#contacto">Conocer más</a>
+            </article>
+
+            <article class="tarjeta">
+              <p class="tarjeta__numero" aria-hidden="true">02</p>
+              <h3>Aplicaciones</h3>
+              <p>
+                Soluciones web construidas con tecnologías actuales y una
+                estructura fácil de mantener.
+              </p>
+              <a href="#contacto">Conocer más</a>
+            </article>
+
+            <article class="tarjeta">
+              <p class="tarjeta__numero" aria-hidden="true">03</p>
+              <h3>Integración</h3>
+              <p>
+                Conectamos servicios y datos para reducir tareas repetitivas y
+                mejorar los procesos.
+              </p>
+              <a href="#contacto">Conocer más</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS: Luz convertirá .proyectos__lista en CSS Grid. -->
+      <section class="proyectos seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+        <div class="contenedor">
+          <header class="seccion__titulo">
+            <p class="etiqueta">Proyectos recientes</p>
+            <h2 id="titulo-proyectos">Soluciones para necesidades concretas</h2>
+            <p>Una selección de productos desarrollados por nuestro equipo.</p>
+          </header>
+
+          <div class="proyectos__lista">
+            <article class="proyecto">
+              <p class="proyecto__tipo">Aplicación universitaria</p>
+              <h3>Campus Conecta</h3>
+              <p>
+                Centraliza horarios, avisos y actividades para mejorar la
+                comunicación con los estudiantes.
+              </p>
+              <a href="#contacto">Ver proyecto</a>
+            </article>
+
+            <article class="proyecto">
+              <p class="proyecto__tipo">Catálogo digital</p>
+              <h3>Mercado Local</h3>
+              <p>
+                Permite que pequeños negocios presenten sus productos y reciban
+                solicitudes desde cualquier dispositivo.
+              </p>
+              <a href="#contacto">Ver proyecto</a>
+            </article>
+
+            <article class="proyecto">
+              <p class="proyecto__tipo">Panel de seguimiento</p>
+              <h3>Control Activo</h3>
+              <p>
+                Resume indicadores importantes para facilitar el seguimiento y
+                la toma de decisiones.
+              </p>
+              <a href="#contacto">Ver proyecto</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- LLAMADA A LA ACCIÓN -->
+      <section class="cta seccion" id="contacto" aria-labelledby="titulo-contacto">
+        <div class="contenedor cta__contenido">
+          <p class="etiqueta">Trabajemos juntos</p>
+          <h2 id="titulo-contacto">¿Tienes un proyecto digital en mente?</h2>
+          <p>
+            Cuéntanos tu idea y evaluaremos una solución clara, funcional y
+            acorde con tus objetivos.
+          </p>
+          <a class="boton boton--claro" href="mailto:contacto@devlab.pe">
+            Contactar a DevLab
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: Zorro aplicará Flexbox en el siguiente commit. -->
+    <footer class="footer">
+      <div class="contenedor footer__contenido">
+        <p><strong>DevLab</strong> · Laboratorio de Desarrollo de Aplicaciones</p>
+        <p><small>&copy; 2026 DevLab. Proyecto académico.</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
