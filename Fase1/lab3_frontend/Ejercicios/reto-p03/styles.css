@@ -1,10 +1,7 @@
 /* =========================================================
-   RETO P03 - COMMIT 1: CHIPS
-   Base visual, modelo de caja y flujo normal.
-
-   En este commit todavía NO se utilizan Flexbox, CSS Grid,
-   posicionamiento, Media Queries, transiciones ni transformaciones.
-   Esas mejoras corresponden a los siguientes integrantes.
+   RETO P03 - EDUARDO: MICRO-LAYOUT Y COMPONENTES UNIDIMENSIONALES
+   Base visual + Flexbox para Header, Hero, acciones y Footer.
+   El layout general de catálogos queda reservado para CSS Grid.
    ========================================================= */
 
 :root {
@@ -80,8 +77,10 @@ a:focus-visible {
 
 img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .contenedor {
@@ -90,15 +89,28 @@ img {
   margin-inline: auto;
 }
 
+/* =========================
+   HEADER - Flexbox 1D
+   ========================= */
 .header {
   padding-block: 1.25rem;
   border-bottom: 0.0625rem solid var(--borde);
   background: var(--blanco);
 }
 
+.header__contenido {
+  /* EDUARDO: Flexbox para organizar logo y navegación en un solo eje. */
+  display: flex;
+  /* EDUARDO: En Mobile First los elementos se apilan verticalmente. */
+  flex-direction: column;
+  /* EDUARDO: Alinea los elementos al inicio del eje transversal. */
+  align-items: flex-start;
+  /* EDUARDO: Separación interna mediante gap, sin márgenes manuales. */
+  gap: 1rem;
+}
+
 .logo {
   display: inline-block;
-  margin-bottom: 1rem;
   color: var(--azul);
   font-size: 1.65rem;
   font-weight: 800;
@@ -106,13 +118,15 @@ img {
 }
 
 .nav__lista {
+  /* EDUARDO: Flexbox permite distribuir los enlaces del menú en una fila. */
+  display: flex;
+  /* EDUARDO: Los enlaces pueden pasar a otra línea si falta espacio. */
+  flex-wrap: wrap;
+  /* EDUARDO: Espaciado uniforme entre elementos del menú. */
+  gap: 0.5rem 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.nav__lista li + li {
-  margin-top: 0.5rem;
 }
 
 .nav a {
@@ -121,13 +135,34 @@ img {
   text-decoration: none;
 }
 
+/* =========================
+   HERO - Flexbox 1D
+   ========================= */
 .hero {
   padding-block: 4rem;
   background: var(--blanco);
 }
 
+.hero__contenido {
+  /* EDUARDO: Flexbox controla el micro-layout del contenido del Hero. */
+  display: flex;
+  /* EDUARDO: Mobile First: texto e imagen comienzan en columna. */
+  flex-direction: column;
+  /* EDUARDO: Los hijos ocupan el ancho disponible del contenedor. */
+  align-items: stretch;
+  /* EDUARDO: Espaciado entre texto e imagen mediante gap. */
+  gap: 2.5rem;
+}
+
+.hero__texto,
+.hero__imagen {
+  /* EDUARDO: Elasticidad solicitada: crece, se reduce y parte de 250px. */
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
 .hero__texto {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .hero__texto > p:not(.etiqueta),
@@ -143,7 +178,12 @@ img {
 }
 
 .hero__imagen img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin-inline: auto;
   border-radius: 1rem;
+  object-fit: contain;
 }
 
 .etiqueta,
@@ -158,12 +198,20 @@ img {
 }
 
 .acciones {
+  /* EDUARDO: Flexbox para el grupo de botones interactivos. */
+  display: flex;
+  /* EDUARDO: Permite que los botones se acomoden en varias líneas. */
+  flex-wrap: wrap;
+  /* EDUARDO: Centra los botones en el eje transversal. */
+  align-items: center;
+  /* EDUARDO: Mantiene separación uniforme entre botones. */
+  gap: 0.5rem;
   margin-top: 1.5rem;
 }
 
 .boton {
   display: inline-block;
-  margin: 0.25rem 0.25rem 0.25rem 0;
+  margin: 0;
   padding: 0.8rem 1.1rem;
   border: 0.125rem solid var(--verde);
   border-radius: 0.5rem;
@@ -224,16 +272,92 @@ img {
   color: var(--azul);
 }
 
+/* =========================
+   FOOTER - Flexbox 1D
+   ========================= */
 .footer {
   padding-block: 2rem;
   background: var(--azul);
   color: #dbe8f3;
 }
 
-.footer p {
-  margin-bottom: 0.5rem;
+.footer__contenido {
+  /* EDUARDO: Flexbox para distribuir los elementos internos del Footer. */
+  display: flex;
+  /* EDUARDO: Mobile First: contenido apilado verticalmente. */
+  flex-direction: column;
+  /* EDUARDO: Alineación inicial del eje transversal. */
+  align-items: flex-start;
+  /* EDUARDO: Espaciado mediante gap. */
+  gap: 0.5rem;
 }
 
-.footer p:last-child {
+.footer p {
   margin-bottom: 0;
+}
+
+/* =========================
+   Responsive Mobile First
+   Breakpoint por contenido:
+   cuando el Header/Hero/Footer ya tienen
+   espacio suficiente para distribuirse en fila.
+   ========================= */
+@media (min-width: 48rem) {
+  .header__contenido {
+    /* EDUARDO: Al tener más espacio, logo y navegación pasan a una fila. */
+    flex-direction: row;
+    /* EDUARDO: Centra verticalmente los elementos del Header. */
+    align-items: center;
+    /* EDUARDO: Separa logo y navegación usando todo el espacio disponible. */
+    justify-content: space-between;
+    /* EDUARDO: Conserva una separación mínima entre los bloques. */
+    gap: 2rem;
+  }
+
+  .hero__contenido {
+    /* EDUARDO: En pantallas mayores, texto e imagen se distribuyen en fila. */
+    flex-direction: row;
+    /* EDUARDO: Alineación vertical de ambos bloques del Hero. */
+    align-items: center;
+    /* EDUARDO: Distribuye el espacio restante entre los extremos. */
+    justify-content: space-between;
+    /* EDUARDO: Separación entre las dos columnas flexibles. */
+    gap: 3rem;
+  }
+
+  .hero__texto,
+  .hero__imagen {
+    /* EDUARDO: Mantiene la elasticidad 1 1 250px en la versión horizontal. */
+    flex: 1 1 250px;
+  }
+
+  .footer__contenido {
+    /* EDUARDO: En escritorio, los elementos del Footer se distribuyen en fila. */
+    flex-direction: row;
+    /* EDUARDO: Alineación vertical de los elementos del Footer. */
+    align-items: center;
+    /* EDUARDO: Coloca cada bloque en extremos opuestos. */
+    justify-content: space-between;
+    /* EDUARDO: Espaciado entre los bloques cuando sea necesario. */
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  .hero__contenido {
+    /* EDUARDO: Aumenta el espacio entre texto e imagen en pantallas grandes. */
+    gap: 5rem;
+  }
+
+  .hero__texto {
+    flex-basis: 0;
+  }
+
+  .hero__imagen {
+    flex-basis: 0;
+  }
 }
