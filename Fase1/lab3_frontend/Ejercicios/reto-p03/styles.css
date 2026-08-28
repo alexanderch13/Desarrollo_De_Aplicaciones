@@ -1,24 +1,30 @@
-/* =========================================================
-   RETO P03 - EDUARDO: MICRO-LAYOUT Y COMPONENTES UNIDIMENSIONALES
-   Base visual + Flexbox para Header, Hero, acciones y Footer.
-   El layout general de catálogos queda reservado para CSS Grid.
-   ========================================================= */
-
-:root {
-  --azul: #0b3562;
-  --azul-claro: #e7f0f7;
-  --verde: #168f7a;
-  --texto: #17324d;
-  --texto-suave: #5a7084;
-  --fondo: #f7fafc;
-  --blanco: #ffffff;
-  --borde: #d9e2ec;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f6f8fb;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eef3f8;
+  --color-text: #172033;
+  --color-muted: #5d687a;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-accent: #14b8a6;
+  --color-border: #dce3ec;
+  --color-dark: #0f172a;
+
+  --radius-sm: 0.6rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.4rem;
+
+  --shadow-sm: 0 8px 24px rgba(23, 32, 51, 0.07);
+  --shadow-md: 0 18px 45px rgba(23, 32, 51, 0.11);
+
+  --content-width: 1180px;
+  --space-section: clamp(3.5rem, 8vw, 6rem);
 }
 
 html {
@@ -26,338 +32,435 @@ html {
 }
 
 body {
+  min-width: 0;
   margin: 0;
-  background: var(--fondo);
-  color: var(--texto);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  overflow-x: hidden;
+
+  color: var(--color-text);
+  background: var(--color-bg);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
   line-height: 1.6;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
 }
 
 h1,
 h2,
 h3,
-p,
-figure {
-  margin-top: 0;
+p {
+  margin-block-start: 0;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--azul);
   line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-  max-width: 16ch;
-  margin-bottom: 1.25rem;
-  font-size: 2.5rem;
+  max-width: 14ch;
+  font-size: clamp(2.25rem, 8vw, 4.5rem);
 }
 
 h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--color-muted);
+}
+
+.etiqueta {
   margin-bottom: 0.75rem;
-  font-size: 1.3rem;
-}
 
-a {
-  color: var(--verde);
-  text-underline-offset: 0.2em;
-}
+  color: var(--color-primary);
 
-a:focus-visible {
-  outline: 0.2rem solid #f2bd54;
-  outline-offset: 0.2rem;
-}
-
-img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.contenedor {
-  width: 90%;
-  max-width: 73.75rem;
-  margin-inline: auto;
-}
-
-/* =========================
-   HEADER - Flexbox 1D
-   ========================= */
-.header {
-  padding-block: 1.25rem;
-  border-bottom: 0.0625rem solid var(--borde);
-  background: var(--blanco);
-}
-
-.header__contenido {
-  /* EDUARDO: Flexbox para organizar logo y navegación en un solo eje. */
-  display: flex;
-  /* EDUARDO: En Mobile First los elementos se apilan verticalmente. */
-  flex-direction: column;
-  /* EDUARDO: Alinea los elementos al inicio del eje transversal. */
-  align-items: flex-start;
-  /* EDUARDO: Separación interna mediante gap, sin márgenes manuales. */
-  gap: 1rem;
-}
-
-.logo {
-  display: inline-block;
-  color: var(--azul);
-  font-size: 1.65rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.nav__lista {
-  /* EDUARDO: Flexbox permite distribuir los enlaces del menú en una fila. */
-  display: flex;
-  /* EDUARDO: Los enlaces pueden pasar a otra línea si falta espacio. */
-  flex-wrap: wrap;
-  /* EDUARDO: Espaciado uniforme entre elementos del menú. */
-  gap: 0.5rem 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav a {
-  color: var(--texto);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-/* =========================
-   HERO - Flexbox 1D
-   ========================= */
-.hero {
-  padding-block: 4rem;
-  background: var(--blanco);
-}
-
-.hero__contenido {
-  /* EDUARDO: Flexbox controla el micro-layout del contenido del Hero. */
-  display: flex;
-  /* EDUARDO: Mobile First: texto e imagen comienzan en columna. */
-  flex-direction: column;
-  /* EDUARDO: Los hijos ocupan el ancho disponible del contenedor. */
-  align-items: stretch;
-  /* EDUARDO: Espaciado entre texto e imagen mediante gap. */
-  gap: 2.5rem;
-}
-
-.hero__texto,
-.hero__imagen {
-  /* EDUARDO: Elasticidad solicitada: crece, se reduce y parte de 250px. */
-  flex: 1 1 250px;
-  min-width: 0;
-}
-
-.hero__texto {
-  margin-bottom: 0;
-}
-
-.hero__texto > p:not(.etiqueta),
-.seccion__titulo > p:not(.etiqueta),
-.tarjeta > p:not(.tarjeta__numero),
-.proyecto > p:not(.proyecto__tipo),
-.cta__contenido > p:not(.etiqueta) {
-  color: var(--texto-suave);
-}
-
-.hero__imagen {
-  margin-bottom: 0;
-}
-
-.hero__imagen img {
-  width: 100%;
-  max-width: 680px;
-  height: auto;
-  margin-inline: auto;
-  border-radius: 1rem;
-  object-fit: contain;
-}
-
-.etiqueta,
-.tarjeta__numero,
-.proyecto__tipo {
-  margin-bottom: 0.75rem;
-  color: var(--verde);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.acciones {
-  /* EDUARDO: Flexbox para el grupo de botones interactivos. */
+.header,
+main > section,
+.footer {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+}
+
+main > section {
+  margin-block: var(--space-section);
+}
+
+.header {
   display: flex;
-  /* EDUARDO: Permite que los botones se acomoden en varias líneas. */
-  flex-wrap: wrap;
-  /* EDUARDO: Centra los botones en el eje transversal. */
+  flex-direction: column;
   align-items: center;
-  /* EDUARDO: Mantiene separación uniforme entre botones. */
-  gap: 0.5rem;
+  gap: 1rem;
+
+  padding-block: 1.25rem;
+}
+
+.logo {
+  color: var(--color-dark);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.nav a {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.hero__texto,
+.hero__imagen {
+  min-width: 0;
+}
+
+.hero__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__texto > p:not(.etiqueta) {
+  max-width: 62ch;
+}
+
+.hero__imagen {
+  margin: 0;
+}
+
+.hero__imagen img {
+  width: 100%;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.hero__imagen figcaption {
+  margin-top: 0.65rem;
+
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  width: 100%;
   margin-top: 1.5rem;
 }
 
 .boton {
   display: inline-block;
-  margin: 0;
-  padding: 0.8rem 1.1rem;
-  border: 0.125rem solid var(--verde);
-  border-radius: 0.5rem;
-  background: var(--verde);
-  color: var(--blanco);
-  font-weight: 800;
+
+  padding: 0.8rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-weight: 750;
   text-align: center;
   text-decoration: none;
 }
 
+.boton--principal,
+.boton--contacto {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
 .boton--secundario {
-  border-color: var(--azul);
-  background: transparent;
-  color: var(--azul);
+  border-color: var(--color-border);
+  background: var(--color-surface);
 }
 
-.seccion {
-  padding-block: 4rem;
-}
-
-.seccion__titulo {
-  max-width: 40rem;
+.seccion-titulo {
+  max-width: 700px;
   margin-bottom: 2rem;
 }
 
-.tarjeta,
-.proyecto {
-  margin-bottom: 1.25rem;
-  padding: 1.5rem;
-  border: 0.0625rem solid var(--borde);
-  border-radius: 0.875rem;
-  background: var(--blanco);
+.tarjetas {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 1.25rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
-.tarjeta a,
-.proyecto a {
-  font-weight: 800;
+.tarjetas > li {
+  min-width: 0;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+  padding: 1.5rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.tarjeta__icono {
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.55rem;
+
+  border-radius: 0.5rem;
+
+  color: var(--color-primary);
+  background: #e8efff;
+
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.tarjeta p {
+  margin-bottom: 1.25rem;
+}
+
+.tarjeta a {
+  margin-top: auto;
+
+  color: var(--color-primary-dark);
+  font-weight: 750;
+  text-underline-offset: 0.2em;
 }
 
 .proyectos {
-  background: var(--azul-claro);
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  grid-template-areas:
+    "contenido"
+    "dato";
+
+  gap: 1.25rem;
+  align-items: stretch;
 }
 
-.cta {
-  background: var(--verde);
-  color: var(--blanco);
+.proyectos__texto,
+.dato {
+  min-width: 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
 
-.cta h2,
-.cta .etiqueta,
-.cta__contenido > p:not(.etiqueta) {
-  color: var(--blanco);
+.proyectos__texto {
+  grid-area: contenido;
+
+  background: var(--color-dark);
 }
 
-.boton--claro {
-  border-color: var(--blanco);
-  background: var(--blanco);
-  color: var(--azul);
+.proyectos__texto h2,
+.proyectos__texto p {
+  color: #ffffff;
 }
 
-/* =========================
-   FOOTER - Flexbox 1D
-   ========================= */
-.footer {
-  padding-block: 2rem;
-  background: var(--azul);
-  color: #dbe8f3;
+.proyectos__texto p {
+  opacity: 0.78;
 }
 
-.footer__contenido {
-  /* EDUARDO: Flexbox para distribuir los elementos internos del Footer. */
+.dato {
+  grid-area: dato;
+
   display: flex;
-  /* EDUARDO: Mobile First: contenido apilado verticalmente. */
   flex-direction: column;
-  /* EDUARDO: Alineación inicial del eje transversal. */
-  align-items: flex-start;
-  /* EDUARDO: Espaciado mediante gap. */
-  gap: 0.5rem;
+  justify-content: center;
+
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
-.footer p {
+.dato p:first-child {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-primary);
+
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1;
+}
+
+.dato p:last-child {
   margin-bottom: 0;
 }
 
-/* =========================
-   Responsive Mobile First
-   Breakpoint por contenido:
-   cuando el Header/Hero/Footer ya tienen
-   espacio suficiente para distribuirse en fila.
-   ========================= */
-@media (min-width: 48rem) {
-  .header__contenido {
-    /* EDUARDO: Al tener más espacio, logo y navegación pasan a una fila. */
-    flex-direction: row;
-    /* EDUARDO: Centra verticalmente los elementos del Header. */
-    align-items: center;
-    /* EDUARDO: Separa logo y navegación usando todo el espacio disponible. */
-    justify-content: space-between;
-    /* EDUARDO: Conserva una separación mínima entre los bloques. */
-    gap: 2rem;
+.cta__contenido {
+  padding: clamp(2rem, 6vw, 4rem);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface-soft);
+
+  text-align: center;
+}
+
+.cta__contenido p {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.footer {
+  padding-block: 2rem;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.footer h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1.25rem;
+}
+
+.footer p {
+  margin-bottom: 0.25rem;
+}
+
+.tarjeta,
+.proyectos__texto,
+.dato,
+.cta__contenido {
+  overflow-wrap: anywhere;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+figure,
+nav {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .header,
+  main > section,
+  .footer {
+    width: min(100% - 3rem, var(--content-width));
   }
 
-  .hero__contenido {
-    /* EDUARDO: En pantallas mayores, texto e imagen se distribuyen en fila. */
+  .header {
     flex-direction: row;
-    /* EDUARDO: Alineación vertical de ambos bloques del Hero. */
-    align-items: center;
-    /* EDUARDO: Distribuye el espacio restante entre los extremos. */
     justify-content: space-between;
-    /* EDUARDO: Separación entre las dos columnas flexibles. */
-    gap: 3rem;
+    align-items: center;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
   }
 
   .hero__texto,
   .hero__imagen {
-    /* EDUARDO: Mantiene la elasticidad 1 1 250px en la versión horizontal. */
-    flex: 1 1 250px;
-  }
-
-  .footer__contenido {
-    /* EDUARDO: En escritorio, los elementos del Footer se distribuyen en fila. */
-    flex-direction: row;
-    /* EDUARDO: Alineación vertical de los elementos del Footer. */
-    align-items: center;
-    /* EDUARDO: Coloca cada bloque en extremos opuestos. */
-    justify-content: space-between;
-    /* EDUARDO: Espaciado entre los bloques cuando sea necesario. */
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  h1 {
-    font-size: 3.25rem;
-  }
-
-  .hero__contenido {
-    /* EDUARDO: Aumenta el espacio entre texto e imagen en pantallas grandes. */
-    gap: 5rem;
+    flex: 1 1 0;
   }
 
   .hero__texto {
-    flex-basis: 0;
+    justify-content: center;
   }
 
-  .hero__imagen {
-    flex-basis: 0;
+  .acciones {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .proyectos {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    grid-template-areas:
+      "contenido contenido dato";
+
+    gap: 1.5rem;
+  }
+
+  .footer__contenido {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
