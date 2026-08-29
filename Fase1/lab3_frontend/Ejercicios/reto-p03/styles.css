@@ -541,3 +541,34 @@ nav {
     scroll-behavior: auto;
   }
 }
+/* 1. Transiciones base para botones y tarjetas */
+.boton,
+.tarjeta {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* 2. Efectos interactivos (:hover) con transformaciones suaves */
+.boton:hover {
+  transform: translateY(-3px) scale(1.02);
+  /* Sombra basada en la variable --color-primary (#2563eb) */
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25); 
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md); 
+  border-color: var(--color-primary); 
+}
+
+/* 3. Accesibilidad: Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .boton:hover,
+  .tarjeta:hover {
+    /* Se anula el desplazamiento y la escala, conservando solo cambios estáticos como sombras y bordes */
+    transform: none; 
+  }
+}
