@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevLab | Experiencia 03 - Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#">DevLab</a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__texto">
+        <span class="etiqueta">DESARROLLO DE APLICACIONES</span>
+        <h1>Construimos experiencias digitales que funcionan.</h1>
+        <p>
+          Esta interfaz fue creada para analizar su comportamiento en distintos
+          tamaños de pantalla. Antes de modificar el código, observa con atención
+          qué elementos dejan de funcionar correctamente.
+        </p>
+
+        <div class="acciones">
+          <a class="boton boton--principal" href="#servicios">Ver servicios</a>
+          <a class="boton boton--secundario" href="#proyectos">Nuestros proyectos</a>
+        </div>
+      </div>
+
+      <div class="hero__imagen">
+        <img src="assets/dashboard.svg"
+             alt="Ilustración de un panel de aplicación web">
+      </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+      <header class="seccion-titulo">
+        <span>LO QUE HACEMOS</span>
+        <h2>Servicios para proyectos digitales</h2>
+        <p>Explora algunas de las áreas en las que podemos ayudarte.</p>
+      </header>
+
+      <ul class="tarjetas">
+        <li class="tarjeta tarjeta--destacada">
+          <span class="tarjeta__icono">01</span>
+          <h3>Diseño Web</h3>
+          <p>Interfaces claras, consistentes y centradas en las necesidades del usuario.</p>
+          <a href="#">Conocer más</a>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono">02</span>
+          <h3>Aplicaciones</h3>
+          <p>Soluciones web construidas con tecnologías actuales y buenas prácticas.</p>
+          <a href="#">Conocer más</a>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono">03</span>
+          <h3>Integración</h3>
+          <p>Conectamos servicios y datos para construir experiencias más completas.</p>
+          <a href="#">Conocer más</a>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono">04</span>
+          <h3>Consultoría Técnica</h3>
+          <p>Evaluamos tu producto actual y proponemos mejoras concretas de arquitectura.</p>
+          <a href="#">Conocer más</a>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono">05</span>
+          <h3>Soporte y Mantenimiento</h3>
+          <p>Acompañamos tu aplicación después del lanzamiento con mejoras continuas.</p>
+          <a href="#">Conocer más</a>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono">06</span>
+          <h3>Analítica de Datos</h3>
+          <p>Convertimos el comportamiento de tus usuarios en decisiones de producto.</p>
+          <a href="#">Conocer más</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+      <header class="proyectos__texto">
+        <span class="etiqueta">PROYECTO DESTACADO</span>
+        <h2>Una solución que debe verse bien en cualquier pantalla.</h2>
+        <p>
+          ¿Lo conseguimos realmente? Utiliza las herramientas del navegador
+          para comprobarlo.
+        </p>
+      </header>
+
+      <aside class="dato">
+        <strong>96%</strong>
+        <span>de usuarios espera una experiencia consistente entre dispositivos.</span>
+      </aside>
+    </section>
+
+    <section class="ficha" id="ficha" aria-labelledby="ficha-titulo">
+      <header class="ficha__header">
+        <h2 id="ficha-titulo">Ficha técnica del proyecto</h2>
+      </header>
+
+      <aside class="ficha__lateral">
+        <h3>Stack utilizado</h3>
+        <p>HTML semántico, CSS Grid, Flexbox y Media Queries.</p>
+      </aside>
+
+      <article class="ficha__principal">
+        <h3>Resumen</h3>
+        <p>Un dashboard construido con etiquetas semánticas, sin depender de contenedores genéricos para su distribución.</p>
+      </article>
+
+      <aside class="ficha__extra">
+        <h3>Estado actual</h3>
+        <p>En desarrollo · Última actualización: agosto 2026.</p>
+      </aside>
+
+      <footer class="ficha__footer">
+        <p>Este bloque demuestra el uso de grid-template-areas.</p>
+      </footer>
+    </section>
+  </main>
+
+  <button class="ayuda" type="button" aria-label="Abrir ayuda">?</button>
+
+  <footer class="footer" id="contacto">
+    <strong>DevLab</strong>
+    <span>Laboratorio de Desarrollo de Aplicaciones · 2026</span>
+  </footer>
+
+</body>
+</html>

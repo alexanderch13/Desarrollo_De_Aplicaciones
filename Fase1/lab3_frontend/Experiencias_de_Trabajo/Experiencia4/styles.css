@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17324d;
+  background: #f7fafc;
+}
+
+img {
+  /* Imagen fluida */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  /* Contenedor flex */
+  display: flex;
+  /* Mobile first: columna */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  min-height: 78px;
+  padding: 1rem 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.logo {
+  color: #0a4f88;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav {
+  /* Menú flexible */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #168f7a;
+}
+
+.hero {
+  display: flex;
+  /* Mobile first: columna */
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.hero__texto,
+.hero__imagen {
+  /* Flex compacto */
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
+.hero__texto {
+  width: 100%;
+}
+
+.etiqueta {
+  color: #168f7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 1rem 0 1.25rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.02;
+  color: #0b3562;
+}
+
+.hero p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.boton {
+  min-width: 180px;
+  padding: 0.875rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.boton--principal {
+  color: white;
+  background: #168f7a;
+}
+
+.boton--secundario {
+  color: #0b3562;
+  background: white;
+  border: 2px solid #0b3562;
+}
+
+/* Imagen sin ancho rígido */
+.hero__imagen {
+  width: 100%;
+  margin: 0;
+}
+
+.hero__imagen img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(24, 68, 108, 0.18);
+}
+
+.servicios {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.seccion-titulo {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.seccion-titulo h2,
+.proyectos h2 {
+  margin: 0.625rem 0 0.75rem;
+  font-size: 2.4rem;
+  color: #0b3562;
+}
+
+.seccion-titulo p,
+.proyectos p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+.tarjetas {
+  /* Contenedor Grid */
+  display: grid;
+  /* Columnas flexibles */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  /* Reset de lista */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tarjeta {
+  /* Flexbox interno */
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: 1.75rem;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+}
+
+.tarjeta__icono {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.75rem;
+  color: white;
+  font-weight: 800;
+  background: #0a5ea8;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #0b3562;
+}
+
+.tarjeta p {
+  line-height: 1.6;
+  color: #60758a;
+}
+
+.tarjeta a {
+  color: #168f7a;
+  font-weight: 800;
+  /* Ancla al final */
+  margin-top: auto;
+}
+
+.tarjeta--destacada {
+  /* Una columna base */
+  grid-column: auto;
+}
+
+.proyectos {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  /* Mobile first: apilado */
+  grid-template-columns: 1fr;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto 5rem;
+  padding: 3rem;
+  background: #eaf6f3;
+  border-radius: 20px;
+}
+
+.dato {
+  padding: 2rem;
+  color: white;
+  background: #0b3562;
+  border-radius: 16px;
+}
+
+.dato strong {
+  display: block;
+  margin-bottom: 0.625rem;
+  font-size: 3.2rem;
+}
+
+.dato span {
+  line-height: 1.5;
+}
+
+.ficha {
+  display: grid;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto 5rem;
+  /* Mobile first: apilado */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "extra"
+    "footer";
+}
+
+.ficha__header    { grid-area: header; }
+.ficha__lateral   { grid-area: aside; }
+.ficha__principal { grid-area: main; }
+.ficha__extra     { grid-area: extra; }
+.ficha__footer    { grid-area: footer; }
+
+.ficha__lateral,
+.ficha__extra {
+  padding: 1.5rem;
+  background: #eaf6f3;
+  border-radius: 14px;
+}
+
+.ficha__principal {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+}
+
+.ficha__footer {
+  padding: 1rem 1.5rem;
+  color: #52667a;
+  border-top: 1px solid #dce5ee;
+}
+
+.ayuda {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #168f7a;
+  border: 0;
+  border-radius: 50%;
+}
+
+.footer {
+  display: flex;
+  /* Mobile first: apilado */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.75rem 5%;
+  color: #dbe8f3;
+  background: #0b3562;
+}
+
+/* BREAKPOINT PROGRESIVO */
+@media (min-width: 48rem) {
+  .header {
+    /* Vuelve a fila */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero {
+    /* Pasa a fila */
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .footer {
+    /* Horizontal en desktop */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .proyectos {
+    /* Dos columnas, sin solape */
+    grid-template-columns: 1fr 380px;
+  }
+
+  .ficha {
+    /* Dos columnas */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "aside  main"
+      "extra  main"
+      "footer footer";
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .tarjeta--destacada {
+    /* Ocupa dos columnas */
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    /* Más separación */
+    gap: 5rem;
+  }
+
+  .ficha {
+    /* Solo cambia areas */
+    grid-template-areas:
+      "header header"
+      "main   aside"
+      "main   extra"
+      "footer footer";
+  }
+}
