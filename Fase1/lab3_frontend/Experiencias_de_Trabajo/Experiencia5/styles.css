@@ -387,3 +387,41 @@ img {
       "footer footer";
   }
 }
+/* 1. Transiciones base para que el movimiento sea fluido, no abrupto */
+.boton,
+.tarjeta {
+  /* Se anima la transformación y la sombra durante 0.3 segundos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Pseudo-clases :hover con transformaciones y sombras */
+.boton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(22, 143, 122, 0.25);
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(11, 53, 98, 0.12);
+  border-color: #168f7a; /* Resalte extra al pasar el cursor */
+}
+
+/* 3. Accesibilidad: Respetar la preferencia de reducción de movimiento del usuario */
+@media (prefers-reduced-motion: reduce) {
+  /* Anula las animaciones de tiempo para todos los elementos */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Anula específicamente el desplazamiento espacial para evitar mareos */
+  .boton:hover,
+  .tarjeta:hover {
+    transform: none; 
+    /* La sombra sí se mantiene porque no implica movimiento físico en la pantalla */
+  }
+}
