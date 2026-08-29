@@ -246,6 +246,7 @@ main > section {
 }
 
 .tarjeta {
+  /* Punto f) Flexbox organiza el contenido interno */
   display: flex;
   flex-direction: column;
 
@@ -284,6 +285,19 @@ main > section {
   color: var(--color-primary-dark);
   font-weight: 750;
   text-underline-offset: 0.2em;
+}
+
+/* Punto g) Tarjeta destacada */
+.tarjeta--destacada {
+  grid-column: auto; /* comportamiento base: una columna */
+  border: 1px solid var(--color-primary);
+  background: #eef4ff;
+}
+
+@media (min-width: 56.25rem) {
+  .tarjeta--destacada {
+    grid-column: span 2; /* ocupa dos columnas en pantallas amplias */
+  }
 }
 
 .proyectos {
@@ -347,6 +361,67 @@ main > section {
   margin-bottom: 0;
 }
 
+.ficha {
+  display: grid;
+  gap: 1.5rem;
+
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "extra"
+    "footer";
+}
+
+.ficha__header    { grid-area: header; }
+.ficha__lateral   { grid-area: aside; }
+.ficha__principal { grid-area: main; }
+.ficha__extra     { grid-area: extra; }
+.ficha__footer    { grid-area: footer; }
+
+.ficha__lateral,
+.ficha__extra {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-soft);
+}
+
+.ficha__principal {
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.ficha__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+@media (min-width: 48rem) {
+  .ficha {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "aside  main"
+      "extra  main"
+      "footer footer";
+  }
+}
+
+@media (min-width: 64rem) {
+  .ficha {
+    /* Solo cambia grid-template-areas: el lateral pasa a la derecha */
+    grid-template-areas:
+      "header header"
+      "main   aside"
+      "main   extra"
+      "footer footer";
+  }
+}
+
 .cta__contenido {
   padding: clamp(2rem, 6vw, 4rem);
 
@@ -387,7 +462,10 @@ main > section {
 .tarjeta,
 .proyectos__texto,
 .dato,
-.cta__contenido {
+.cta__contenido,
+.ficha__lateral,
+.ficha__principal,
+.ficha__extra {
   overflow-wrap: anywhere;
 }
 
@@ -457,7 +535,6 @@ nav {
     gap: 0.5rem 1.5rem;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   html {
