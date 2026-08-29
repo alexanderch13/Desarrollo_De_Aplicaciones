@@ -33,6 +33,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#ficha">Ficha técnica</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -98,7 +99,7 @@
 
         <ul class="tarjetas" aria-label="Servicios disponibles">
           <li>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta--destacada">
               <p class="tarjeta__icono" aria-hidden="true">01</p>
 
               <h3>Diseño web</h3>
@@ -141,6 +142,51 @@
               <a href="#contacto">Conocer más</a>
             </article>
           </li>
+
+          <li>
+            <article class="tarjeta">
+              <p class="tarjeta__icono" aria-hidden="true">04</p>
+
+              <h3>Consultoría Técnica</h3>
+
+              <p>
+                Evaluamos tu producto actual y proponemos mejoras concretas
+                de arquitectura.
+              </p>
+
+              <a href="#contacto">Conocer más</a>
+            </article>
+          </li>
+
+          <li>
+            <article class="tarjeta">
+              <p class="tarjeta__icono" aria-hidden="true">05</p>
+
+              <h3>Soporte y Mantenimiento</h3>
+
+              <p>
+                Acompañamos tu aplicación después del lanzamiento con
+                mejoras continuas.
+              </p>
+
+              <a href="#contacto">Conocer más</a>
+            </article>
+          </li>
+
+          <li>
+            <article class="tarjeta">
+              <p class="tarjeta__icono" aria-hidden="true">06</p>
+
+              <h3>Analítica de Datos</h3>
+
+              <p>
+                Convertimos el comportamiento de tus usuarios en decisiones
+                de producto.
+              </p>
+
+              <a href="#contacto">Conocer más</a>
+            </article>
+          </li>
         </ul>
       </section>
 
@@ -177,6 +223,39 @@
       </section>
 
       <section
+        class="ficha"
+        id="ficha"
+        aria-labelledby="titulo-ficha"
+      >
+        <header class="ficha__header">
+          <h2 id="titulo-ficha">Ficha técnica del proyecto</h2>
+        </header>
+
+        <aside class="ficha__lateral">
+          <h3>Stack utilizado</h3>
+          <p>HTML semántico, CSS Grid, Flexbox y Media Queries.</p>
+        </aside>
+
+        <article class="ficha__principal">
+          <h3>Resumen</h3>
+          <p>
+            Un catálogo construido con etiquetas semánticas, cuyas columnas
+            se adaptan automáticamente al espacio disponible sin depender
+            de Media Queries.
+          </p>
+        </article>
+
+        <aside class="ficha__extra">
+          <h3>Estado actual</h3>
+          <p>En desarrollo · Última actualización: agosto 2026.</p>
+        </aside>
+
+        <footer class="ficha__footer">
+          <p>Este bloque demuestra el uso de grid-template-areas.</p>
+        </footer>
+      </section>
+
+      <section
         class="cta"
         id="contacto"
         aria-labelledby="titulo-contacto"
@@ -192,7 +271,7 @@
             Cuéntanos tu idea y evaluaremos una solución clara y funcional.
           </p>
 
-          <a
+          
             class="boton boton--contacto"
             href="mailto:contacto@devlab.pe"
           >
