@@ -1,6 +1,6 @@
 /*
 ARCHIVO     : ejercicio1.js
-AUTOR       : [Nombre del estudiante]
+AUTOR       : Chipana Flores Alexander Tomas
 FECHA       : 03/09/2026
 DESCRIPCIÓN : Calcula el costo de envío y valida los datos.
 */

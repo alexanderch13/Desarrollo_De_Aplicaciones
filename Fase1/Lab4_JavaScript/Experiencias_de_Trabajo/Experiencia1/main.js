@@ -1,6 +1,6 @@
 /*
 ARCHIVO     : main.js
-AUTOR       : [Nombre del estudiante]
+AUTOR       : Chipana Flores Alexander Tomas
 FECHA       : 03/09/2026
 DESCRIPCIÓN : Experiencia 1: tipos, ámbito, hoisting e importe.
 */

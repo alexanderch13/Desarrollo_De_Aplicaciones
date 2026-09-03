@@ -1,6 +1,6 @@
 /*
 ARCHIVO     : ejercicio2.js
-AUTOR       : [Nombre del estudiante]
+AUTOR       : Chipana Flores Alexander Tomas
 FECHA       : 03/09/2026
 DESCRIPCIÓN : Analiza calificaciones mediante métodos de arrays.
 */
