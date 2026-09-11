@@ -1,0 +1,51 @@
+/* 
+*********************************************************************** 
+* Archivo: exp05-mixins.scss 
+* Tema: Mixins Paramétricos y Directiva @extend 
+* Autor: Mg. Ángel Felipe Montesinos Murillo 
+* Programa: Escuela Profesional de Ingeniería de Sistemas 
+* Descripción: Implementación de reutilización de código avanzado. 
+*********************************************************************** 
+*/ 
+ 
+// INSTRUCCIÓN: Definir el mixin 'boton-estilo($color-fondo, $color-texto)' aquí 
+ 
+// INSTRUCCIÓN: Definir el placeholder '%mensaje-base' aquí 
+ 
+// MODIFICAR: Usar @include para inyectar el mixin 
+.btn-aceptar { 
+    /* Reemplazar estos estilos por el Mixin (Fondo: #2ecc71, Texto: white) */ 
+    background-color: #2ecc71; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+} 
+ 
+.btn-cancelar { 
+    /* Reemplazar estos estilos por el Mixin (Fondo: #e74c3c, Texto: white) */ 
+    background-color: #e74c3c; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+} 
+ 
+// MODIFICAR: Usar @extend para heredar de %mensaje-base 
+.mensaje-error { 
+    /* Extraer padding y border a %mensaje-base y usar @extend */ 
+    padding: 15px; 
+    border: 1px solid transparent;
+        border-radius: 4px; 
+     
+    background-color: #f8d7da; 
+    color: #721c24; 
+} 
+ 
+.mensaje-exito { 
+    /* Extraer padding y border a %mensaje-base y usar @extend */ 
+    padding: 15px; 
+    border: 1px solid transparent; 
+    border-radius: 4px; 
+     
+    background-color: #d4edda; 
+    color: #155724; 
+} 

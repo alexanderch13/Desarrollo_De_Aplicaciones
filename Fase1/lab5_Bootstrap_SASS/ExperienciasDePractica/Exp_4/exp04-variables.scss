@@ -1,0 +1,54 @@
+/*************************************************************************************************
+  ARCHIVO        :  exp04-variables.scss
+  AUTOR          :  Eduardo Mateo Motta Flores
+  FECHA          :  11/09/2026
+  DESCRIPCIÓN    :  Refactorización de código CSS tradicional aplicando el principio DRY mediante 
+                    el uso de variables globales y anidamiento estructural (Nesting) en Sass.
+*************************************************************************************************/
+
+// 1. y 2. Declaración de variables globales de diseño
+$color-principal: #2c3e50;
+$color-alerta: #e74c3c;
+$fuente-base: 'Arial', sans-serif;
+
+// Aplicación de variable tipográfica en la base del documento
+body { 
+    font-family: $fuente-base; 
+    background-color: #f4f4f4; 
+} 
+
+// 3. Refactorización del bloque usando Nesting (Anidamiento jerárquico)
+.sidebar { 
+    background-color: $color-principal; 
+    width: 250px; 
+    padding: 20px; 
+    
+    ul { 
+        list-style: none; 
+        padding: 0; 
+        
+        li { 
+            margin-bottom: 10px; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+            
+            a { 
+                color: white; 
+                text-decoration: none; 
+                font-family: $fuente-base; 
+                display: block; 
+                padding: 5px; 
+                
+                // Referencia al selector padre (a:hover) usando el ampersand (&)
+                &:hover { 
+                    color: $color-alerta; 
+                } 
+            } 
+        } 
+    } 
+} 
+
+// Aplicación de variables en elementos independientes
+.alerta-mensaje { 
+    color: $color-alerta; 
+    border: 1px solid $color-alerta; 
+}
