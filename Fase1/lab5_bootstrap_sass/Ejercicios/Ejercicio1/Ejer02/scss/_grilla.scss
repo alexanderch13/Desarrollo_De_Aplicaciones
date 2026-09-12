@@ -1,0 +1,24 @@
+.contenedor {
+  width: 100%;
+  max-width: px-a-rem(1100px);
+  margin: 0 auto;
+  padding: 0 px-a-rem(16px);
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 px-a-rem(-8px);
+}
+
+@for $i from 1 through $total-columnas {
+  .col-#{$i} {
+    flex: 0 0 ancho-columna($i, $total-columnas);
+    max-width: ancho-columna($i, $total-columnas);
+    padding: px-a-rem(8px);
+  }
+}
+
+@for $i from 1 through 5 {
+  .mt-#{$i} { margin-top: px-a-rem($i * 8px); }
+}

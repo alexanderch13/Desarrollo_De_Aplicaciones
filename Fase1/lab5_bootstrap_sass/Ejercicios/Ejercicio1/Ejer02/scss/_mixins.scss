@@ -1,0 +1,24 @@
+@use "sass:color";
+
+// Asigna el fondo y decide el color de texto según su luminosidad
+@mixin tema-componente($color-fondo, $umbral: 60%) {
+  background-color: $color-fondo;
+
+  @if color.channel($color-fondo, "lightness", $space: hsl) > $umbral {
+    color: #1a1d21;
+  } @else {
+    color: #ffffff;
+  }
+}
+
+@mixin boton-base {
+  display: inline-block;
+  border: none;
+  border-radius: px-a-rem(6px);
+  padding: px-a-rem(10px) px-a-rem(20px);
+  font-family: inherit;
+  font-size: px-a-rem(15px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}

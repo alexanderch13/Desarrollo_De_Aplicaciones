@@ -1,0 +1,16 @@
+@use "sass:color";
+
+@each $nombre, $color in $tema-colores {
+
+  .btn-#{$nombre} {
+    @include boton-base;
+    @include tema-componente($color, $umbral-luminosidad);
+
+    &:hover {
+      background-color: color.scale($color, $lightness: -20%);
+    }
+  }
+
+  .texto-#{$nombre} { color: $color; }
+  .fondo-#{$nombre} { background-color: $color; }
+}

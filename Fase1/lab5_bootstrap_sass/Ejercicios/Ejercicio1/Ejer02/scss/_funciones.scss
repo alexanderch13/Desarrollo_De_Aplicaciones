@@ -1,0 +1,11 @@
+@use "sass:math";
+
+// Convierte píxeles a su equivalente en rem
+@function px-a-rem($pixeles, $base: 16px) {
+  @return math.div($pixeles, $base) * 1rem;
+}
+
+// Devuelve el porcentaje que ocupan N columnas sobre el total
+@function ancho-columna($columnas, $total: 12) {
+  @return math.percentage(math.div($columnas, $total));
+}

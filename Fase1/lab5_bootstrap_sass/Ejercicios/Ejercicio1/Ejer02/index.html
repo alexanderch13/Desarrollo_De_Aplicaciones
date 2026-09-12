@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Micro-Framework CSS con Sass — Laboratorio 05</title>
+  <meta name="description" content="Micro-framework CSS construido con Sass: arquitectura modular en parciales, función de conversión a rem, mixin con control de flujo y clases generadas desde un mapa corporativo.">
+  <meta name="author" content="Luz">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Micro-Framework CSS con Sass">
+  <meta property="og:description" content="Sistema de diseño modular generado desde un mapa de cinco colores corporativos.">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="scss/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Micro-Framework CSS con Sass",
+    "description": "Arquitectura modular en parciales, funciones matemáticas, mixins con control de flujo e iteradores sobre mapas.",
+    "author": { "@type": "Person", "name": "Luz" },
+    "inLanguage": "es",
+    "proficiencyLevel": "Intermediate",
+    "keywords": "Sass, SCSS, micro-framework, parciales, mixins, rem, mapas, each"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="portada">
+    <p class="portada__etiqueta">Laboratorio 05 · Ejercicio propuesto 2</p>
+    <h1 class="portada__titulo">Micro-Framework CSS</h1>
+    <p class="portada__resumen">
+      Un sistema de diseño construido desde cero. Cinco parciales ensamblados en un
+      archivo compilador producen la cuadrícula, los botones y los utilitarios,
+      derivados de un mapa corporativo y de una única base tipográfica.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="bloque" aria-labelledby="titulo-arquitectura">
+      <h2 class="bloque__titulo" id="titulo-arquitectura">
+        <small class="bloque__indice">01</small>
+        Arquitectura modular
+      </h2>
+      <p class="bloque__nota">
+        Ningún parcial genera CSS por su cuenta. Solo se compila
+        <code>main.scss</code>, que los ensambla con <code>@import</code>.
+      </p>
+
+      <dl class="muestrario">
+        <dt class="muestrario__clave">_variables.scss</dt>
+        <dd class="muestrario__valor">Paleta corporativa y constantes globales</dd>
+
+        <dt class="muestrario__clave">_funciones.scss</dt>
+        <dd class="muestrario__valor">Conversión a rem y cálculo de columnas</dd>
+
+        <dt class="muestrario__clave">_mixins.scss</dt>
+        <dd class="muestrario__valor">Tema de componente con control de flujo</dd>
+
+        <dt class="muestrario__clave">_grilla.scss</dt>
+        <dd class="muestrario__valor">Cuadrícula y escala de espaciado</dd>
+
+        <dt class="muestrario__clave">_botones.scss</dt>
+        <dd class="muestrario__valor">Botones y utilitarios desde el mapa</dd>
+
+        <dt class="muestrario__clave">main.scss</dt>
+        <dd class="muestrario__valor">Ensamblador — el único que se compila</dd>
+      </dl>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-grilla">
+      <h2 class="bloque__titulo" id="titulo-grilla">
+        <small class="bloque__indice">02</small>
+        Cuadrícula de doce columnas
+      </h2>
+      <p class="bloque__nota">
+        Doce clases generadas por <code>@for</code>. Cada ancho lo devuelve la función
+        <code>ancho-columna()</code>, y el relleno se expresa en rem mediante
+        <code>px-a-rem()</code>.
+      </p>
+
+      <figure class="lienzo">
+        <p class="fila">
+          <span class="col-12"><em class="celda">.col-12</em></span>
+        </p>
+        <p class="fila">
+          <span class="col-6"><em class="celda">.col-6</em></span>
+          <span class="col-6"><em class="celda">.col-6</em></span>
+        </p>
+        <p class="fila">
+          <span class="col-4"><em class="celda">.col-4</em></span>
+          <span class="col-4"><em class="celda">.col-4</em></span>
+          <span class="col-4"><em class="celda">.col-4</em></span>
+        </p>
+        <p class="fila">
+          <span class="col-3"><em class="celda">.col-3</em></span>
+          <span class="col-3"><em class="celda">.col-3</em></span>
+          <span class="col-3"><em class="celda">.col-3</em></span>
+          <span class="col-3"><em class="celda">.col-3</em></span>
+        </p>
+        <figcaption class="lienzo__pie">Las columnas se reparten los doce doceavos disponibles.</figcaption>
+      </figure>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-botones">
+      <h2 class="bloque__titulo" id="titulo-botones">
+        <small class="bloque__indice">03</small>
+        Botones generados desde el mapa
+      </h2>
+      <p class="bloque__nota">
+        Cinco botones producidos por <code>@each</code>. El color de texto lo decidió el
+        mixin evaluando la luminosidad del fondo; el estado <code>:hover</code> se calculó
+        oscureciendo el color base. Pase el cursor por encima.
+      </p>
+
+      <figure class="lienzo">
+        <p class="botonera">
+          <button type="button" class="btn-primario">Primario</button>
+          <button type="button" class="btn-secundario">Secundario</button>
+          <button type="button" class="btn-acento">Acento</button>
+          <button type="button" class="btn-peligro">Peligro</button>
+          <button type="button" class="btn-advertencia">Advertencia</button>
+        </p>
+        <figcaption class="lienzo__pie">
+          Los dos últimos reciben texto oscuro: su luminosidad supera el umbral del 60 %.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-utilitarios">
+      <h2 class="bloque__titulo" id="titulo-utilitarios">
+        <small class="bloque__indice">04</small>
+        Utilitarios de color
+      </h2>
+      <p class="bloque__nota">
+        El mismo bucle produce, por cada color, una clase de texto y una de fondo.
+      </p>
+
+      <dl class="muestrario">
+        <dt class="muestrario__clave">.texto-primario</dt>
+        <dd class="muestrario__valor texto-primario">Acción disponible</dd>
+
+        <dt class="muestrario__clave">.texto-secundario</dt>
+        <dd class="muestrario__valor texto-secundario">Información auxiliar</dd>
+
+        <dt class="muestrario__clave">.texto-peligro</dt>
+        <dd class="muestrario__valor texto-peligro">Operación irreversible</dd>
+
+        <dt class="muestrario__clave">.fondo-primario</dt>
+        <dd class="muestrario__valor"><output class="ficha fondo-primario">#0d6efd</output></dd>
+
+        <dt class="muestrario__clave">.fondo-acento</dt>
+        <dd class="muestrario__valor"><output class="ficha ficha--clara fondo-acento">#6ea8fe</output></dd>
+
+        <dt class="muestrario__clave">.fondo-advertencia</dt>
+        <dd class="muestrario__valor"><output class="ficha ficha--clara fondo-advertencia">#ffda6a</output></dd>
+      </dl>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-escala">
+      <h2 class="bloque__titulo" id="titulo-escala">
+        <small class="bloque__indice">05</small>
+        Escala de espaciado en rem
+      </h2>
+      <p class="bloque__nota">
+        Cinco clases generadas por <code>@for</code>. Cada índice se multiplica por ocho
+        píxeles y la función los convierte a rem, de modo que el espaciado responde al
+        tamaño de fuente configurado por el usuario.
+      </p>
+
+      <dl class="muestrario muestrario--apilado">
+        <dt class="muestrario__clave">.mt-1</dt>
+        <dd class="muestrario__valor"><code class="regla mt-1">8px → 0.5rem</code></dd>
+
+        <dt class="muestrario__clave">.mt-3</dt>
+        <dd class="muestrario__valor"><code class="regla mt-3">24px → 1.5rem</code></dd>
+
+        <dt class="muestrario__clave">.mt-5</dt>
+        <dd class="muestrario__valor"><code class="regla mt-5">40px → 2.5rem</code></dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="cierre">
+    <p>Seis archivos de Sass produjeron treinta y nueve clases de CSS.</p>
+    <p>Cambiar la identidad visual del sistema requiere editar un solo mapa.</p>
+  </footer>
+
+</body>
+</html>
