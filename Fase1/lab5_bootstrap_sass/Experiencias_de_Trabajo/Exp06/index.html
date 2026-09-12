@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automatización con Sass: mapas, @each y @for — Laboratorio 05</title>
+  <meta name="description" content="Clases utilitarias de color y espaciado generadas automáticamente en Sass mediante un mapa recorrido con @each y un bucle @for.">
+  <meta name="author" content="Luz">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automatización con Sass: mapas, @each y @for">
+  <meta property="og:description" content="Once clases de CSS generadas desde un mapa de cuatro colores y un rango numérico.">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="exp06-automatizacion.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automatización con Sass: mapas, @each y @for",
+    "description": "Generación procedimental de clases utilitarias de color y espaciado con Sass.",
+    "author": { "@type": "Person", "name": "Luz" },
+    "inLanguage": "es",
+    "proficiencyLevel": "Beginner",
+    "keywords": "Sass, SCSS, mapas, iteradores, each, for, interpolación"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="portada">
+    <p class="portada__etiqueta">Laboratorio 05 · Experiencia 06</p>
+    <h1 class="portada__titulo">Automatización con mapas y bucles</h1>
+    <p class="portada__resumen">
+      Las once clases de esta página no fueron escritas a mano. Sass las derivó
+      de un mapa de cuatro colores y de un rango numérico, empleando
+      interpolación para construir cada nombre de selector.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="bloque" aria-labelledby="titulo-texto">
+      <h2 class="bloque__titulo" id="titulo-texto">
+        <small class="bloque__indice">01</small>
+        Color de texto
+      </h2>
+      <p class="bloque__nota">
+        Cuatro clases producidas por el bucle <code>@each</code> sobre el mapa.
+      </p>
+
+      <dl class="muestrario">
+        <dt class="muestrario__clave">.texto-primario</dt>
+        <dd class="muestrario__valor texto-primario">Interfaz consistente</dd>
+
+        <dt class="muestrario__clave">.texto-exito</dt>
+        <dd class="muestrario__valor texto-exito">Operación completada</dd>
+
+        <dt class="muestrario__clave">.texto-secundario</dt>
+        <dd class="muestrario__valor texto-secundario">Información auxiliar</dd>
+
+        <dt class="muestrario__clave">.texto-peligro</dt>
+        <dd class="muestrario__valor texto-peligro">Acción irreversible</dd>
+      </dl>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-fondo">
+      <h2 class="bloque__titulo" id="titulo-fondo">
+        <small class="bloque__indice">02</small>
+        Color de fondo
+      </h2>
+      <p class="bloque__nota">
+        El mismo bucle genera la variante de fondo en su segunda declaración.
+      </p>
+
+      <dl class="muestrario">
+        <dt class="muestrario__clave">.fondo-primario</dt>
+        <dd class="muestrario__valor"><output class="ficha fondo-primario">#0d6efd</output></dd>
+
+        <dt class="muestrario__clave">.fondo-exito</dt>
+        <dd class="muestrario__valor"><output class="ficha fondo-exito">#198754</output></dd>
+
+        <dt class="muestrario__clave">.fondo-secundario</dt>
+        <dd class="muestrario__valor"><output class="ficha fondo-secundario">#6c757d</output></dd>
+
+        <dt class="muestrario__clave">.fondo-peligro</dt>
+        <dd class="muestrario__valor"><output class="ficha fondo-peligro">#dc3545</output></dd>
+      </dl>
+    </section>
+
+    <section class="bloque" aria-labelledby="titulo-margen">
+      <h2 class="bloque__titulo" id="titulo-margen">
+        <small class="bloque__indice">03</small>
+        Escala de márgenes
+      </h2>
+      <p class="bloque__nota">
+        Tres clases generadas por <code>@for</code>, multiplicando el índice por diez
+        píxeles. La separación creciente de cada regla es el efecto aplicado.
+      </p>
+
+      <dl class="muestrario muestrario--apilado">
+        <dt class="muestrario__clave">.mt-1</dt>
+        <dd class="muestrario__valor"><code class="regla mt-1">margin-top: 10px</code></dd>
+
+        <dt class="muestrario__clave">.mt-2</dt>
+        <dd class="muestrario__valor"><code class="regla mt-2">margin-top: 20px</code></dd>
+
+        <dt class="muestrario__clave">.mt-3</dt>
+        <dd class="muestrario__valor"><code class="regla mt-3">margin-top: 30px</code></dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="cierre">
+    <p>Veinticinco líneas de Sass produjeron once clases de CSS.</p>
+    <p>Añadir un quinto color al mapa generaría dos clases más sin tocar el bucle.</p>
+  </footer>
+
+</body>
+</html>

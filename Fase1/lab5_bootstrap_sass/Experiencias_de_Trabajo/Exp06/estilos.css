@@ -1,0 +1,191 @@
+:root {
+  --tinta: #1a1d21;
+  --tenue: #6b7280;
+  --linea: #e5e7eb;
+  --lienzo: #fbfbfc;
+  --papel: #ffffff;
+  --realce: #f3f4f6;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  background: var(--lienzo);
+  color: var(--tinta);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Encabezado */
+
+.portada {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--linea);
+}
+
+.portada__etiqueta {
+  margin: 0 0 0.5rem;
+  color: var(--tenue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portada__titulo {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.portada__resumen {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--tenue);
+}
+
+/* Secciones */
+
+.bloque {
+  margin-bottom: 3.5rem;
+}
+
+.bloque__titulo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.bloque__indice {
+  color: var(--tenue);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.bloque__nota {
+  margin: 0 0 1.5rem;
+  color: var(--tenue);
+  font-size: 0.9rem;
+}
+
+.bloque__nota code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  background: var(--realce);
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+
+/* Muestrario: rejilla de dos columnas sobre el propio dl */
+
+.muestrario {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  margin: 0;
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  background: var(--papel);
+  overflow: hidden;
+}
+
+.muestrario__clave {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 0 0.9rem 1.15rem;
+  border-top: 1px solid var(--linea);
+  color: var(--tenue);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.muestrario__valor {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.9rem 1.15rem;
+  border-top: 1px solid var(--linea);
+  font-size: 0.95rem;
+}
+
+.muestrario__clave:first-of-type,
+.muestrario__clave:first-of-type + .muestrario__valor {
+  border-top: none;
+}
+
+.ficha {
+  min-width: 7rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+/* Variante apilada: una sola columna para que el margen sea visible */
+
+.muestrario--apilado {
+  grid-template-columns: 1fr;
+}
+
+.muestrario--apilado .muestrario__clave {
+  padding: 0.9rem 1.15rem 0.2rem;
+}
+
+.muestrario--apilado .muestrario__valor {
+  display: block;
+  padding: 0 1.15rem 0.9rem;
+  border-top: none;
+}
+
+.regla {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-left: 3px solid var(--tinta);
+  background: var(--realce);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+/* Pie */
+
+.cierre {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--linea);
+  color: var(--tenue);
+  font-size: 0.85rem;
+}
+
+.cierre p {
+  margin: 0 0 0.35rem;
+}
+
+@media (max-width: 34rem) {
+  .muestrario {
+    grid-template-columns: 1fr;
+  }
+
+  .muestrario__clave {
+    padding: 0.9rem 1.15rem 0.2rem;
+  }
+
+  .muestrario__valor {
+    padding: 0 1.15rem 0.9rem;
+    border-top: none;
+  }
+}

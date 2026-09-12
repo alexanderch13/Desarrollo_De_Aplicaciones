@@ -1,0 +1,17 @@
+$colores-tema: (
+  "primario":   #0d6efd,
+  "exito":      #198754,
+  "secundario": #6c757d,
+  "peligro":    #dc3545
+);
+
+// Recorre el mapa generando dos clases por cada color
+@each $nombre, $color in $colores-tema {
+  .texto-#{$nombre} { color: $color; }
+  .fondo-#{$nombre} { background-color: $color; }
+}
+
+// Genera la escala de márgenes multiplicando el índice por 10px
+@for $i from 1 through 3 {
+  .mt-#{$i} { margin-top: $i * 10px; }
+}
