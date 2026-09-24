@@ -1,0 +1,132 @@
+.app-layout {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Header */
+.header {
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.subtitulo {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Panel informativo */
+.info-panel {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.info-panel h2 {
+  color: #0f172a;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.info-panel p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.estado-badge {
+  display: inline-block;
+  background-color: #0284c7;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Grilla del catálogo */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-imagen {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background-color: #f1f5f9;
+  padding: 16px;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.categoria-tag {
+  align-self: flex-start;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.card-body h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.footer small {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+}
