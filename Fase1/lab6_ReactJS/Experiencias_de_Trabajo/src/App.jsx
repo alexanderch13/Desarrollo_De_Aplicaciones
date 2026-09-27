@@ -1,13 +1,15 @@
 import Header from './components/Header';
 import Card from './components/Card';
 import Footer from './components/Footer';
+import catalogoData from './data/catalogoData';
 import './App.css';
 
 function App() {
   // Variables requeridas por la Exp. 01 Parte 2
   const practicaNumero = 6;
-  const descripcionGeneral = "Este proyecto implementa la estructura base de un catálogo interactivo con componentes modulares en React.";
-  const estadoProyecto = "Fase 1: Cascarón estático listo";
+  const descripcionGeneral =
+    "Este proyecto implementa el catálogo interactivo con componentes modulares, props y renderizado dinámico de listas en React.";
+  const estadoProyecto = "Fase 2: Props y renderizado dinámico con map()";
 
   return (
     <div className="app-layout">
@@ -22,11 +24,20 @@ function App() {
           <span className="estado-badge">Estado actual: {estadoProyecto}</span>
         </section>
 
-        {/* Cascarón visual del catálogo interactivo (Base Ejercicio 1) */}
+        {/* Catálogo interactivo renderizado dinámicamente a partir de
+            catalogoData. Se usa map() para generar un <Card/> por cada
+            objeto y 'key' (item.id) para que React identifique cada
+            elemento de forma estable entre renders. */}
         <section className="catalogo-grid">
-          <Card />
-          <Card />
-          <Card />
+          {catalogoData.map((item) => (
+            <Card
+              key={item.id}
+              nombre={item.nombre}
+              descripcion={item.descripcion}
+              categoria={item.categoria}
+              imagen={item.imagen}
+            />
+          ))}
         </section>
       </main>
 
