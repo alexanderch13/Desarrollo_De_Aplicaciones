@@ -1,50 +1,66 @@
-import Header from './components/Header';
-import Card from './components/Card';
-import Footer from './components/Footer';
-import catalogoData from './data/catalogoData';
-import './App.css';
+import { useState } from 'react'
+import Header from './components/Header'
+import Card from './components/Card'
+import Footer from './components/Footer'
+import catalogoData from './data/catalogoData'
+import Formulario from './components/Formulario'
+import './App.css'
 
 function App() {
-  // Variables requeridas por la Exp. 01 Parte 2
-  const practicaNumero = 6;
-  const descripcionGeneral =
-    "Este proyecto implementa el catálogo interactivo con componentes modulares, props y renderizado dinámico de listas en React.";
-  const estadoProyecto = "Fase 2: Props y renderizado dinámico con map()";
+  const [tecnologias, setTecnologias] = useState(catalogoData)
+
+  function agregarTecnologia(nuevaTecnologia) {
+    setTecnologias([...tecnologias, nuevaTecnologia])
+  }
+
+  function cambiarEstado(id) {
+    setTecnologias(
+      tecnologias.map((tec) =>
+        tec.id === id ? { ...tec, completado: !tec.completado } : tec
+      )
+    )
+  }
+
+  function eliminarTecnologia(id) {
+    setTecnologias(tecnologias.filter((tec) => tec.id !== id))
+  }
+
+  const totalCompletadas = tecnologias.filter((tec) => tec.completado).length
 
   return (
-    <div className="app-layout">
-      {/* Componente Header */}
+    <main className="app-layout">
       <Header />
 
-      {/* Contenido principal con expresiones JSX */}
-      <main className="main-content">
-        <section className="info-panel">
-          <h2>Práctica N° {practicaNumero}</h2>
-          <p>{descripcionGeneral}</p>
-          <span className="estado-badge">Estado actual: {estadoProyecto}</span>
-        </section>
+      <section className="info-panel">
+        <h2>Práctica N.º 6 — ReactJS</h2>
+        <p>
+          Catálogo interactivo con componentes, props, eventos y estado local.
+        </p>
+        <span className="estado-badge">
+          Completadas: {totalCompletadas} de {tecnologias.length}
+        </span>
+      </section>
 
-        {/* Catálogo interactivo renderizado dinámicamente a partir de
-            catalogoData. Se usa map() para generar un <Card/> por cada
-            objeto y 'key' (item.id) para que React identifique cada
-            elemento de forma estable entre renders. */}
-        <section className="catalogo-grid">
-          {catalogoData.map((item) => (
-            <Card
-              key={item.id}
-              nombre={item.nombre}
-              descripcion={item.descripcion}
-              categoria={item.categoria}
-              imagen={item.imagen}
-            />
-          ))}
-        </section>
-      </main>
+      <Formulario onAgregar={agregarTecnologia} />
 
-      {/* Componente Footer */}
+      <section className="catalogo-grid">
+        {tecnologias.map((tec) => (
+          <Card
+            key={tec.id}
+            nombre={tec.nombre}
+            descripcion={tec.descripcion}
+            categoria={tec.categoria}
+            imagen={tec.imagen}
+            completado={tec.completado}
+            onCambiarEstado={() => cambiarEstado(tec.id)}
+            onEliminar={() => eliminarTecnologia(tec.id)}
+          />
+        ))}
+      </section>
+
       <Footer />
-    </div>
-  );
+    </main>
+  )
 }
 
-export default App;
+export default App
