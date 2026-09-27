@@ -1,53 +1,53 @@
-// Arreglo de objetos que simula la base de datos local del catálogo interactivo.
-// Cada objeto representa una tecnología con su información y un id único,
-// utilizado luego como 'key' estable al renderizar la lista con map().
-
 const catalogoData = [
   {
     id: 1,
-    nombre: "React",
+    nombre: 'React',
     descripcion:
-      "Biblioteca declarativa para construir interfaces de usuario basadas en componentes.",
-    categoria: "Frontend",
+      'Biblioteca declarativa para construir interfaces de usuario basadas en componentes.',
+    categoria: 'Frontend',
     imagen:
-      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    completado: false,
   },
   {
     id: 2,
-    nombre: "Vite",
+    nombre: 'Vite',
     descripcion:
-      "Herramienta de compilación ultrarrápida para proyectos web modernos.",
-    categoria: "Build Tool",
+      'Herramienta de compilación ultrarrápida para proyectos web modernos.',
+    categoria: 'Build Tool',
     imagen:
-      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vite/vite.png",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
+    completado: false,
   },
   {
     id: 3,
-    nombre: "JavaScript",
+    nombre: 'JavaScript',
     descripcion:
-      "Lenguaje de programación que da interactividad a las páginas web.",
-    categoria: "Lenguaje",
+      'Lenguaje de programación que da interactividad a las páginas web.',
+    categoria: 'Lenguaje',
     imagen:
-      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    completado: false,
   },
   {
     id: 4,
-    nombre: "CSS3",
+    nombre: 'CSS3',
     descripcion:
-      "Lenguaje de estilos utilizado para dar diseño y presentación a documentos HTML.",
-    categoria: "Estilos",
+      'Lenguaje de estilos utilizado para dar diseño y presentación a documentos HTML.',
+    categoria: 'Estilos',
     imagen:
-      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    completado: false,
   },
   {
     id: 5,
-    nombre: "Node.js",
-    descripcion:
-      "Entorno de ejecución de JavaScript del lado del servidor.",
-    categoria: "Backend",
+    nombre: 'Node.js',
+    descripcion: 'Entorno de ejecución de JavaScript del lado del servidor.',
+    categoria: 'Backend',
     imagen:
-      "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    completado: false,
   },
-];
+]
 
-export default catalogoData;
+export default catalogoData
