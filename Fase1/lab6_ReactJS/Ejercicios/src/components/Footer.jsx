@@ -5,8 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p>
-        &copy; {anio} {institucion} — Escuela Profesional de Ingeniería de
-        Sistemas
+        &copy; {anio} {institucion} — Escuela Profesional de Ingeniería de Sistemas
       </p>
     </footer>
   )
