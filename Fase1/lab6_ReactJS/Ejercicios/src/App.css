@@ -30,7 +30,7 @@
   font-size: 1rem;
 }
 
-/* Introducción del catálogo */
+/* Introduccion del catalogo */
 .catalogo-intro {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -51,7 +51,7 @@
   font-size: 0.95rem;
 }
 
-/* Panel de estado (base Ejercicio 3) */
+/* Panel de estado */
 .panel-estado {
   background-color: #f0f9ff;
   border: 1px dashed #0284c7;
@@ -118,20 +118,128 @@
   margin-bottom: 16px;
 }
 
+.card-estado {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  color: #64748b;
+}
+
+.card-estado strong {
+  color: #0f172a;
+}
+
+/* Botones de accion en la tarjeta */
 .card-footer {
   border-top: 1px solid #f1f5f9;
   padding-top: 12px;
+  display: flex;
+  gap: 8px;
 }
 
-.btn-placeholder {
-  width: 100%;
-  padding: 8px;
-  background-color: #f1f5f9;
-  border: 1px dashed #cbd5e1;
-  color: #64748b;
+.btn-estado,
+.btn-eliminar {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
   border-radius: 6px;
   font-size: 0.85rem;
-  cursor: not-allowed;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-estado {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn-estado:hover {
+  background-color: #bae6fd;
+}
+
+.btn-eliminar {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-eliminar:hover {
+  background-color: #fecaca;
+}
+
+/* Formulario */
+.formulario-panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.formulario-panel h2 {
+  color: #0f172a;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #475569;
+  gap: 4px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: 2px solid #4f46e5;
+  border-color: transparent;
+}
+
+.formulario button {
+  padding: 10px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: #4338ca;
+}
+
+.mensaje {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.mensaje-exito {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.mensaje-error {
+  background-color: #fee2e2;
+  color: #991b1b;
 }
 
 /* Footer */
