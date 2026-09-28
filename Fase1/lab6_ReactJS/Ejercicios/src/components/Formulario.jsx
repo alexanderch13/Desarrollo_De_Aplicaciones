@@ -1,11 +1,7 @@
 import { useState } from 'react'
 
 function Formulario({ onAgregar }) {
-  const [formulario, setFormulario] = useState({
-    nombre: '',
-    descripcion: '',
-    categoria: '',
-  })
+  const [formulario, setFormulario] = useState({ nombre: '', descripcion: '', categoria: '' })
   const [mensaje, setMensaje] = useState({ tipo: '', texto: '' })
 
   function manejarCambio(event) {
@@ -27,10 +23,8 @@ function Formulario({ onAgregar }) {
 
   function manejarEnvio(event) {
     event.preventDefault()
-
     try {
       validar()
-
       const nuevoElemento = {
         id: Date.now(),
         nombre: formulario.nombre.trim(),
@@ -38,13 +32,8 @@ function Formulario({ onAgregar }) {
         categoria: formulario.categoria,
         estado: 'pendiente',
       }
-
       onAgregar(nuevoElemento)
-
-      setMensaje({
-        tipo: 'exito',
-        texto: `Registrado: ${nuevoElemento.nombre}`,
-      })
+      setMensaje({ tipo: 'exito', texto: `Registrado: ${nuevoElemento.nombre}` })
       setFormulario({ nombre: '', descripcion: '', categoria: '' })
     } catch (error) {
       setMensaje({ tipo: 'error', texto: `Error: ${error.message}` })
@@ -56,37 +45,18 @@ function Formulario({ onAgregar }) {
   return (
     <section className="formulario-panel">
       <h2>Registrar nuevo elemento</h2>
-
       <form onSubmit={manejarEnvio} className="formulario">
         <label>
           Nombre:
-          <input
-            type="text"
-            name="nombre"
-            value={formulario.nombre}
-            onChange={manejarCambio}
-            placeholder="Ej. TypeScript"
-          />
+          <input type="text" name="nombre" value={formulario.nombre} onChange={manejarCambio} placeholder="Ej. TypeScript" />
         </label>
-
         <label>
           Descripcion:
-          <input
-            type="text"
-            name="descripcion"
-            value={formulario.descripcion}
-            onChange={manejarCambio}
-            placeholder="Breve descripcion"
-          />
+          <input type="text" name="descripcion" value={formulario.descripcion} onChange={manejarCambio} placeholder="Breve descripcion" />
         </label>
-
         <label>
           Categoria:
-          <select
-            name="categoria"
-            value={formulario.categoria}
-            onChange={manejarCambio}
-          >
+          <select name="categoria" value={formulario.categoria} onChange={manejarCambio}>
             <option value="">-- Elegir --</option>
             <option value="Frontend">Frontend</option>
             <option value="Backend">Backend</option>
@@ -95,10 +65,8 @@ function Formulario({ onAgregar }) {
             <option value="Build Tool">Build Tool</option>
           </select>
         </label>
-
         <button type="submit">Registrar</button>
       </form>
-
       {mensaje.texto && (
         <p className={`mensaje mensaje-${mensaje.tipo}`}>{mensaje.texto}</p>
       )}
