@@ -25,11 +25,7 @@ function Card({
       </section>
 
       <footer className="card-footer">
-        <button
-          type="button"
-          className="btn-estado"
-          onClick={onCambiarEstado}
-        >
+        <button type="button" className="btn-estado" onClick={onCambiarEstado}>
           {estaCompletado ? 'Marcar pendiente' : 'Marcar completado'}
         </button>
         <button type="button" className="btn-eliminar" onClick={onEliminar}>
