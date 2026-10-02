@@ -1,15 +1,20 @@
 import TareaItem from "./TareaItem";
 
-function TareaLista({ tareas, onAlternar }) {
-  if (tareas.length === 0) return <p>No hay tareas registradas.</p>;
+export default function TareaLista({ tareas, onToggle, onDelete }) {
+  if (tareas.length === 0) {
+    return <p className="sin-tareas">No hay tareas registradas</p>;
+  }
 
   return (
-    <ul>
-      {tareas.map((t) => (
-        <TareaItem key={t.id} tarea={t} onAlternar={onAlternar} />
+    <ul className="lista-tareas">
+      {tareas.map((tarea) => (
+        <TareaItem
+          key={tarea.id}
+          tarea={tarea}
+          onToggle={onToggle}
+          onDelete={onDelete}
+        />
       ))}
     </ul>
   );
 }
-
-export default TareaLista;
