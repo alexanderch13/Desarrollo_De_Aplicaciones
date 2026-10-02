@@ -1,12 +1,23 @@
-function TareaItem({ tarea, onAlternar }) {
+import { Link } from "react-router-dom";
+
+export default function TareaItem({ tarea, onToggle, onDelete }) {
   return (
-    <li className={tarea.completada ? "tarea completada" : "tarea"}>
-      <span>{tarea.titulo}</span>
-      <button onClick={() => onAlternar(tarea.id)}>
-        {tarea.completada ? "Deshacer" : "Completar"}
+    <li className="item-tarea">
+      <input
+        type="checkbox"
+        checked={tarea.completada}
+        onChange={() => onToggle(tarea.id)}
+        className="checkbox-tarea"
+      />
+      <Link to={`/tareas/${tarea.id}`} className="enlace-tarea">
+        {tarea.titulo}
+      </Link>
+      <button 
+        onClick={() => onDelete(tarea.id)}
+        className="boton-eliminar"
+      >
+        ✕
       </button>
     </li>
   );
 }
-
-export default TareaItem;   
