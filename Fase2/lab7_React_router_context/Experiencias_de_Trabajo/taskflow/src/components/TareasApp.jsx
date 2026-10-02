@@ -1,38 +1,39 @@
 import { useState } from "react";
+import FormularioTarea from "./FormularioTarea";
 import TareaLista from "./TareaLista";
-import FormularioTarea from "./FormularioTarea"; // Importación del nuevo formulario
 
-function TareasApp() {
-  const [tareas, setTareas] = useState([
-    { id: 1, titulo: "Revisar el marco teórico", completada: true },
-    { id: 2, titulo: "Resolver la Experiencia 2", completada: false },
-    { id: 3, titulo: "Repasar Hooks", completada: false },
-  ]);
-
-  // Función para agregar una nueva tarea creando un arreglo nuevo con el operador spread (...)
-  const agregarTarea = (titulo) => {
-    const nuevaTarea = { 
-      id: Date.now(), // Generador de identificador único simple para la demo
-      titulo, 
-      completada: false 
+export default function TareasApp({ tareas, setTareas }) {
+  const handleAgregar = (titulo) => {
+    const nuevaTarea = {
+      id: Math.max(...tareas.map((t) => t.id), 0) + 1,
+      titulo,
+      completada: false,
     };
-    setTareas([...tareas, nuevaTarea]); // Inserta de forma inmutable
+    setTareas([...tareas, nuevaTarea]);
   };
 
-  const alternarTarea = (id) => {
+  const handleToggle = (id) => {
     setTareas(
-      tareas.map((t) =>
-        t.id === id ? { ...t, completada: !t.completada } : t
+      tareas.map((tarea) =>
+        tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea
       )
     );
   };
 
+  const handleDelete = (id) => {
+    setTareas(tareas.filter((tarea) => tarea.id !== id));
+  };
+
+  const completadas = tareas.filter((t) => t.completada).length;
+
   return (
-    <div>
-      <FormularioTarea onAgregar={agregarTarea} />
-      <TareaLista tareas={tareas} onAlternar={alternarTarea} />
+    <div className="tareas-app">
+      <div className="stats-tareas">
+        <span className="stat">Total: {tareas.length}</span>
+        <span className="stat">Completadas: {completadas}</span>
+      </div>
+      <FormularioTarea onAgregar={handleAgregar} />
+      <TareaLista tareas={tareas} onToggle={handleToggle} onDelete={handleDelete} />
     </div>
   );
 }
-
-export default TareasApp;
