@@ -1,3 +1,5 @@
+import { useState } from "react"; // NUEVO
+import Buscador from "./components/Buscador"; // NUEVO
 import ListaProductos from "./components/ListaProductos";
 
 const mockProductos = [
@@ -16,14 +18,25 @@ const mockProductos = [
 ];
 
 function App() {
+  const [carrito, setCarrito] = useState([]); // NUEVO
+  const [busqueda, setBusqueda] = useState(""); // NUEVO
+
   const handleAgregar = (producto) => {
     console.log("Producto seleccionado:", producto);
+    setCarrito([...carrito, producto]); // NUEVO
   };
+
+  // NUEVO
+  const productosFiltrados = mockProductos.filter((p) =>
+    p.title.toLowerCase().includes(busqueda.toLowerCase())
+  );
 
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "20px", fontFamily: "sans-serif" }}>
       <h1>Catálogo de Productos</h1>
-      <ListaProductos productos={mockProductos} onAgregarAlCarrito={handleAgregar} />
+      <p>🛒 Carrito: {carrito.length} producto(s)</p> {/* NUEVO */}
+      <Buscador valor={busqueda} onCambiar={setBusqueda} /> {/* NUEVO */}
+      <ListaProductos productos={productosFiltrados} onAgregarAlCarrito={handleAgregar} /> {/* CAMBIÓ: productosFiltrados */}
     </main>
   );
 }
