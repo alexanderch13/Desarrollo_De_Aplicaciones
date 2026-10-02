@@ -1,29 +1,28 @@
 import { useState } from "react";
 
-function FormularioTarea({ onAgregar }) {
+export default function FormularioTarea({ onAgregar }) {
   const [titulo, setTitulo] = useState("");
 
-  const manejarEnvio = (evento) => {
-    evento.preventDefault(); // Evita que el navegador recargue la página
-    const limpio = titulo.trim();
-    
-    if (limpio === "") return; // Validación elemental de campo vacío
-    
-    onAgregar(limpio); // Notifica al componente padre para insertar la tarea
-    setTitulo(""); // Limpia el campo de texto de forma controlada
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (titulo.trim()) {
+      onAgregar(titulo);
+      setTitulo("");
+    }
   };
 
   return (
-    <form onSubmit={manejarEnvio} className="formulario-tarea">
+    <form onSubmit={handleSubmit} className="formulario-tarea">
       <input
         type="text"
+        placeholder="Agregar nueva tarea..."
         value={titulo}
-        onChange={(evento) => setTitulo(evento.target.value)} // Sincroniza el input con el estado
-        placeholder="Escribe una nueva tarea"
+        onChange={(e) => setTitulo(e.target.value)}
+        className="input-tarea"
       />
-      <button type="submit">Agregar</button>
+      <button type="submit" className="boton-agregar">
+        Agregar
+      </button>
     </form>
   );
 }
-
-export default FormularioTarea;
