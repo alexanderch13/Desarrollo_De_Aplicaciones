@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export default function TareaItem({ tarea, onToggle, onDelete }) {
   return (
     <li className="item-tarea">
