@@ -1,12 +1,19 @@
-function Encabezado({ usuario }) {
-  const fecha = new Date().toLocaleDateString("es-PE", {
-    day: "numeric", month: "long", year: "numeric",
-  });
+export default function Encabezado() {
+  const obtenerFecha = () => {
+    const hoy = new Date();
+    const dia = String(hoy.getDate()).padStart(2, "0");
+    const mes = String(hoy.getMonth() + 1).padStart(2, "0");
+    const año = hoy.getFullYear();
+    return `${dia}/${mes}/${año}`;
+  };
+
   return (
     <header className="encabezado">
-      <h1>TaskFlow</h1>
-      <p>Hola, {usuario}. Hoy es {fecha}.</p>
+      <h1 className="titulo-encabezado">TaskFlow</h1>
+      <p className="autores">
+        Alexander Chipana | Luz Zambrano | Eduardo Morales | Eduardo Motta
+      </p>
+      <span className="fecha">{obtenerFecha()}</span>
     </header>
   );
 }
-export default Encabezado;
