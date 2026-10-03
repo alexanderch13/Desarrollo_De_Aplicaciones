@@ -1,48 +1,29 @@
-function ProductoCard({ producto, onAgregarAlCarrito }) {
-  const { title, price, image } = producto;
+import '../styles/ProductoCard.css';
+
+export default function ProductoCard({ producto, agregarAlCarrito }) {
+  const handleImageError = (e) => {
+    e.target.src = 'https://via.placeholder.com/250x250?text=Imagen+No+Disponible';
+  };
 
   return (
-    <div style={{
-      border: "1px solid #e2e8f0",
-      borderRadius: "8px",
-      padding: "16px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      alignItems: "center",
-      textAlign: "center",
-      background: "#fff"
-    }}>
-      <img
-        src={image}
-        alt={title}
-        style={{
-          width: "120px",
-          height: "120px",
-          objectFit: "contain",
-          marginBottom: "12px"
-        }}
-      />
-      <h4 style={{ fontSize: "0.95rem", margin: "8px 0" }}>{title}</h4>
-      <p style={{ fontWeight: "bold", color: "#2563eb", margin: "6px 0" }}>
-        ${price.toFixed(2)}
-      </p>
-      <button
-        onClick={() => onAgregarAlCarrito(producto)}
-        style={{
-          marginTop: "auto",
-          padding: "8px 12px",
-          backgroundColor: "#0284c7",
-          color: "white",
-          border: "none",
-          borderRadius: "4px",
-          cursor: "pointer"
-        }}
-      >
-        Agregar al carrito
-      </button>
+    <div className="producto-card">
+      <div className="producto-imagen">
+        <img 
+          src={producto.images?.[0] || 'https://via.placeholder.com/250x250?text=Sin+Imagen'}
+          alt={producto.title}
+          onError={handleImageError}
+        />
+      </div>
+      <div className="producto-info">
+        <h3>{producto.title}</h3>
+        <p className="precio">${producto.price.toFixed(2)}</p>
+        <button 
+          className="btn-agregar"
+          onClick={() => agregarAlCarrito(producto)}
+        >
+          Agregar al carrito
+        </button>
+      </div>
     </div>
   );
 }
-
-export default ProductoCard;
