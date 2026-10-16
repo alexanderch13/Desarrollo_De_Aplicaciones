@@ -1,36 +1,36 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
 import reflex as rx
-
-from rxconfig import config
-
-
-class State(rx.State):
-    """The app state."""
-
+from .componentes import tarjeta_tarea, panel_indicadores
 
 def index() -> rx.Component:
-    # Welcome Page (Index)
     return rx.container(
-        rx.color_mode.button(position="top-right"),
         rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text(
-                "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
-                size="5",
+            rx.heading("Tablero Kanban - Ejercicios", size="8"),
+            panel_indicadores(total=4, pendientes=1, en_progreso=1, completadas=2),
+            rx.hstack(
+                # Columna Pendientes
+                rx.box(
+                    rx.heading("Pendiente", size="5"),
+                    tarjeta_tarea("Diseñar BD", "Modelo entidad-relación", "Pendiente"),
+                    width="33%", padding="10px", background_color="#F3F4F6"
+                ),
+                # Columna En Progreso
+                rx.box(
+                    rx.heading("En Progreso", size="5"),
+                    tarjeta_tarea("Frontend UI", "Maquetación", "En progreso"),
+                    width="33%", padding="10px", background_color="#F3F4F6"
+                ),
+                # Columna Completadas
+                rx.box(
+                    rx.heading("Completada", size="5"),
+                    tarjeta_tarea("Setup", "Inicialización uv", "Completada"),
+                    width="33%", padding="10px", background_color="#F3F4F6"
+                ),
+                spacing="4", width="100%", align_items="start"
             ),
-            rx.link(
-                rx.button("Check out our docs!"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
-                is_external=True,
-            ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
+            spacing="5", padding="20px", width="100%",
         ),
+        max_width="1200px", margin="0 auto",
     )
 
-
 app = rx.App()
-app.add_page(index)
+app.add_page(index, route="/")
