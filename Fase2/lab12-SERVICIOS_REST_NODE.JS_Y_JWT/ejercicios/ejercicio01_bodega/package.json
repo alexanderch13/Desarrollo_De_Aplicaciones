@@ -1,0 +1,13 @@
+{
+  "name": "lab12-bodega",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node ../../pruebas/verificar.js bodega"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

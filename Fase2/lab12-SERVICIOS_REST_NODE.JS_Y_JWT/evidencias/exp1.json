@@ -1,0 +1,32 @@
+[
+  {
+    "caso": "Ruta inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Listado publico",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Libro existente",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Libro inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Identificador invalido",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  }
+]

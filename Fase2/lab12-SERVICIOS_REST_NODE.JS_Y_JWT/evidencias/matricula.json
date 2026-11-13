@@ -1,0 +1,200 @@
+[
+  {
+    "caso": "Ruta inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Registro siempre estudiante",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Registro duplicado",
+    "esperado": 409,
+    "obtenido": 409,
+    "correcto": true
+  },
+  {
+    "caso": "Login incorrecto",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Login estudiante",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Perfil sin token",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Token invalido",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Token expirado",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Perfil valido",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Login admin",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Login docente",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Login otro docente",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Estudiante no crea cursos",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Docente no crea cursos",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Curso sin token",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Admin crea curso",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Matricula por admin",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Estudiante no registra nota",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Admin no actua como docente",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Docente ajeno no registra nota",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Nota fuera de rango",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Alumno sin matricula",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Docente registra nota",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Docente actualiza nota",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Estudiante consulta notas propias",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Login otro estudiante",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Query no permite consultar notas ajenas",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Docente no usa notas propias de estudiante",
+    "esperado": 403,
+    "obtenido": 403,
+    "correcto": true
+  },
+  {
+    "caso": "Cambio con clave actual incorrecta",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Cambiar contrasena",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Token anterior revocado",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Clave anterior ya no sirve",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Login con clave nueva",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  }
+]

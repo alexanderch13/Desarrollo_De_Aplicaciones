@@ -1,0 +1,128 @@
+[
+  {
+    "caso": "Ruta inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Crear categoria A",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Crear categoria B",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Categoria repetida",
+    "esperado": 409,
+    "obtenido": 409,
+    "correcto": true
+  },
+  {
+    "caso": "Listar categorias",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Obtener categoria",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Actualizar categoria",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Precio negativo",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Categoria no existe",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Crear producto",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Filtrar categoria A",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Filtrar categoria B",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "No borrar categoria ocupada",
+    "esperado": 409,
+    "obtenido": 409,
+    "correcto": true
+  },
+  {
+    "caso": "Producto existente",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Actualizar producto",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "PUT identico de producto",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Producto inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Filtro invalido",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Borrar producto",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Borrar categoria A",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Borrar categoria B",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  }
+]

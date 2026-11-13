@@ -1,0 +1,13 @@
+{
+  "name": "lab12-tareas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node ../../pruebas/verificar.js tareas"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

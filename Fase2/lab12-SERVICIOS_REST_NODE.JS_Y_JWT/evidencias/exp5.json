@@ -1,0 +1,146 @@
+[
+  {
+    "caso": "Ruta inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Listado publico",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Libro existente",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Libro inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Identificador invalido",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Registro publico sin elevar rol",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Email duplicado",
+    "esperado": 409,
+    "obtenido": 409,
+    "correcto": true
+  },
+  {
+    "caso": "Clave corta",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Login incorrecto",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Login lector",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Perfil sin token",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Token invalido",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Token expirado",
+    "esperado": 401,
+    "obtenido": 401,
+    "correcto": true
+  },
+  {
+    "caso": "Perfil valido",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Crear libro con texto SQL",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Faltan campos",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Anio invalido",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Lectura posterior a crear",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Actualizar libro",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "PUT identico conserva 200",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Actualizar inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Eliminar libro",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Consultar eliminado",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Eliminar inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  }
+]

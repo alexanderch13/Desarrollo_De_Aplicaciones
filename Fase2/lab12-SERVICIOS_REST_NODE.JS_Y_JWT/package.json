@@ -1,0 +1,39 @@
+{
+  "name": "lab12-servicios-rest-nodejs-jwt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laboratorio 12 con seis experiencias y tres ejercicios",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node actividades/experiencia06/src/index.js",
+    "dev": "nodemon actividades/experiencia06/src/index.js",
+    "verificar": "node pruebas/verificar.js",
+    "comprobar": "node pruebas/ejecutar_todo.js",
+    "preparar": "node scripts/preparar_env.js",
+    "conexion": "node scripts/probar_conexion.js",
+    "importar": "node scripts/importar_sql.js",
+    "crear-usuario": "node scripts/crear_usuario.js",
+    "exp1": "node actividades/experiencia01/src/index.js",
+    "exp2": "node actividades/experiencia02/src/index.js",
+    "exp3": "node actividades/experiencia03/src/index.js",
+    "exp4": "node actividades/experiencia04/src/index.js",
+    "exp5": "node actividades/experiencia05/src/index.js",
+    "exp6": "node actividades/experiencia06/src/index.js",
+    "bodega": "node ejercicios/ejercicio01_bodega/src/index.js",
+    "tareas": "node ejercicios/ejercicio02_tareas_nube/src/index.js",
+    "matricula": "node ejercicios/ejercicio03_matricula/src/index.js",
+    "test": "node pruebas/ejecutar_todo.js"
+  },
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "dotenv": "18.0.10",
+    "express": "5.3.0",
+    "jsonwebtoken": "9.0.3",
+    "mysql2": "3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  }
+}

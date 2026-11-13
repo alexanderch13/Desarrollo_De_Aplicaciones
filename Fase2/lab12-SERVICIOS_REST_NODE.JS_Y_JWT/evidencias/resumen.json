@@ -1,0 +1,51 @@
+{
+  "fecha": "2026-11-13T16:03:03.141Z",
+  "entorno": "Entorno virtual Linux; Node.js 24.22.1; MySQL Community 8.4.7 local; TLS con CA e identidad verificadas cuando corresponde",
+  "resultados": [
+    {
+      "proyecto": "exp1",
+      "casos": 5,
+      "correctos": 5
+    },
+    {
+      "proyecto": "exp2",
+      "casos": 15,
+      "correctos": 15
+    },
+    {
+      "proyecto": "exp3",
+      "casos": 15,
+      "correctos": 15
+    },
+    {
+      "proyecto": "exp4",
+      "casos": 15,
+      "correctos": 15
+    },
+    {
+      "proyecto": "exp5",
+      "casos": 24,
+      "correctos": 24
+    },
+    {
+      "proyecto": "exp6",
+      "casos": 29,
+      "correctos": 29
+    },
+    {
+      "proyecto": "bodega",
+      "casos": 21,
+      "correctos": 21
+    },
+    {
+      "proyecto": "tareas",
+      "casos": 19,
+      "correctos": 19
+    },
+    {
+      "proyecto": "matricula",
+      "casos": 33,
+      "correctos": 33
+    }
+  ]
+}

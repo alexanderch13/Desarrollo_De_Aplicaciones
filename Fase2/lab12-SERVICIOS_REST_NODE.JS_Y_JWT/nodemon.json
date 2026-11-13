@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "actividades",
+    "ejercicios",
+    "compartido"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "**/pruebas/**",
+    "**/evidencias/**",
+    "**/node_modules/**"
+  ]
+}

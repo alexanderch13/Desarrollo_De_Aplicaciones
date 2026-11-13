@@ -1,0 +1,116 @@
+[
+  {
+    "caso": "Ruta inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "Crear tarea 1",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Crear tarea 2",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Crear tarea 3",
+    "esperado": 201,
+    "obtenido": 201,
+    "correcto": true
+  },
+  {
+    "caso": "Pagina 1 limite 2",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Pagina 2 limite 2",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Pagina cero",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Limite excesivo",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Fecha imposible",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "Estado invalido",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "PATCH rechaza otros campos",
+    "esperado": 400,
+    "obtenido": 400,
+    "correcto": true
+  },
+  {
+    "caso": "PATCH cambia solo estado",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "PATCH identico conserva 200",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "PATCH inexistente",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  },
+  {
+    "caso": "PUT tarea",
+    "esperado": 200,
+    "obtenido": 200,
+    "correcto": true
+  },
+  {
+    "caso": "Eliminar tarea 7",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Eliminar tarea 8",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Eliminar tarea 9",
+    "esperado": 204,
+    "obtenido": 204,
+    "correcto": true
+  },
+  {
+    "caso": "Tarea eliminada",
+    "esperado": 404,
+    "obtenido": 404,
+    "correcto": true
+  }
+]

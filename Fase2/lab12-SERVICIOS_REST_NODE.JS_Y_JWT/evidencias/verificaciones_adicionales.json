@@ -1,0 +1,42 @@
+[
+  {
+    "caso": "Persistencia despues de reiniciar el proceso Node.js",
+    "resultado": "Correcto"
+  },
+  {
+    "caso": "Conexion TLS con CA e identidad verificadas",
+    "resultado": "Correcto",
+    "version": "8.4.7",
+    "base": "biblioteca",
+    "cifrado": "TLS_AES_256_GCM_SHA384"
+  },
+  {
+    "caso": "Usuario de aplicacion con EXECUTE y sin SELECT directo",
+    "resultado": "Correcto",
+    "permisos": [
+      {
+        "Grants for lab12_app@%": "GRANT USAGE ON *.* TO `lab12_app`@`%`"
+      },
+      {
+        "Grants for lab12_app@%": "GRANT EXECUTE ON `biblioteca`.* TO `lab12_app`@`%`"
+      },
+      {
+        "Grants for lab12_app@%": "GRANT EXECUTE ON `bodega`.* TO `lab12_app`@`%`"
+      },
+      {
+        "Grants for lab12_app@%": "GRANT EXECUTE ON `matricula`.* TO `lab12_app`@`%`"
+      },
+      {
+        "Grants for lab12_app@%": "GRANT EXECUTE ON `tareas`.* TO `lab12_app`@`%`"
+      }
+    ]
+  },
+  {
+    "caso": "Rechazo de certificado emitido por una CA no confiable",
+    "resultado": "Correcto"
+  },
+  {
+    "caso": "Nodemon reinicia al guardar un archivo JavaScript",
+    "resultado": "Correcto"
+  }
+]

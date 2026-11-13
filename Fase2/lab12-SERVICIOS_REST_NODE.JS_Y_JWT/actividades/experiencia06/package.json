@@ -1,0 +1,13 @@
+{
+  "name": "lab12-exp6",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node ../../pruebas/verificar.js exp6"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

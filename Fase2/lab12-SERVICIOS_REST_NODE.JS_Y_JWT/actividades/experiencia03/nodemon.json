@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "src",
+    "../../compartido"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "../../pruebas/**"
+  ]
+}

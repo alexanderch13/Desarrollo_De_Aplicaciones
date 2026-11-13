@@ -1,0 +1,132 @@
+[
+  {
+    "archivo": "01_entorno.jpg",
+    "sha256": "23f76904791d00a9eb966dc5eaf4b9c7df22d453bcfb35c6656fba2c948a559a",
+    "titulo": "Versiones del entorno y dependencias"
+  },
+  {
+    "archivo": "02_nodemon.jpg",
+    "sha256": "ee85da6ef0111fa14ff829be6632f67e6774ad43bd836ebd2faedddd747306c0",
+    "titulo": "Reinicio automático con Nodemon"
+  },
+  {
+    "archivo": "03_exp1_get.jpg",
+    "sha256": "d4d46c89dbd8bd5292b29ed1a3922af579361af5d34b852fc31d9590ad0831bc",
+    "titulo": "Consulta del catálogo y respuesta 404"
+  },
+  {
+    "archivo": "04_exp2_crud.jpg",
+    "sha256": "f4f1d7eeafc6d13567740c49277fd91ddbd3ffcd14edc31226f713091576b167",
+    "titulo": "Ciclo CRUD y validaciones en memoria"
+  },
+  {
+    "archivo": "05_biblioteca_mysql.jpg",
+    "sha256": "bc71873bdf64915d24a19247dc9b795ee37731206bfab603f640d47dc23c24a0",
+    "titulo": "Libros y procedimientos almacenados en MySQL"
+  },
+  {
+    "archivo": "06_persistencia_reinicio.jpg",
+    "sha256": "7c9b9a0b0b8edfce257409650c4f1bdabc010d7bf99400b40232d0ea49195a7c",
+    "titulo": "Persistencia después de reiniciar Node.js"
+  },
+  {
+    "archivo": "07_tls_certificados.jpg",
+    "sha256": "9eb19f86306791ff223eccac6d215be3b6e3b20fa187bb4f37c8cfe036bce715",
+    "titulo": "Conexión TLS y rechazo de una CA incorrecta"
+  },
+  {
+    "archivo": "08_exp4_crud_tls.jpg",
+    "sha256": "85ce3111274ad0e09dd2efef512f38b73c3f8931bf06e08e0e28fb354842e9c6",
+    "titulo": "CRUD sobre MySQL con TLS"
+  },
+  {
+    "archivo": "09_registro_validaciones.jpg",
+    "sha256": "2aa568e95627d2232dfe197ea2b279208af813bed971e906ece498228eb0058c",
+    "titulo": "Registro de lector y validaciones de entrada"
+  },
+  {
+    "archivo": "10_login_jwt_bcrypt.jpg",
+    "sha256": "a31fae5a30eb6f25b642216e47e60c28d76f5628999af545b4c6ebf88831e168",
+    "titulo": "Inicio de sesión, JWT y hash bcrypt"
+  },
+  {
+    "archivo": "11_biblioteca_permisos.jpg",
+    "sha256": "5ba425f5d011f2b8e42cf914b170f2fe4d23c4d14e7f69747ba4c6b7a6506a01",
+    "titulo": "Permisos de escritura para lector y administrador"
+  },
+  {
+    "archivo": "12_jwt_perfil_errores.jpg",
+    "sha256": "468e6d5d8b7c4c563d83c6ca29dc91d3a6bb7a159422a35f36e513315cec9b9d",
+    "titulo": "Verificación de JWT, perfil y errores de acceso"
+  },
+  {
+    "archivo": "13_bodega_tablas.jpg",
+    "sha256": "d8dfc84f988ac34f48b399a8a7d4fc1356af1c60a3b950c678c59746e3847193",
+    "titulo": "Estructura de categorías y productos"
+  },
+  {
+    "archivo": "14_bodega_filtro_conflicto.jpg",
+    "sha256": "32c8ad07c294e78fa75957cc4cb5b986dd9204e7b67fe61ca3095689b613852a",
+    "titulo": "Filtro por categoría y conflicto de integridad"
+  },
+  {
+    "archivo": "15_bodega_crud.jpg",
+    "sha256": "fe3eb28a134a1b2a6d1fd1d84c919d0246473843dfb491f9979e7d1dbbda798b",
+    "titulo": "Comprobaciones de categorías y productos"
+  },
+  {
+    "archivo": "16_tareas_paginacion.jpg",
+    "sha256": "95ccf3daa2e68638fa568020ef7d7b94374c01018ced77023b426e6ad67159c9",
+    "titulo": "Paginación de tareas mediante HTTP"
+  },
+  {
+    "archivo": "17_tareas_sql_tls.jpg",
+    "sha256": "0bb507a5a47542ae9f9766e42ca0df367ac1f107356dfad4f36638402cc4335f",
+    "titulo": "Procedimiento paginado y sesión TLS en MySQL local"
+  },
+  {
+    "archivo": "18_tareas_patch.jpg",
+    "sha256": "c13c414ce62602e75bc4ddfe8c7a5cf905413d03736cd825ff42cc84ad666ca4",
+    "titulo": "Cambio de estado y rechazo de campos adicionales"
+  },
+  {
+    "archivo": "19_matricula_tablas_roles.jpg",
+    "sha256": "054bd922065cc4c9fb0a12e96d12daf8ae8dee6e57eac3ca2b99bedfca486097",
+    "titulo": "Tablas, claves y tres roles de matrícula"
+  },
+  {
+    "archivo": "20_matricula_cursos.jpg",
+    "sha256": "c6b8775352e58eb5b62ba1c6000a02380b723048e8384f93ac2ab59cb7904b3b",
+    "titulo": "Creación de cursos y matrícula por administrador"
+  },
+  {
+    "archivo": "21_matricula_notas.jpg",
+    "sha256": "40bbc5217fafcc9463999585f5dde5ef089c997d92adf7913cd690c369c9ef1f",
+    "titulo": "Registro de notas por el docente asignado"
+  },
+  {
+    "archivo": "22_matricula_aislamiento.jpg",
+    "sha256": "793ed0fb7cc8f9135417ca68b1cc634e90d718fcd6bf289bb88b535ffe4669a4",
+    "titulo": "Consulta de notas propias por estudiante"
+  },
+  {
+    "archivo": "23_password_revocacion.jpg",
+    "sha256": "468479a4244144758bb433cd851aaf64311eafe68b87936fa88c198416a474c0",
+    "titulo": "Cambio de contraseña y revocación del token"
+  },
+  {
+    "archivo": "24_matricula_verificacion.jpg",
+    "sha256": "94dddecd1907a77eab94cf6c0f2e724cceb617a738aa73eaa7af1df44b91a3ec",
+    "titulo": "Verificación de roles, matrícula y calificaciones"
+  },
+  {
+    "archivo": "25_configuracion.jpg",
+    "sha256": "3622c261995049bdd08da03902e611fe56ba47c82dcf96f698ac29cc3d1fa59d",
+    "titulo": "Plantilla de entorno y exclusiones de Git"
+  },
+  {
+    "archivo": "26_resumen_pruebas.jpg",
+    "sha256": "ab1886da13627c24865c79eabef4d8345a93650a7d716ff9e9adf73cad22d678",
+    "titulo": "Resultado global de las pruebas de los nueve servicios"
+  }
+]
